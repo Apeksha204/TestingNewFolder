@@ -1062,10 +1062,17 @@
     "clusterId": "0",
     "originalCustomJarName": "",
     "projectDetails": {
-      "associatedAccounts": [],
+      "associatedAccounts": [
+        {
+          "vendorType": "ApacheSpark",
+          "name": "kd-cluster",
+          "id": 14
+        }
+      ],
       "createdBy": "kuldeep.chouhan",
       "projectDisplayName": "Default",
       "sharedProject": false,
+      "name": "Default_1730098071421",
       "projectName": "Default_1730098071421",
       "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
       "projectVersion": 1
