@@ -258,7 +258,7 @@
     "appDisplayName": "TestImport_git",
     "lockedDate": "",
     "tags": [],
-    "parentVersionNumber": 1,
+    "parentVersionNumber": 3,
     "configureEmail": false,
     "enableErrorHandler": true,
     "channels": [
@@ -735,6 +735,7 @@
     },
     "customFileNames": "supermarket_sales-Sheet.csv",
     "status": "STOPPED",
+    "description": "Test",
     "partialConfig": {},
     "clusterId": "-1",
     "originalCustomJarName": "",
@@ -755,7 +756,7 @@
       "projectVersion": 1
     },
     "topologySupervisors": [],
-    "createVersionRequestByUser": false,
+    "createVersionRequestByUser": true,
     "lockedBy": "",
     "engine": "spark",
     "alert": {
@@ -765,11 +766,11 @@
     },
     "appType": "etl",
     "isReplayAlter": false,
-    "gitcommitid": "3d3de93fc9ffb43d776a2165a17a604588051725",
+    "gitcommitid": "b02efc8b724718eb9bc3aeb241ff598c8295b806",
     "date_created": 1750229028313,
     "sessionId": "25DFF3F926AF85F77B499650625056EB",
-    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/3d3de93fc9ffb43d776a2165a17a604588051725",
-    "versionNumber": 2,
+    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/b02efc8b724718eb9bc3aeb241ff598c8295b806",
+    "versionNumber": 4,
     "structure": "pipeline",
     "templateName": "",
     "displayColumnsMap": {
