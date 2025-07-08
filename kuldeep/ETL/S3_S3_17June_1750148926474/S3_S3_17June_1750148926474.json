@@ -468,7 +468,7 @@
     "customFileNames": "",
     "status": "STOPPED",
     "failedReason": "",
-    "description": "Testing 8 July ssh",
+    "description": "Test ssh",
     "partialConfig": {},
     "clusterId": "-1",
     "originalCustomJarName": "",
