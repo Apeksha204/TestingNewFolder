@@ -1,0 +1,907 @@
+{
+  "internalJson": {
+    "httpSessionId": "8756FB5D61B79EE8B6E4E1F5C427F1F1",
+    "isCustomerComputeEnabled": true,
+    "inspectType": "local",
+    "templateUsed": [],
+    "customJarBeforeModification": "",
+    "isDraft": false,
+    "addedJars": [],
+    "processors": [
+      {
+        "connectorId": "12",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "emitter",
+        "isStopRequest": false,
+        "connectionType": "gcs",
+        "messageTypes": [
+          "SampleSource_863616"
+        ],
+        "projectDetails": {
+          "associatedAccounts": [
+            {
+              "vendorType": "AWS_DB",
+              "name": "TestDatabricks",
+              "id": 2
+            },
+            {
+              "vendorType": "ApacheSpark",
+              "name": "Apache Standalone",
+              "id": 16
+            },
+            {
+              "vendorType": "ApacheSpark",
+              "name": "APACHE-YARN-LOCAL",
+              "id": 20
+            }
+          ],
+          "createdBy": "yatish",
+          "projectDisplayName": "Default",
+          "sharedProject": false,
+          "name": "Default_1730207943680",
+          "projectName": "Default_1730207943680",
+          "projectId": "9397ae3e-53b2-4964-b42f-09398f140a20",
+          "projectVersion": 1
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "subtype": "",
+        "appType": "structuredstreaming",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "GCS-emitter",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "both",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          90,
+          10
+        ],
+        "label": "GCS",
+        "inputDStreamType": "both",
+        "currentAppType": "batch",
+        "message": "",
+        "tags": [
+          "Google Cloud Storage",
+          "Cloud Storage Integration",
+          "File Storage",
+          "Google Cloud Integration",
+          "Cloud Data Storage",
+          "Data Storage Integration"
+        ],
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "SampleSource_863616",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "GCSEmitter_342007",
+        "refreshMetadata": false,
+        "category": [
+          "File"
+        ],
+        "config": {
+          "bucketName": "anirkhe",
+          "datasetNewAssociation": true,
+          "partitionColumnsList": [],
+          "outputMode": "append",
+          "processingTimeUnit": "",
+          "path": "Apeksha/Test1",
+          "IsPiiEnable": false,
+          "multilineJson": false,
+          "delimiter": ",",
+          "scope": "global",
+          "saxInspect": {
+            "datasetIds": {
+              "inputdatasetId": [
+                "SampleSource_863616"
+              ],
+              "outputdatasetId": [
+                "GCSEmitter_342007"
+              ]
+            },
+            "referenceSchemaId": {
+              "outputSchemaId": [
+                "SampleSource_863616"
+              ],
+              "inputSchemaId": [
+                "SampleSource_863616"
+              ]
+            }
+          },
+          "customJDBC": false,
+          "reuseDataset": true,
+          "ignoreActionError": false,
+          "datasetChange": "NEW",
+          "datasetVersion": 1,
+          "isTimeBasedCheckPoint": false,
+          "datasetTransformer": "com.streamanalytix.bs.dataset.service.impl.GCSEmitterDSTransformer",
+          "appDisplayName": "TestDataset",
+          "turnpikeName": "",
+          "mvelfnclist": [],
+          "format": "csv",
+          "datasetName": "TestDataset_1740552549911",
+          "columnList": [
+            "InvoiceID",
+            "Branch",
+            "City",
+            "CustomerType",
+            "Gender",
+            "ProductLine",
+            "UnitPrice",
+            "Quantity",
+            "Tax_5_percent",
+            "Total",
+            "Date",
+            "Time",
+            "Payment",
+            "Cogs",
+            "GrossMarginPercentage",
+            "GrossIncome",
+            "Rating"
+          ],
+          "isTurnPikeChild": "false",
+          "trigger": false,
+          "priority": 1,
+          "processingTime": "",
+          "partioningRequired": "",
+          "saveMode": "append",
+          "checkpointLocation": "",
+          "datasetSourceType": "GCS",
+          "checkpointConnectionId": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "connectionId": "4301c213-2c4c-4cbe-afed-cfd2abec08f8",
+          "connectionConfig": {},
+          "expfldlst": "",
+          "connectionName": "GCS",
+          "operatorType": "processor",
+          "saveAsDataset": true,
+          "checkpointConnectionType": "hdfs",
+          "executorPlugin": "com.streamanalytix.spark.ss.emitter.GCSEmitter",
+          "subsystemName": "Test12_1740552677316"
+        }
+      }
+    ],
+    "esperHAEnabled": false,
+    "isLocked": false,
+    "id": "Test12_1740552677316",
+    "connections": [
+      "4301c213-2c4c-4cbe-afed-cfd2abec08f8"
+    ],
+    "emailIds": [],
+    "iscreatVersionChecked": false,
+    "appDisplayName": "Test12",
+    "lockedDate": "",
+    "tags": [],
+    "parentVersionNumber": 4,
+    "configureEmail": false,
+    "enableErrorHandler": true,
+    "channels": [
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "20",
+        "className": "com.streamanalytix.spark.ss.receiver.SparkSSReceiver",
+        "channelType": "single",
+        "isStopRequest": false,
+        "type": "channel",
+        "messageTypes": [
+          "SampleSource_863616"
+        ],
+        "projectDetails": {
+          "createdBy": "yatish",
+          "projectName": "Default_1730207943680",
+          "projectDisplayName": "Default",
+          "projectId": "9397ae3e-53b2-4964-b42f-09398f140a20",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": [
+            {
+              "vendorType": "AWS_DB",
+              "name": "TestDatabricks",
+              "id": 2
+            },
+            {
+              "vendorType": "ApacheSpark",
+              "name": "Apache Standalone",
+              "id": 16
+            },
+            {
+              "vendorType": "ApacheSpark",
+              "name": "APACHE-YARN-LOCAL",
+              "id": 20
+            }
+          ],
+          "name": "Default_1730207943680"
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "GCSEmitter_342007"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "appType": "structuredstreaming,ssbatch",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "samplesource-channel",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "canChangeSchema": true,
+        "coordinates": [
+          10,
+          10
+        ],
+        "label": "Sample Source",
+        "inputDStreamType": "na",
+        "message": "",
+        "tags": [
+          "Sample Data",
+          "Dummy Data"
+        ],
+        "groupings": [],
+        "messageTypeId": "tracemessage",
+        "name": "SampleSource_863616",
+        "refreshMetadata": false,
+        "schemaIdentifier": "com.streamanalytix.engine.core.scheme.util.DefaultSchemaIdentifier",
+        "category": [
+          "Marketing"
+        ],
+        "config": {
+          "isBinaryFileUpload": false,
+          "recordsPerBatch": "100",
+          "sourceHeader": true,
+          "messageTypes": [
+            "SampleSource_863616"
+          ],
+          "channelPlugin": "com.streamanalytix.spark.ss.receiver.SampleSourceBatch",
+          "IsPiiEnable": false,
+          "delimiter": ",",
+          "multilineJson": false,
+          "configEdited": false,
+          "saxInspect": {
+            "autoInspectHdfsFilePath": "supermarket_sales-Sheet.csv",
+            "typeOfSchemaDetection": "fileUpload",
+            "datasetIds": {
+              "inputdatasetId": [],
+              "outputdatasetId": [
+                "SampleSource_863616"
+              ]
+            },
+            "detectSchema": false,
+            "header": true,
+            "referenceSchemaId": {
+              "inputSchemaId": [],
+              "outputSchemaId": [
+                "SampleSource_863616"
+              ]
+            },
+            "piiDetect": true,
+            "rowCount": 100,
+            "samplingMethod": "topN",
+            "triggerTime": "3 seconds"
+          },
+          "customJDBC": false,
+          "ignoreActionError": false,
+          "configureData": "uploadData",
+          "mvelfnclist": [],
+          "filePath": "supermarket_sales-Sheet.csv",
+          "datasetSelectVersion": "0",
+          "inspectAsBatch": true,
+          "filename": "",
+          "parserType": "DELIMITED",
+          "fieldMapping": {},
+          "repeatData": "false",
+          "datasetSelected": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "connectionConfig": {
+            "inferSchema": "false"
+          },
+          "expfldlst": "",
+          "operatorType": "receiver",
+          "subsystemName": "Test12_1740552677316"
+        }
+      }
+    ],
+    "name": "Test12_1740552677316",
+    "autoInspectSchema": {
+      "SampleSource_863616": [
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "InvoiceID",
+          "alias": "InvoiceID",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "Branch",
+          "alias": "Branch",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "City",
+          "alias": "City",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "CustomerType",
+          "alias": "CustomerType",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "Gender",
+          "alias": "Gender",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "ProductLine",
+          "alias": "ProductLine",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "UnitPrice",
+          "alias": "UnitPrice",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "Quantity",
+          "alias": "Quantity",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "Tax_5_percent",
+          "alias": "Tax_5_percent",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "Total",
+          "alias": "Total",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "Date",
+          "alias": "Date",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "Time",
+          "alias": "Time",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "Payment",
+          "alias": "Payment",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "Cogs",
+          "alias": "Cogs",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "GrossMarginPercentage",
+          "alias": "GrossMarginPercentage",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "GrossIncome",
+          "alias": "GrossIncome",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        },
+        {
+          "isTimestampField": "N",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "dataType": "java.lang.String",
+          "precision": 10,
+          "scale": 0,
+          "description": "",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isInputField": "Y",
+          "isPiiMasked": "",
+          "name": "Rating",
+          "alias": "Rating",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "selected": true
+        }
+      ]
+    },
+    "customFileNames": "supermarket_sales-Sheet.csv",
+    "status": "STOPPED",
+    "displayName": "Test12",
+    "description": "Test Git",
+    "partialConfig": {},
+    "clusterId": "-1",
+    "originalCustomJarName": "",
+    "projectDetails": {
+      "associatedAccounts": [
+        {
+          "vendorType": "AWS_DB",
+          "name": "TestDatabricks",
+          "id": 2
+        },
+        {
+          "vendorType": "ApacheSpark",
+          "name": "Apache Standalone",
+          "id": 16
+        },
+        {
+          "vendorType": "ApacheSpark",
+          "name": "APACHE-YARN-LOCAL",
+          "id": 20
+        }
+      ],
+      "createdBy": "yatish",
+      "projectDisplayName": "Default",
+      "sharedProject": false,
+      "name": "Default_1730207943680",
+      "projectName": "Default_1730207943680",
+      "projectId": "9397ae3e-53b2-4964-b42f-09398f140a20",
+      "projectVersion": 1
+    },
+    "topologySupervisors": [],
+    "createVersionRequestByUser": true,
+    "lockedBy": "",
+    "engine": "spark",
+    "alert": {
+      "added": [],
+      "updated": [],
+      "deleted": []
+    },
+    "appType": "etl",
+    "isReplayAlter": false,
+    "gitcommitid": "a205af62b1020b17f4d613514a37febbb36a8b6a",
+    "sessionId": "8756FB5D61B79EE8B6E4E1F5C427F1F1",
+    "gitcommiturl": "https://Aksmha@bitbucket.org/aksmha/gathr-pipeline-repo/commit/a205af62b1020b17f4d613514a37febbb36a8b6a",
+    "versionNumber": 5,
+    "structure": "pipeline",
+    "templateName": "",
+    "displayColumnsMap": {
+      "SampleSource_863616": {
+        "SampleSource_863616": {
+          "allCols": [],
+          "displayCols": [
+            "InvoiceID",
+            "Branch",
+            "City",
+            "CustomerType",
+            "Gender",
+            "ProductLine",
+            "UnitPrice",
+            "Quantity",
+            "Tax_5_percent",
+            "Total",
+            "Date",
+            "Time",
+            "Payment",
+            "Cogs",
+            "GrossMarginPercentage",
+            "GrossIncome",
+            "Rating"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "GCSEmitter_342007": {
+        "SampleSource_863616": {
+          "allCols": [],
+          "displayCols": [
+            "InvoiceID",
+            "Branch",
+            "City",
+            "CustomerType",
+            "Gender",
+            "ProductLine",
+            "UnitPrice",
+            "Quantity",
+            "Tax_5_percent",
+            "Total",
+            "Date",
+            "Time",
+            "Payment",
+            "Cogs",
+            "GrossMarginPercentage",
+            "GrossIncome",
+            "Rating"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      }
+    },
+    "isDraftSupported": false,
+    "tenantId": "11",
+    "config": {
+      "subnetSettingsName": "",
+      "checkPointDirectory": "/",
+      "enableCheckPoint": "false",
+      "isCustomerComputeEnabled": true,
+      "yarnAmCores": "1",
+      "batchDuration": "1000",
+      "executorCores": "2",
+      "userProvidedSparkOptions": "",
+      "poolNname": "FIFO",
+      "uiJson": {
+        "source": {
+          "images": [
+            "samplesource-channel.png"
+          ],
+          "all": [
+            "Sample Source"
+          ],
+          "count": ""
+        },
+        "target": {
+          "images": [
+            "GCS-emitter.png"
+          ],
+          "all": [
+            "GCS"
+          ],
+          "count": ""
+        }
+      },
+      "taskMaxFailures": "4",
+      "pendingRestartCount": "0",
+      "driverPermGenSize": "256",
+      "kPipelineId": "461a680f-71aa-4da2-8c88-7d64459bdb54",
+      "isImpersonationEnabled": false,
+      "isUnlimitedLicense": true,
+      "computeAccProjectName": "Default_1730207943680",
+      "receiverMaxRate": "",
+      "appCores": "2",
+      "enableBackPressure": "",
+      "isPipelineSchedulingEnabled": false,
+      "deploymentMode": "local",
+      "driverMemory": "512",
+      "isConnectionMissing": false,
+      "isMonitoringGraphsEnable": true,
+      "offset": -330,
+      "yarnAmMemory": "512",
+      "isAccumulatorDataPublishOnES": true,
+      "useDedicatedAlways": false,
+      "monitoringComponentList": [
+        "SampleSource_863616",
+        "GCSEmitter_342007"
+      ],
+      "accountId": 16,
+      "extraDriverJavaOptions": "",
+      "downloadKeytabFileLocation": "",
+      "connectionName": "",
+      "yarnQueue": "default",
+      "computeClusterType": "gathrCluster",
+      "vendorType": "ApacheSpark",
+      "eventLogDirectory": "/",
+      "initialExecutors": "0",
+      "driverCores": "1",
+      "yarnUser": "hdfs",
+      "dynamicAllocationEnabled": "false",
+      "clouderaLineage": false,
+      "extraExecutorJavaOptions": "",
+      "clusterId": "",
+      "isBatchPipeline": true,
+      "executorInstances": "1",
+      "waitRestartTime": "2",
+      "autoInspection": false,
+      "isDirty": true,
+      "logLevel": "INFO",
+      "useDedicatedCluster": false,
+      "engine": "spark",
+      "sharedCluster": false,
+      "eventLogEnabled": "false",
+      "captureRawData": true,
+      "vpcEndpointDNS": "",
+      "maxExecutors": "1",
+      "keyTabSelectOption": "specifyKeyTabFilePath",
+      "executorMemory": "512",
+      "ignoreConnectionTesting": false,
+      "isRestartRequired": false,
+      "extraSparkSubmitOptions": "",
+      "receiverRateLimiter": "none",
+      "statusAlertConfig": {
+        "isErrorHandlingRequired": false,
+        "targetStatus": [],
+        "errorLogTarget": "kafka",
+        "componentType": "",
+        "connectionName": "",
+        "connectionId": "",
+        "topicName": "",
+        "partitions": "1",
+        "replicationFactor": "1",
+        "topicAdministration": ""
+      },
+      "typeOfApplication": "structuredstreaming",
+      "regionId": "",
+      "maxRestartCount": 1,
+      "keyTabFilePath": "",
+      "zkKeyTabFileLocation": "",
+      "enableResourceAnalyzer": false,
+      "pipelineNotification": {
+        "errors": {},
+        "warnings": {
+          "GCSEmitter_342007": [
+            "\u003cspan class\u003d\"notification-comp-name\"\u003eGCS\u003c/span\u003e: component is not Inspected"
+          ]
+        },
+        "recommendations": {}
+      }
+    },
+    "subsystemName": "Test12_1740552677316",
+    "customJarName": ""
+  }
+}
