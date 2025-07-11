@@ -141,7 +141,7 @@
     "iscreatVersionChecked": false,
     "appDisplayName": "test_vikas_import_git",
     "tags": [],
-    "parentVersionNumber": 0,
+    "parentVersionNumber": 3,
     "configureEmail": false,
     "enableErrorHandler": true,
     "channels": [
@@ -609,7 +609,7 @@
     "status": "STOPPED",
     "description": "Test",
     "partialConfig": {},
-    "clusterId": "0",
+    "clusterId": "-1",
     "originalCustomJarName": "",
     "projectDetails": {
       "associatedAccounts": [
@@ -636,10 +636,10 @@
     },
     "appType": "etl",
     "isReplayAlter": false,
-    "gitcommitid": "45ae4a264eda24a79d046eadfba41f153c38c400",
+    "gitcommitid": "629f4e6ab79e211eb3ef3d062c8a8c5e07f2524b",
     "sessionId": "F7F8ED91FE269833BEEE4074B77DE983",
-    "gitcommiturl": "https://github.com/Apeksha204/Testing/commit/45ae4a264eda24a79d046eadfba41f153c38c400",
-    "versionNumber": 1,
+    "gitcommiturl": "https://Aksmha@bitbucket.org/aksmha/gathr-pipeline-repo/commit/629f4e6ab79e211eb3ef3d062c8a8c5e07f2524b",
+    "versionNumber": 4,
     "structure": "pipeline",
     "templateName": "",
     "displayColumnsMap": {
