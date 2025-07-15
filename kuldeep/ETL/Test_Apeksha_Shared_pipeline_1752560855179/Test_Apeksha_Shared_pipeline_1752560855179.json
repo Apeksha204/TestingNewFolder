@@ -1,0 +1,808 @@
+{
+  "internalJson": {
+    "httpSessionId": "A846E11042EE4614C24F2D14406ABAA8",
+    "isCustomerComputeEnabled": true,
+    "templateUsed": [],
+    "inspectType": "local",
+    "customJarBeforeModification": "",
+    "isDraft": false,
+    "addedJars": [],
+    "processors": [
+      {
+        "connectorId": "319",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "emitter",
+        "isStopRequest": false,
+        "messageTypes": [
+          "SampleSource_554574"
+        ],
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Shared_project_662348",
+          "projectDisplayName": "Shared_project",
+          "projectId": "b8bc91eb-25f0-4504-9b5b-17aebe556d09",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": [],
+          "name": "Shared_project_662348"
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "subtype": "",
+        "appType": "structuredstreaming",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "dummy-emitter",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "both",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          90,
+          10
+        ],
+        "label": "Placeholder",
+        "inputDStreamType": "both",
+        "currentAppType": "batch",
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "SampleSource_554574",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "DummyEmitter_135292",
+        "refreshMetadata": false,
+        "category": [
+          "File"
+        ],
+        "config": {
+          "processingTimeUnit": "seconds",
+          "IsPiiEnable": false,
+          "multilineJson": false,
+          "saxInspect": {
+            "datasetIds": {
+              "inputdatasetId": [
+                "SampleSource_554574"
+              ],
+              "outputdatasetId": [
+                "DummyEmitter_135292"
+              ]
+            },
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "SampleSource_554574"
+              ],
+              "outputSchemaId": [
+                "SampleSource_554574"
+              ]
+            }
+          },
+          "customJDBC": false,
+          "ignoreActionError": false,
+          "isTimeBasedCheckPoint": false,
+          "turnpikeName": "",
+          "mvelfnclist": [],
+          "isTurnPikeChild": "false",
+          "trigger": false,
+          "priority": 1,
+          "processingTime": "",
+          "checkpointLocation": "",
+          "checkpointConnectionId": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "outputmode": "append",
+          "connectionConfig": {},
+          "expfldlst": "",
+          "operatorType": "processor",
+          "checkpointConnectionType": "",
+          "executorPlugin": "com.streamanalytix.spark.ss.emitter.DummyEmitter",
+          "subsystemName": "Test_Apeksha_Shared_pipeline_1752560855179"
+        }
+      }
+    ],
+    "esperHAEnabled": false,
+    "id": "Test_Apeksha_Shared_pipeline_1752560855179",
+    "connections": [],
+    "emailIds": [],
+    "iscreatVersionChecked": false,
+    "appDisplayName": "Test_Apeksha_Shared_pipeline",
+    "tags": [],
+    "parentVersionNumber": 2,
+    "configureEmail": false,
+    "enableErrorHandler": true,
+    "channels": [
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "20",
+        "className": "com.streamanalytix.spark.ss.receiver.SparkSSReceiver",
+        "channelType": "single",
+        "isStopRequest": false,
+        "type": "channel",
+        "messageTypes": [
+          "SampleSource_554574"
+        ],
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Shared_project_662348",
+          "projectDisplayName": "Shared_project",
+          "projectId": "b8bc91eb-25f0-4504-9b5b-17aebe556d09",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": [],
+          "name": "Shared_project_662348"
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "DummyEmitter_135292"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "appType": "structuredstreaming,ssbatch",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "samplesource-channel",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "canChangeSchema": true,
+        "coordinates": [
+          10,
+          10
+        ],
+        "label": "Sample Source",
+        "inputDStreamType": "na",
+        "message": "",
+        "tags": [
+          "Sample Data",
+          "Dummy Data"
+        ],
+        "groupings": [],
+        "messageTypeId": "tracemessage",
+        "name": "SampleSource_554574",
+        "refreshMetadata": false,
+        "schemaIdentifier": "com.streamanalytix.engine.core.scheme.util.DefaultSchemaIdentifier",
+        "category": [
+          "Marketing"
+        ],
+        "config": {
+          "isBinaryFileUpload": false,
+          "recordsPerBatch": "100",
+          "sourceHeader": true,
+          "messageTypes": [
+            "SampleSource_554574"
+          ],
+          "channelPlugin": "com.streamanalytix.spark.ss.receiver.SampleSourceBatch",
+          "IsPiiEnable": false,
+          "delimiter": ",",
+          "multilineJson": false,
+          "configEdited": false,
+          "saxInspect": {
+            "autoInspectHdfsFilePath": "supermarket_sales-Sheet.csv",
+            "typeOfSchemaDetection": "fileUpload",
+            "datasetIds": {
+              "inputdatasetId": [],
+              "outputdatasetId": [
+                "SampleSource_554574"
+              ]
+            },
+            "detectSchema": false,
+            "header": true,
+            "referenceSchemaId": {
+              "inputSchemaId": [],
+              "outputSchemaId": [
+                "SampleSource_554574"
+              ]
+            },
+            "piiDetect": true,
+            "rowCount": 100,
+            "samplingMethod": "topN",
+            "triggerTime": "3 seconds"
+          },
+          "customJDBC": false,
+          "ignoreActionError": false,
+          "configureData": "uploadData",
+          "mvelfnclist": [],
+          "filePath": "supermarket_sales-Sheet.csv",
+          "datasetSelectVersion": "0",
+          "inspectAsBatch": true,
+          "filename": "",
+          "parserType": "DELIMITED",
+          "fieldMapping": {},
+          "repeatData": "false",
+          "datasetSelected": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "connectionConfig": {
+            "timestampFormat": "dd/MM/yyyy HH:mm:ss"
+          },
+          "expfldlst": "",
+          "operatorType": "receiver",
+          "subsystemName": "Test_Apeksha_Shared_pipeline_1752560855179"
+        }
+      }
+    ],
+    "name": "Test_Apeksha_Shared_pipeline_1752560855179",
+    "autoInspectSchema": {
+      "SampleSource_554574": [
+        {
+          "name": "InvoiceID",
+          "alias": "InvoiceID",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Branch",
+          "alias": "Branch",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "City",
+          "alias": "City",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "CustomerType",
+          "alias": "CustomerType",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Gender",
+          "alias": "Gender",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "ProductLine",
+          "alias": "ProductLine",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "UnitPrice",
+          "alias": "UnitPrice",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Quantity",
+          "alias": "Quantity",
+          "dataType": "java.lang.Integer",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Tax_5_percent",
+          "alias": "Tax_5_percent",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Total",
+          "alias": "Total",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Date",
+          "alias": "Date",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Time",
+          "alias": "Time",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Payment",
+          "alias": "Payment",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Cogs",
+          "alias": "Cogs",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "GrossMarginPercentage",
+          "alias": "GrossMarginPercentage",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "GrossIncome",
+          "alias": "GrossIncome",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Rating",
+          "alias": "Rating",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        }
+      ]
+    },
+    "customFileNames": "supermarket_sales-Sheet.csv",
+    "status": "STOPPED",
+    "description": "New",
+    "partialConfig": {},
+    "clusterId": "-1",
+    "originalCustomJarName": "",
+    "projectDetails": {
+      "associatedAccounts": [],
+      "createdBy": "kuldeep.chouhan",
+      "projectDisplayName": "Shared_project",
+      "sharedProject": false,
+      "name": "Shared_project_662348",
+      "projectName": "Shared_project_662348",
+      "projectId": "b8bc91eb-25f0-4504-9b5b-17aebe556d09",
+      "projectVersion": 1
+    },
+    "topologySupervisors": [],
+    "createVersionRequestByUser": true,
+    "engine": "spark",
+    "alert": {
+      "added": [],
+      "updated": [],
+      "deleted": []
+    },
+    "appType": "etl",
+    "isReplayAlter": false,
+    "gitcommitid": "e5762dabca1824917e7a2ba64a723fccb3b53093",
+    "sessionId": "A846E11042EE4614C24F2D14406ABAA8",
+    "gitcommiturl": "https://Aksmha@bitbucket.org/aksmha/gathr-pipeline-repo/commit/e5762dabca1824917e7a2ba64a723fccb3b53093",
+    "versionNumber": 3,
+    "structure": "pipeline",
+    "templateName": "",
+    "displayColumnsMap": {
+      "SampleSource_554574": {
+        "SampleSource_554574": {
+          "allCols": [],
+          "displayCols": [
+            "InvoiceID",
+            "Branch",
+            "City",
+            "CustomerType",
+            "Gender",
+            "ProductLine",
+            "UnitPrice",
+            "Quantity",
+            "Tax_5_percent",
+            "Total",
+            "Date",
+            "Time",
+            "Payment",
+            "Cogs",
+            "GrossMarginPercentage",
+            "GrossIncome",
+            "Rating"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "DummyEmitter_135292": {
+        "SampleSource_554574": {
+          "allCols": [],
+          "displayCols": [
+            "InvoiceID",
+            "Branch",
+            "City",
+            "CustomerType",
+            "Gender",
+            "ProductLine",
+            "UnitPrice",
+            "Quantity",
+            "Tax_5_percent",
+            "Total",
+            "Date",
+            "Time",
+            "Payment",
+            "Cogs",
+            "GrossMarginPercentage",
+            "GrossIncome",
+            "Rating"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      }
+    },
+    "isDraftSupported": false,
+    "tenantId": "9",
+    "config": {
+      "subnetSettingsName": "",
+      "checkPointDirectory": "/",
+      "enableCheckPoint": "false",
+      "isCustomerComputeEnabled": true,
+      "yarnAmCores": "1",
+      "batchDuration": "1000",
+      "dataValidationExecutionMode": "sequential",
+      "executorCores": "2",
+      "userProvidedSparkOptions": "",
+      "uploadKeyTabFile": "",
+      "poolNname": "FIFO",
+      "uiJson": {
+        "source": {
+          "images": [
+            "samplesource-channel.png"
+          ],
+          "all": [
+            "Sample Source"
+          ],
+          "count": ""
+        },
+        "target": {
+          "images": [
+            "dummy-emitter.png"
+          ],
+          "all": [
+            "Placeholder"
+          ],
+          "count": ""
+        }
+      },
+      "taskMaxFailures": "4",
+      "pendingRestartCount": "0",
+      "driverPermGenSize": "256",
+      "extraSparkGpuProperty": "--conf spark.executor.resource.gpu.amount\u003d1 --conf spark.executor.resource.gpu.vendor\u003dnvidia.com --conf spark.task.resource.gpu.amount\u003d0.1 --conf spark.kubernetes.node.selector.\u0027nvidia.com/gpu.present\u0027\u003dtrue",
+      "kPipelineId": "c9936c30-86b3-49fc-9e94-1f4db0a3dc8f",
+      "isImpersonationEnabled": false,
+      "isUnlimitedLicense": true,
+      "computeAccProjectName": "Shared_project_662348",
+      "receiverMaxRate": "",
+      "id": "",
+      "appCores": "2",
+      "enableBackPressure": "",
+      "deploymentMode": "local",
+      "driverMemory": "512",
+      "isConnectionMissing": false,
+      "isMonitoringGraphsEnable": true,
+      "offset": -330,
+      "entityType": "cluster",
+      "yarnAmMemory": "512",
+      "isAccumulatorDataPublishOnES": true,
+      "gpuAffinity": false,
+      "useDedicatedAlways": false,
+      "monitoringComponentList": [
+        "SampleSource_554574",
+        "DummyEmitter_135292"
+      ],
+      "accountId": "",
+      "extraDriverJavaOptions": "",
+      "downloadKeytabFileLocation": "",
+      "connectionName": "",
+      "yarnQueue": "default",
+      "computeClusterType": "gathrCluster",
+      "vendorType": "local",
+      "eventLogDirectory": "/",
+      "initialExecutors": 0,
+      "driverCores": "1",
+      "yarnUser": "kuldeep.chouhan",
+      "dynamicAllocationEnabled": "false",
+      "clouderaLineage": false,
+      "extraExecutorJavaOptions": "",
+      "clusterId": "0",
+      "isBatchPipeline": true,
+      "executorInstances": 1,
+      "waitRestartTime": "2",
+      "autoInspection": false,
+      "isDirty": false,
+      "logLevel": "INFO",
+      "useDedicatedCluster": false,
+      "engine": "spark",
+      "clusterName": "",
+      "sharedCluster": false,
+      "eventLogEnabled": "false",
+      "captureRawData": true,
+      "vpcEndpointDNS": "",
+      "maxExecutors": 1,
+      "keyTabSelectOption": "",
+      "executorMemory": "512",
+      "ignoreConnectionTesting": false,
+      "isRestartRequired": false,
+      "extraSparkSubmitOptions": "",
+      "receiverRateLimiter": "none",
+      "statusAlertConfig": {
+        "isErrorHandlingRequired": false,
+        "targetStatus": [],
+        "errorLogTarget": "kafka",
+        "componentType": "",
+        "connectionName": "",
+        "connectionId": "",
+        "topicName": "",
+        "partitions": "1",
+        "replicationFactor": "1",
+        "topicAdministration": ""
+      },
+      "typeOfApplication": "structuredstreaming",
+      "regionId": "",
+      "maxRestartCount": 1,
+      "keyTabFilePath": "",
+      "zkKeyTabFileLocation": "",
+      "enableResourceAnalyzer": false,
+      "userKrbPrincipal": "",
+      "pipelineNotification": {
+        "errors": {},
+        "warnings": {},
+        "recommendations": {}
+      }
+    },
+    "subsystemName": "Test_Apeksha_Shared_pipeline_1752560855179",
+    "customJarName": ""
+  }
+}
