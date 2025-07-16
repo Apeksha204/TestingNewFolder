@@ -1,0 +1,1295 @@
+{
+  "internalJson": {
+    "httpSessionId": "FA983B8B464812FA3DFECDF2DA53C491",
+    "inspectType": "local",
+    "customJarBeforeModification": "",
+    "isDraft": false,
+    "processors": [
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "286",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "processor",
+        "isStopRequest": false,
+        "messageTypes": [
+          "S3BatchChannel_119765"
+        ],
+        "projectDetails": {
+          "associatedAccounts": [],
+          "createdBy": "kuldeep.chouhan",
+          "projectDisplayName": "Default",
+          "sharedProject": false,
+          "projectName": "Default_1730098071421",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "projectVersion": 1
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "OpenAIProcessor_564227"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "appType": "structuredstreaming",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "pdfparser-processor",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "queueName": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "canChangeSchema": "true",
+        "coordinates": [
+          90,
+          -10
+        ],
+        "label": "PDF Parser",
+        "inputDStreamType": "plain",
+        "message": "",
+        "tags": [
+          "PDF",
+          "Split Pages",
+          "Split Sections",
+          "Split Words",
+          "Split Lines"
+        ],
+        "sourceType": "business",
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "S3BatchChannel_119765",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "PDFParser_205596",
+        "refreshMetadata": false,
+        "isPremium": false,
+        "category": [
+          "File"
+        ],
+        "config": {
+          "imageFormat": "PNG",
+          "contentTypeColumn": "contentType",
+          "dropInputColumn": true,
+          "datasetNewAssociation": false,
+          "imgAddString": "_",
+          "imgPagePrefix": "PageNo_",
+          "additionalString": "_",
+          "doNotMaskLargeColumn": true,
+          "password": "",
+          "sectionPrefix": "SectionNo_",
+          "isPasswordProtected": "false",
+          "failureColumn": "None",
+          "delimiter": "",
+          "saxInspect": {
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "S3BatchChannel_119765"
+              ],
+              "outputSchemaId": [
+                "PDFParser_205596"
+              ]
+            },
+            "datasetIds": {
+              "inputdatasetId": [
+                "S3BatchChannel_119765"
+              ],
+              "outputdatasetId": [
+                "PDFParser_205596"
+              ]
+            },
+            "detectSchema": false
+          },
+          "customJDBC": false,
+          "numberoflines": "",
+          "contentColumn": "content",
+          "failedContentColumn": "None",
+          "textcount": "",
+          "isEncoded": "true",
+          "mvelfnclist": [],
+          "overlapCount": "",
+          "inputColumn": "base64EncodedBinaryContent",
+          "splitoptions": "doNotSplit",
+          "outputMessage": "S3BatchChannel_119765",
+          "sectionColumn": "section",
+          "pagePrefix": "PageNo_",
+          "parentTag": "/",
+          "numbersOfCharacters": "",
+          "imgNumPrefix": "ImageNo_",
+          "extractImages": "false",
+          "numbersOfWords": "",
+          "connectionConfig": {},
+          "expfldlst": "",
+          "operatorType": "processor",
+          "executorPlugin": "com.streamanalytix.spark.ss.processor.PDFParser",
+          "subsystemName": "Import_OpenAI_1730698370859"
+        }
+      },
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "287",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "processor",
+        "isStopRequest": false,
+        "connectionType": "openai",
+        "messageTypes": [
+          "PDFParser_205596"
+        ],
+        "projectDetails": {
+          "associatedAccounts": [],
+          "createdBy": "kuldeep.chouhan",
+          "projectDisplayName": "Default",
+          "sharedProject": false,
+          "projectName": "Default_1730098071421",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "projectVersion": 1
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "S3emitter_588442"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "appType": "batch,streaming",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "openai-processor",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "queueName": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "canChangeSchema": "true",
+        "coordinates": [
+          170,
+          -10
+        ],
+        "label": "OpenAI",
+        "inputDStreamType": "plain",
+        "tags": [
+          "Natural Language",
+          "NLP",
+          "Artificial Intelligence",
+          "PDF",
+          "Summarizer",
+          "Classification",
+          "Sentiment Analysis",
+          "Entity Extraction"
+        ],
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "PDFParser_205596",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "OpenAIProcessor_564227",
+        "refreshMetadata": false,
+        "isPremium": false,
+        "category": [
+          "ML"
+        ],
+        "config": {
+          "batchMaxTokenCount": 600000,
+          "wait": 60,
+          "numberOfPartition": 5,
+          "datasetNewAssociation": false,
+          "startMarker": "{",
+          "responseFormat": "json",
+          "additionalUserPrompt": "Please provide valid json response.",
+          "openAIComponentId": "openai",
+          "retryDelay": 1,
+          "presencePenalty": 0.6,
+          "outputColumn": "",
+          "endMarker": "}",
+          "saxInspect": {
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "PDFParser_205596"
+              ],
+              "outputSchemaId": [
+                "OpenAIProcessor_564227"
+              ]
+            },
+            "datasetIds": {
+              "inputdatasetId": [
+                "PDFParser_205596"
+              ],
+              "outputdatasetId": [
+                "OpenAIProcessor_564227"
+              ]
+            },
+            "detectSchema": false
+          },
+          "maxTokens": 500,
+          "temperature": 1,
+          "customJDBC": false,
+          "batchMaxRequestCount": 5000,
+          "model": "gpt-4o",
+          "frequencyPenalty": 1,
+          "batchMaxTime": 60,
+          "connectionTimeout": 120,
+          "stopSequence": [],
+          "userPrompt": "{Content}",
+          "inputKeysColumn": [
+            {
+              "key": "Content",
+              "columnName": "content"
+            }
+          ],
+          "outputKeysColumn": [
+            {
+              "key": "Names",
+              "columnName": "names"
+            },
+            {
+              "key": "Emails",
+              "columnName": "emails"
+            },
+            {
+              "key": "Skills",
+              "columnName": "skills"
+            },
+            {
+              "key": "Phones",
+              "columnName": "Phones"
+            },
+            {
+              "key": "Experience",
+              "columnName": "Experience"
+            }
+          ],
+          "retryCount": 10,
+          "mvelfnclist": [],
+          "includeResponseInRetry": true,
+          "topP": 1,
+          "isRetryEnabled": true,
+          "systemPrompt": "Extract the following fields from the content below. Output must be JSON and should only contain the following keys:\n\nNames: Comma-separated list of names used in content provided below.\nEmails: Comma-separated list of emails referred to in the content provided below\nSkills: Comma-separated list of skills referred to in the content provided below\nPhone: Comma-separated list of phones referred to in the content provided below\nExperience: Comma-separated list of Experience summary referred to in the content provided below\n\n\nDo not include any explanations, only provide a  RFC8259 compliant JSON response following this format without deviation.\n\n{\n\"Names\":\"Comma-separated list of names\",\n\"Emails\": \"Comma-separated list of emails\",\n\"Skills\": \"Comma-separated list of Skills\",\n\"Phones\": \"Comma-separated list of Phones\",\n\"Experience\": \"Comma-separated list of Experience summary\",\n}",
+          "outputMessage": "PDFParser_205596",
+          "parentTag": "/",
+          "modelExtraConfig": [],
+          "readTimeout": 120,
+          "connectionConfig": {},
+          "connectionId": "84f75c91-be07-4e77-bf95-186de007beed",
+          "retryValidateKeys": [
+            "Names",
+            "Emails",
+            "Skills"
+          ],
+          "expfldlst": "",
+          "connectionName": "openAI",
+          "operatorType": "processor",
+          "executorPlugin": "com.streamanalytix.spark.ss.processor.OpenAIProcessor",
+          "subsystemName": "Import_OpenAI_1730698370859",
+          "retryWhen": "any"
+        }
+      },
+      {
+        "connectorId": "2",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "emitter",
+        "isStopRequest": false,
+        "connectionType": "s3",
+        "messageTypes": [
+          "OpenAIProcessor_564227"
+        ],
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectDisplayName": "Default",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": []
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "subtype": "",
+        "appType": "structuredstreaming",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "s3-emitter",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "both",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "queueName": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          250,
+          -10
+        ],
+        "label": "S3",
+        "inputDStreamType": "both",
+        "currentAppType": "batch",
+        "message": "",
+        "tags": [
+          "S3 Integration",
+          "Cloud Storage",
+          "Data Storage",
+          "Object Storage",
+          "AWS S3 Integration",
+          "File Storage",
+          "Cloud Data Storage",
+          "AWS"
+        ],
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "OpenAIProcessor_564227",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "S3emitter_588442",
+        "refreshMetadata": false,
+        "isPremium": false,
+        "category": [
+          "File"
+        ],
+        "config": {
+          "bucketName": "anirkhe115",
+          "datasetNewAssociation": false,
+          "partitionColumnsList": [],
+          "outputMode": "append",
+          "processingTimeUnit": "",
+          "path": "/KD/unlimited/openAI_Import",
+          "endpoint": "",
+          "scdJoinColumns": "",
+          "delimiter": "|",
+          "saxInspect": {
+            "header": true,
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "OpenAIProcessor_564227"
+              ],
+              "outputSchemaId": [
+                "OpenAIProcessor_564227"
+              ]
+            },
+            "datasetIds": {
+              "inputdatasetId": [
+                "OpenAIProcessor_564227"
+              ],
+              "outputdatasetId": [
+                "S3emitter_588442"
+              ]
+            }
+          },
+          "customJDBC": false,
+          "s3Protocol": "s3a",
+          "ignoreActionError": false,
+          "useCustomFilename": false,
+          "isTimeBasedCheckPoint": false,
+          "turnpikeName": "",
+          "mvelfnclist": [],
+          "format": "csv",
+          "customFileName": "",
+          "columnList": [
+            "names",
+            "emails",
+            "skills",
+            "Phones",
+            "Experience",
+            "status",
+            "error"
+          ],
+          "isTurnPikeChild": "false",
+          "trigger": false,
+          "scdType": "",
+          "priority": 1,
+          "processingTime": "",
+          "endPoint": "",
+          "partioningRequired": "",
+          "saveMode": "append",
+          "checkpointLocation": "",
+          "checkpointConnectionId": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "connectionId": "s3default-0853-42cc-aa7b-2cb6c84780f",
+          "header": true,
+          "connectionConfig": {},
+          "expfldlst": "",
+          "connectionName": "s3_default",
+          "operatorType": "processor",
+          "checkpointConnectionType": "",
+          "executorPlugin": "com.streamanalytix.spark.ss.emitter.S3Emitter",
+          "subsystemName": "Import_OpenAI_1730698370859",
+          "scdEnabled": "false"
+        }
+      }
+    ],
+    "esperHAEnabled": false,
+    "isLocked": false,
+    "id": "Import_OpenAI_1730698370859",
+    "connections": [
+      "84f75c91-be07-4e77-bf95-186de007beed",
+      "s3default-0853-42cc-aa7b-2cb6c84780f",
+      "s3default-0853-42cc-aa7b-2cb6c84780f"
+    ],
+    "emailIds": [],
+    "iscreatVersionChecked": false,
+    "appDisplayName": "Import_OpenAI",
+    "lockedDate": "",
+    "tags": [],
+    "parentVersionNumber": 5,
+    "configureEmail": false,
+    "customJarStatus": "",
+    "enableErrorHandler": true,
+    "channels": [
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "2",
+        "className": "com.streamanalytix.spark.ss.receiver.SparkSSReceiver",
+        "channelType": "single",
+        "isStopRequest": false,
+        "type": "channel",
+        "connectionType": "s3",
+        "messageTypes": [
+          "S3BatchChannel_119765"
+        ],
+        "projectDetails": {
+          "associatedAccounts": [],
+          "createdBy": "kuldeep.chouhan",
+          "projectDisplayName": "Default",
+          "sharedProject": false,
+          "projectName": "Default_1730098071421",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "projectVersion": 1
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "PDFParser_205596"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "appType": "structuredstreaming,ssbatch",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "S3-Batch-channel",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "queueName": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          10,
+          -10
+        ],
+        "label": "S3 Batch",
+        "inputDStreamType": "na",
+        "message": "",
+        "tags": [
+          "S3 Batch Processing",
+          "Cloud Storage",
+          "Data Storage",
+          "Object Storage",
+          "AWS S3 Integration",
+          "File Storage",
+          "Cloud Data Storage",
+          "AWS ",
+          "Batch Data Processing",
+          "AWS Batch Integration"
+        ],
+        "groupings": [],
+        "messageTypeId": "tracemessage",
+        "name": "S3BatchChannel_119765",
+        "refreshMetadata": false,
+        "schemaIdentifier": "com.streamanalytix.engine.core.scheme.util.DefaultSchemaIdentifier",
+        "isPremium": false,
+        "category": [
+          "File"
+        ],
+        "config": {
+          "isBinaryFileUpload": false,
+          "bucketName": "anirkhe115",
+          "datasetNewAssociation": false,
+          "readBy": "fileModificationTime",
+          "extraConf": {
+            "cdcErrorAlert": false
+          },
+          "isBatch": "false",
+          "sourceHeader": true,
+          "channelPlugin": "com.streamanalytix.spark.ss.receiver.S3BatchSource",
+          "pathGlobFilter": "",
+          "path": "/KD/Resumes",
+          "enableIncrementalRead": false,
+          "delimiter": ",",
+          "saxInspect": {
+            "typeOfSchemaDetection": "readFromSource",
+            "datasetIds": {
+              "inputdatasetId": [],
+              "outputdatasetId": [
+                "S3BatchChannel_119765"
+              ]
+            },
+            "detectSchema": false,
+            "header": true,
+            "referenceSchemaId": {
+              "inputSchemaId": [],
+              "outputSchemaId": [
+                "S3BatchChannel_119765"
+              ]
+            },
+            "rowCount": 100,
+            "samplingMethod": "topN",
+            "triggerTime": "3 seconds"
+          },
+          "customJDBC": false,
+          "s3Protocol": "S3a",
+          "recursiveFileLookup": "",
+          "ignoreActionError": false,
+          "datasetTransformer": "com.streamanalytix.bs.dataset.service.impl.S3ChannelDSTransformer",
+          "appDisplayName": "",
+          "mvelfnclist": [],
+          "maxValue": "",
+          "datasetName": "",
+          "column": "",
+          "incrementalOffset": {
+            "readBy": "fileModificationTime",
+            "hdfstValue": "",
+            "column": "",
+            "currentValue": "",
+            "readControlType": "none",
+            "maxValue": "",
+            "incrementSize": "",
+            "enableIncrementalRead": false,
+            "inclusiveStartOffset": false,
+            "manualColumn": false
+          },
+          "datasetSelectVersion": "0",
+          "readControlType": "none",
+          "endPoint": "",
+          "parserType": "binaryFile",
+          "datasetSelected": "",
+          "datasetSourceType": "S3",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "isBatchEnabled": true,
+          "connectionConfig": {},
+          "connectionId": "s3default-0853-42cc-aa7b-2cb6c84780f",
+          "expfldlst": "",
+          "connectionName": "s3_default",
+          "operatorType": "receiver",
+          "saveAsDataset": false,
+          "incrementSize": "",
+          "subsystemName": "Import_OpenAI_1730698370859"
+        }
+      }
+    ],
+    "name": "Import_OpenAI_1730698370859",
+    "autoInspectSchema": {
+      "S3BatchChannel_119765": [
+        {
+          "name": "path",
+          "alias": "path",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "modificationTime",
+          "alias": "modificationTime",
+          "dataType": "java.sql.Timestamp",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "length",
+          "alias": "length",
+          "dataType": "java.lang.Integer",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "base64EncodedBinaryContent",
+          "alias": "base64EncodedBinaryContent",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        }
+      ],
+      "OpenAIProcessor_564227": [
+        {
+          "name": "path",
+          "alias": "path",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "modificationTime",
+          "alias": "modificationTime",
+          "dataType": "java.sql.Timestamp",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "length",
+          "alias": "length",
+          "dataType": "java.lang.Integer",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "content",
+          "alias": "content",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "contentType",
+          "alias": "contentType",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "section",
+          "alias": "section",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "names",
+          "alias": "names",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "emails",
+          "alias": "emails",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "skills",
+          "alias": "skills",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "Phones",
+          "alias": "Phones",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "Experience",
+          "alias": "Experience",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "status",
+          "alias": "status",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "error",
+          "alias": "error",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        }
+      ],
+      "PDFParser_205596": [
+        {
+          "name": "path",
+          "alias": "path",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "modificationTime",
+          "alias": "modificationTime",
+          "dataType": "java.sql.Timestamp",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "length",
+          "alias": "length",
+          "dataType": "java.lang.Integer",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "content",
+          "alias": "content",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "contentType",
+          "alias": "contentType",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "section",
+          "alias": "section",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        }
+      ]
+    },
+    "customFileNames": "",
+    "status": "ERROR",
+    "failedReason": "",
+    "isCustomerDatabrickComputeEnabled": false,
+    "description": "Test_import_git",
+    "partialConfig": {},
+    "clusterId": "0",
+    "originalCustomJarName": "",
+    "projectDetails": {
+      "associatedAccounts": [
+        {
+          "vendorType": "ApacheSpark",
+          "name": "kd-cluster",
+          "id": 14
+        }
+      ],
+      "createdBy": "kuldeep.chouhan",
+      "projectDisplayName": "Default",
+      "sharedProject": false,
+      "name": "Default_1730098071421",
+      "projectName": "Default_1730098071421",
+      "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+      "projectVersion": 1
+    },
+    "topologySupervisors": [],
+    "createVersionRequestByUser": true,
+    "lockedBy": "",
+    "engine": "spark",
+    "alert": {
+      "added": [],
+      "updated": [],
+      "deleted": []
+    },
+    "appType": "etl",
+    "isReplayAlter": false,
+    "gitcommitid": "71fb75d4c1cb8865b8cab99835843d8136ce0dbe",
+    "date_created": 1730699449127,
+    "sessionId": "FA983B8B464812FA3DFECDF2DA53C491",
+    "gitcommiturl": "https://Aksmha@bitbucket.org/aksmha/gathr-pipeline-repo/commit/71fb75d4c1cb8865b8cab99835843d8136ce0dbe",
+    "versionNumber": 6,
+    "structure": "pipeline",
+    "templateName": "",
+    "displayColumnsMap": {
+      "S3BatchChannel_119765": {
+        "S3BatchChannel_119765": {
+          "allCols": [],
+          "displayCols": [
+            "path",
+            "modificationTime",
+            "length",
+            "base64EncodedBinaryContent"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "PDFParser_205596": {
+        "PDFParser_205596": {
+          "allCols": [],
+          "displayCols": [
+            "path",
+            "modificationTime",
+            "length",
+            "content",
+            "contentType",
+            "section"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "OpenAIProcessor_564227": {
+        "OpenAIProcessor_564227": {
+          "allCols": [],
+          "displayCols": [
+            "path",
+            "modificationTime",
+            "length",
+            "content",
+            "contentType",
+            "section",
+            "names",
+            "emails",
+            "skills",
+            "Phones",
+            "Experience",
+            "status",
+            "error"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "S3emitter_588442": {
+        "OpenAIProcessor_564227": {
+          "allCols": [],
+          "displayCols": [
+            "path",
+            "modificationTime",
+            "length",
+            "content",
+            "contentType",
+            "section",
+            "names",
+            "emails",
+            "skills",
+            "Phones",
+            "Experience",
+            "status",
+            "error"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      }
+    },
+    "isDraftSupported": false,
+    "tenantId": "9",
+    "isErrorModeNotified": false,
+    "config": {
+      "subnetSettingsName": "",
+      "checkPointDirectory": "/",
+      "enableCheckPoint": "false",
+      "yarnAmCores": "1",
+      "batchDuration": "1000",
+      "executorCores": "2",
+      "userProvidedSparkOptions": "",
+      "action_failure_reason": "",
+      "poolNname": "FIFO",
+      "uiJson": {
+        "source": {
+          "images": [
+            "S3-Batch-channel.png"
+          ],
+          "all": [
+            "S3 Batch"
+          ],
+          "count": ""
+        },
+        "target": {
+          "images": [
+            "s3-emitter.png"
+          ],
+          "all": [
+            "S3"
+          ],
+          "count": ""
+        }
+      },
+      "taskMaxFailures": "4",
+      "pendingRestartCount": "0",
+      "driverPermGenSize": "512",
+      "kPipelineId": "356a618e-41c0-43fb-95f3-1f9c0398cca7",
+      "isImpersonationEnabled": false,
+      "receiverMaxRate": "",
+      "appCores": "2",
+      "enableBackPressure": "",
+      "isPipelineSchedulingEnabled": false,
+      "deploymentMode": "yarn-cluster",
+      "driverMemory": "512",
+      "isConnectionMissing": false,
+      "isMonitoringGraphsEnable": true,
+      "offset": -330,
+      "yarnAmMemory": "512",
+      "isAccumulatorDataPublishOnES": true,
+      "useDedicatedAlways": false,
+      "monitoringComponentList": [
+        "S3BatchChannel_119765",
+        "PDFParser_205596",
+        "OpenAIProcessor_564227",
+        "S3emitter_588442"
+      ],
+      "endAt": "",
+      "accountId": 14,
+      "extraDriverJavaOptions": "",
+      "usingExternalSchema": false,
+      "downloadKeytabFileLocation": "",
+      "connectionName": "",
+      "yarnQueue": "default",
+      "computeClusterType": "gathrCluster",
+      "vendorType": "ApacheSpark",
+      "eventLogDirectory": "/",
+      "initialExecutors": "0",
+      "driverCores": "1",
+      "isCustomerDatabrickComputeEnabled": false,
+      "yarnUser": "kuldeep.chouhan",
+      "dynamicAllocationEnabled": "false",
+      "clouderaLineage": false,
+      "extraExecutorJavaOptions": "",
+      "clusterId": "0",
+      "isBatchPipeline": true,
+      "executorInstances": "1",
+      "waitRestartTime": "2",
+      "autoInspection": false,
+      "isDirty": false,
+      "logLevel": "INFO",
+      "useDedicatedCluster": false,
+      "engine": "spark",
+      "sharedCluster": false,
+      "eventLogEnabled": "false",
+      "captureRawData": true,
+      "vpcEndpointDNS": "",
+      "maxExecutors": "-1",
+      "keyTabSelectOption": "specifyKeyTabFilePath",
+      "executorMemory": "512",
+      "ignoreConnectionTesting": false,
+      "isRestartRequired": false,
+      "extraSparkSubmitOptions": "",
+      "scheduleNote": "",
+      "receiverRateLimiter": "none",
+      "statusAlertConfig": {
+        "isErrorHandlingRequired": false,
+        "targetStatus": [],
+        "errorLogTarget": "kafka",
+        "componentType": "",
+        "connectionName": "",
+        "connectionId": "",
+        "topicName": "",
+        "partitions": "1",
+        "replicationFactor": "1",
+        "topicAdministration": ""
+      },
+      "userTimeZone": "",
+      "cronExpression": "",
+      "typeOfApplication": "structuredstreaming",
+      "regionId": "",
+      "maxRestartCount": 1,
+      "keyTabFilePath": "",
+      "zkKeyTabFileLocation": "",
+      "enableResourceAnalyzer": false,
+      "pipelineNotification": {
+        "errors": {},
+        "warnings": {},
+        "recommendations": {}
+      }
+    },
+    "subsystemName": "Import_OpenAI_1730698370859",
+    "customJarName": ""
+  }
+}
