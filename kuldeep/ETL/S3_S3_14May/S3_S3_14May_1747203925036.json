@@ -1,0 +1,669 @@
+{
+  "internalJson": {
+    "httpSessionId": "4E9E9BAFBAB95945F2A5F8799FBA61E7",
+    "isCustomerComputeEnabled": true,
+    "templateUsed": [],
+    "inspectType": "local",
+    "customJarBeforeModification": "",
+    "isDraft": false,
+    "addedJars": [],
+    "processors": [
+      {
+        "connectorId": "2",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "emitter",
+        "isStopRequest": false,
+        "connectionType": "s3",
+        "messageTypes": [
+          "S3BatchChannel_843373"
+        ],
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "ProjectForVikas_454419",
+          "projectDisplayName": "ProjectForVikas",
+          "projectId": "63fae6da-4338-49fe-b9a6-8ff01bcb2f40",
+          "sharedProject": true,
+          "projectVersion": 1,
+          "associatedAccounts": [
+            {
+              "vendorType": "ApacheSpark",
+              "name": "kd-cluster",
+              "id": 14
+            },
+            {
+              "vendorType": "GCP",
+              "name": "ApekshaGCPFinal",
+              "id": 12
+            }
+          ],
+          "name": "ProjectForVikas_454419"
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "subtype": "",
+        "appType": "structuredstreaming",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "s3-emitter",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "both",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          90,
+          10
+        ],
+        "label": "S3",
+        "inputDStreamType": "both",
+        "currentAppType": "batch",
+        "message": "",
+        "tags": [
+          "S3 Integration",
+          "Cloud Storage",
+          "Data Storage",
+          "Object Storage",
+          "AWS S3 Integration",
+          "File Storage",
+          "Cloud Data Storage",
+          "AWS"
+        ],
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "S3BatchChannel_843373",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "S3emitter_782975",
+        "refreshMetadata": false,
+        "category": [
+          "File"
+        ],
+        "config": {
+          "bucketName": "anirkhe115",
+          "partitionColumnsList": [],
+          "outputMode": "append",
+          "compressionType": "none",
+          "processingTimeUnit": "",
+          "path": "ApekshaSaas/",
+          "IsPiiEnable": false,
+          "endpoint": "",
+          "scdJoinColumns": "",
+          "multilineJson": false,
+          "delimiter": "|",
+          "saxInspect": {
+            "datasetIds": {
+              "inputdatasetId": [
+                "S3BatchChannel_843373"
+              ],
+              "outputdatasetId": [
+                "S3emitter_782975"
+              ]
+            },
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "S3BatchChannel_843373"
+              ],
+              "outputSchemaId": [
+                "S3BatchChannel_843373"
+              ]
+            }
+          },
+          "customJDBC": false,
+          "s3Protocol": "s3a",
+          "ignoreActionError": false,
+          "useCustomFilename": false,
+          "isTimeBasedCheckPoint": false,
+          "turnpikeName": "",
+          "mvelfnclist": [],
+          "format": "csv",
+          "customFileName": "",
+          "columnList": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species"
+          ],
+          "isTurnPikeChild": "false",
+          "trigger": false,
+          "scdType": "",
+          "priority": 1,
+          "processingTime": "",
+          "endPoint": "",
+          "partioningRequired": "",
+          "saveMode": "append",
+          "checkpointLocation": "",
+          "checkpointConnectionId": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "connectionId": "s3default-0853-42cc-aa7b-2cb6c84780f",
+          "header": true,
+          "connectionConfig": {},
+          "expfldlst": "",
+          "connectionName": "s3_default",
+          "operatorType": "processor",
+          "checkpointConnectionType": "hdfs",
+          "executorPlugin": "com.streamanalytix.spark.ss.emitter.S3Emitter",
+          "subsystemName": "S3_S3_14May_1747203925036",
+          "scdEnabled": "false"
+        }
+      }
+    ],
+    "esperHAEnabled": false,
+    "id": "S3_S3_14May_1747203925036",
+    "connections": [
+      "s3default-0853-42cc-aa7b-2cb6c84780f",
+      "s3default-0853-42cc-aa7b-2cb6c84780f"
+    ],
+    "emailIds": [],
+    "iscreatVersionChecked": false,
+    "appDisplayName": "S3_S3_14May",
+    "tags": [],
+    "parentVersionNumber": 1,
+    "configureEmail": false,
+    "enableErrorHandler": true,
+    "channels": [
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "2",
+        "className": "com.streamanalytix.spark.ss.receiver.SparkSSReceiver",
+        "channelType": "single",
+        "isStopRequest": false,
+        "type": "channel",
+        "connectionType": "s3",
+        "messageTypes": [
+          "S3BatchChannel_843373"
+        ],
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "ProjectForVikas_454419",
+          "projectDisplayName": "ProjectForVikas",
+          "projectId": "63fae6da-4338-49fe-b9a6-8ff01bcb2f40",
+          "sharedProject": true,
+          "projectVersion": 1,
+          "associatedAccounts": [
+            {
+              "vendorType": "ApacheSpark",
+              "name": "kd-cluster",
+              "id": 14
+            },
+            {
+              "vendorType": "GCP",
+              "name": "ApekshaGCPFinal",
+              "id": 12
+            }
+          ],
+          "name": "ProjectForVikas_454419"
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "S3emitter_782975"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "appType": "structuredstreaming,ssbatch",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "S3-Batch-channel",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          10,
+          10
+        ],
+        "label": "S3 Batch",
+        "inputDStreamType": "na",
+        "message": "",
+        "tags": [
+          "S3 Batch Processing",
+          "Cloud Storage",
+          "Data Storage",
+          "Object Storage",
+          "AWS S3 Integration",
+          "File Storage",
+          "Cloud Data Storage",
+          "AWS ",
+          "Batch Data Processing",
+          "AWS Batch Integration"
+        ],
+        "groupings": [],
+        "messageTypeId": "tracemessage",
+        "name": "S3BatchChannel_843373",
+        "refreshMetadata": false,
+        "schemaIdentifier": "com.streamanalytix.engine.core.scheme.util.DefaultSchemaIdentifier",
+        "category": [
+          "File"
+        ],
+        "config": {
+          "bucketName": "anirkhe115",
+          "readBy": "fileModificationTime",
+          "sourceHeader": true,
+          "channelPlugin": "com.streamanalytix.spark.ss.receiver.S3BatchSource",
+          "pathGlobFilter": "",
+          "path": "/Iris_old.csv",
+          "IsPiiEnable": false,
+          "endpoint": "",
+          "enableIncrementalRead": false,
+          "multilineJson": false,
+          "delimiter": ",",
+          "configEdited": false,
+          "saxInspect": {
+            "typeOfSchemaDetection": "readFromSource",
+            "datasetIds": {
+              "inputdatasetId": [],
+              "outputdatasetId": [
+                "S3BatchChannel_843373"
+              ]
+            },
+            "detectSchema": false,
+            "header": true,
+            "referenceSchemaId": {
+              "inputSchemaId": [],
+              "outputSchemaId": [
+                "S3BatchChannel_843373"
+              ]
+            },
+            "piiDetect": true,
+            "rowCount": 100,
+            "samplingMethod": "topN",
+            "triggerTime": "3 seconds"
+          },
+          "customJDBC": false,
+          "s3Protocol": "S3a",
+          "recursiveFileLookup": "",
+          "ignoreActionError": false,
+          "datasetTransformer": "com.streamanalytix.bs.dataset.service.impl.S3ChannelDSTransformer",
+          "appDisplayName": "",
+          "mvelfnclist": [],
+          "maxValue": "",
+          "datasetName": "",
+          "column": "",
+          "incrementalOffset": {
+            "readBy": "fileModificationTime",
+            "hdfstValue": "",
+            "column": "",
+            "currentValue": "",
+            "readControlType": "none",
+            "maxValue": "",
+            "incrementSize": "",
+            "enableIncrementalRead": false,
+            "inclusiveStartOffset": false,
+            "manualColumn": true
+          },
+          "datasetSelectVersion": "0",
+          "readControlType": "none",
+          "endPoint": "",
+          "parserType": "DELIMITED",
+          "datasetSelected": "",
+          "datasetSourceType": "S3",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "isBatchEnabled": true,
+          "connectionId": "s3default-0853-42cc-aa7b-2cb6c84780f",
+          "connectionConfig": {},
+          "expfldlst": "",
+          "connectionName": "s3_default",
+          "operatorType": "receiver",
+          "saveAsDataset": false,
+          "incrementSize": "",
+          "subsystemName": "S3_S3_14May_1747203925036"
+        }
+      }
+    ],
+    "name": "S3_S3_14May_1747203925036",
+    "autoInspectSchema": {
+      "S3BatchChannel_843373": [
+        {
+          "name": "PetalLength",
+          "alias": "PetalLength",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "SepalLength",
+          "alias": "SepalLength",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "PetalWidth",
+          "alias": "PetalWidth",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "SepalWidth",
+          "alias": "SepalWidth",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Species",
+          "alias": "Species",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        }
+      ]
+    },
+    "customFileNames": "",
+    "status": "STOPPED",
+    "description": "TestCommit",
+    "partialConfig": {},
+    "clusterId": "-1",
+    "originalCustomJarName": "",
+    "projectDetails": {
+      "associatedAccounts": [
+        {
+          "vendorType": "ApacheSpark",
+          "name": "kd-cluster",
+          "id": 14
+        },
+        {
+          "vendorType": "GCP",
+          "name": "ApekshaGCPFinal",
+          "id": 12
+        }
+      ],
+      "createdBy": "kuldeep.chouhan",
+      "projectDisplayName": "ProjectForVikas",
+      "sharedProject": true,
+      "name": "ProjectForVikas_454419",
+      "projectName": "ProjectForVikas_454419",
+      "projectId": "63fae6da-4338-49fe-b9a6-8ff01bcb2f40",
+      "projectVersion": 1
+    },
+    "topologySupervisors": [],
+    "createVersionRequestByUser": false,
+    "engine": "spark",
+    "alert": {
+      "added": [],
+      "updated": [],
+      "deleted": []
+    },
+    "appType": "etl",
+    "isReplayAlter": false,
+    "gitcommitid": "ff36d106b6c2785c05b43912b55158d28e625d23",
+    "sessionId": "4E9E9BAFBAB95945F2A5F8799FBA61E7",
+    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/ff36d106b6c2785c05b43912b55158d28e625d23",
+    "versionNumber": 2,
+    "structure": "pipeline",
+    "templateName": "",
+    "displayColumnsMap": {
+      "S3BatchChannel_843373": {
+        "S3BatchChannel_843373": {
+          "allCols": [],
+          "displayCols": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "S3emitter_782975": {
+        "S3BatchChannel_843373": {
+          "allCols": [],
+          "displayCols": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      }
+    },
+    "isDraftSupported": false,
+    "tenantId": "9",
+    "config": {
+      "subnetSettingsName": "",
+      "checkPointDirectory": "/",
+      "enableCheckPoint": "false",
+      "isCustomerComputeEnabled": true,
+      "yarnAmCores": "1",
+      "batchDuration": "1000",
+      "dataValidationExecutionMode": "sequential",
+      "executorCores": "2",
+      "userProvidedSparkOptions": "",
+      "uploadKeyTabFile": "",
+      "poolNname": "FIFO",
+      "uiJson": {
+        "source": {
+          "images": [
+            "S3-Batch-channel.png"
+          ],
+          "all": [
+            "S3 Batch"
+          ],
+          "count": ""
+        },
+        "target": {
+          "images": [
+            "s3-emitter.png"
+          ],
+          "all": [
+            "S3"
+          ],
+          "count": ""
+        }
+      },
+      "taskMaxFailures": "4",
+      "pendingRestartCount": "0",
+      "driverPermGenSize": "256",
+      "extraSparkGpuProperty": "--conf spark.executor.resource.gpu.amount\u003d1 --conf spark.executor.resource.gpu.vendor\u003dnvidia.com --conf spark.task.resource.gpu.amount\u003d0.1 --conf spark.kubernetes.node.selector.\u0027nvidia.com/gpu.present\u0027\u003dtrue",
+      "kPipelineId": "df269ead-0ac1-4f62-950f-b01b45d1fff1",
+      "isImpersonationEnabled": false,
+      "isUnlimitedLicense": true,
+      "computeAccProjectName": "ProjectForVikas_454419",
+      "receiverMaxRate": "",
+      "id": "",
+      "appCores": "2",
+      "enableBackPressure": "",
+      "deploymentMode": "local",
+      "driverMemory": "512",
+      "isConnectionMissing": false,
+      "isMonitoringGraphsEnable": true,
+      "offset": -330,
+      "entityType": "cluster",
+      "yarnAmMemory": "512",
+      "isAccumulatorDataPublishOnES": true,
+      "gpuAffinity": false,
+      "useDedicatedAlways": false,
+      "monitoringComponentList": [
+        "S3BatchChannel_843373",
+        "S3emitter_782975"
+      ],
+      "accountId": "-1",
+      "extraDriverJavaOptions": "",
+      "downloadKeytabFileLocation": "",
+      "connectionName": "",
+      "yarnQueue": "default",
+      "computeClusterType": "gathrCluster",
+      "vendorType": "local",
+      "eventLogDirectory": "/",
+      "initialExecutors": "0",
+      "driverCores": "1",
+      "yarnUser": "kuldeep.chouhan",
+      "dynamicAllocationEnabled": "false",
+      "clouderaLineage": false,
+      "extraExecutorJavaOptions": "",
+      "clusterId": "",
+      "isBatchPipeline": true,
+      "executorInstances": "1",
+      "waitRestartTime": "2",
+      "autoInspection": false,
+      "isDirty": false,
+      "logLevel": "INFO",
+      "useDedicatedCluster": false,
+      "engine": "spark",
+      "clusterName": "",
+      "sharedCluster": false,
+      "eventLogEnabled": "false",
+      "captureRawData": true,
+      "vpcEndpointDNS": "",
+      "maxExecutors": "1",
+      "keyTabSelectOption": "specifyKeyTabFilePath",
+      "executorMemory": "512",
+      "ignoreConnectionTesting": false,
+      "isRestartRequired": false,
+      "extraSparkSubmitOptions": "",
+      "receiverRateLimiter": "none",
+      "statusAlertConfig": {
+        "isErrorHandlingRequired": false,
+        "targetStatus": [],
+        "errorLogTarget": "kafka",
+        "componentType": "",
+        "connectionName": "",
+        "connectionId": "",
+        "topicName": "",
+        "partitions": "1",
+        "replicationFactor": "1",
+        "topicAdministration": ""
+      },
+      "typeOfApplication": "structuredstreaming",
+      "regionId": "",
+      "maxRestartCount": 1,
+      "keyTabFilePath": "",
+      "zkKeyTabFileLocation": "",
+      "enableResourceAnalyzer": false,
+      "userKrbPrincipal": "",
+      "pipelineNotification": {
+        "errors": {},
+        "warnings": {},
+        "recommendations": {}
+      }
+    },
+    "subsystemName": "S3_S3_14May_1747203925036",
+    "customJarName": ""
+  }
+}
