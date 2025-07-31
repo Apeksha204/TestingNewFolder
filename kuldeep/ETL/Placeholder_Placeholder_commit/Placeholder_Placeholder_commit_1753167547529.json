@@ -1,0 +1,607 @@
+{
+  "internalJson": {
+    "httpSessionId": "4FDCE584890035E2020F93C906C37482",
+    "isCustomerComputeEnabled": true,
+    "templateUsed": [],
+    "inspectType": "local",
+    "customJarBeforeModification": "",
+    "isDraft": false,
+    "addedJars": [],
+    "processors": [
+      {
+        "connectorId": "319",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "emitter",
+        "isStopRequest": false,
+        "messageTypes": [
+          "DummyChannel_963703"
+        ],
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectDisplayName": "Default",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": [
+            {
+              "vendorType": "ApacheSpark",
+              "name": "kd-cluster",
+              "id": 14
+            }
+          ],
+          "name": "Default_1730098071421"
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "subtype": "",
+        "appType": "structuredstreaming",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "dummy-emitter",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "both",
+        "errorConfig": {},
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          119.89584350585938,
+          15.902772903442383
+        ],
+        "label": "Placeholder",
+        "inputDStreamType": "both",
+        "currentAppType": "batch",
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "DummyChannel_963703",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "DummyEmitter_291199",
+        "refreshMetadata": false,
+        "category": [
+          "File"
+        ],
+        "config": {
+          "datasetNewAssociation": false,
+          "processingTimeUnit": "seconds",
+          "IsPiiEnable": false,
+          "multilineJson": false,
+          "saxInspect": {
+            "datasetIds": {
+              "inputdatasetId": [
+                "DummyChannel_963703"
+              ],
+              "outputdatasetId": [
+                "DummyEmitter_291199"
+              ]
+            },
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "DummyChannel_963703"
+              ],
+              "outputSchemaId": [
+                "DummyChannel_963703"
+              ]
+            }
+          },
+          "customJDBC": false,
+          "ignoreActionError": false,
+          "isTimeBasedCheckPoint": false,
+          "turnpikeName": "",
+          "mvelfnclist": [],
+          "isTurnPikeChild": "false",
+          "trigger": false,
+          "priority": 1,
+          "processingTime": "",
+          "checkpointLocation": "",
+          "checkpointConnectionId": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "outputmode": "append",
+          "connectionConfig": {},
+          "expfldlst": "",
+          "operatorType": "processor",
+          "checkpointConnectionType": "",
+          "executorPlugin": "com.streamanalytix.spark.ss.emitter.DummyEmitter",
+          "subsystemName": "Placeholder_Placeholder_commit_1753167547529"
+        }
+      },
+      {
+        "connectorId": "319",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "emitter",
+        "isStopRequest": false,
+        "messageTypes": [
+          "DummyChannel_963703"
+        ],
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectDisplayName": "Default",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": [
+            {
+              "vendorType": "ApacheSpark",
+              "name": "kd-cluster",
+              "id": 14
+            }
+          ],
+          "name": "Default_1730098071421"
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "subtype": "",
+        "appType": "structuredstreaming",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "dummy-emitter",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "both",
+        "errorConfig": {},
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          199.89584350585938,
+          15.902772903442383
+        ],
+        "label": "Placeholder",
+        "inputDStreamType": "both",
+        "currentAppType": "batch",
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "DummyChannel_963703",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "DummyEmitter_489489",
+        "refreshMetadata": false,
+        "category": [
+          "File"
+        ],
+        "config": {
+          "processingTimeUnit": "seconds",
+          "IsPiiEnable": false,
+          "multilineJson": false,
+          "saxInspect": {
+            "datasetIds": {
+              "inputdatasetId": [
+                "DummyChannel_963703"
+              ],
+              "outputdatasetId": [
+                "DummyEmitter_489489"
+              ]
+            },
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "DummyChannel_963703"
+              ],
+              "outputSchemaId": [
+                "DummyChannel_963703"
+              ]
+            }
+          },
+          "customJDBC": false,
+          "ignoreActionError": false,
+          "isTimeBasedCheckPoint": false,
+          "turnpikeName": "",
+          "mvelfnclist": [],
+          "isTurnPikeChild": "false",
+          "trigger": false,
+          "priority": 2,
+          "processingTime": "",
+          "checkpointLocation": "",
+          "checkpointConnectionId": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "outputmode": "append",
+          "connectionConfig": {},
+          "expfldlst": "",
+          "operatorType": "processor",
+          "checkpointConnectionType": "",
+          "executorPlugin": "com.streamanalytix.spark.ss.emitter.DummyEmitter",
+          "subsystemName": "Placeholder_Placeholder_commit_1753167547529"
+        }
+      }
+    ],
+    "esperHAEnabled": false,
+    "isLocked": false,
+    "id": "Placeholder_Placeholder_commit_1753167547529",
+    "connections": [],
+    "emailIds": "",
+    "iscreatVersionChecked": true,
+    "appDisplayName": "Placeholder_Placeholder_commit",
+    "lockedDate": "",
+    "tags": [],
+    "parentVersionNumber": 6,
+    "configureEmail": false,
+    "customJarStatus": "",
+    "enableErrorHandler": true,
+    "channels": [
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "319",
+        "className": "com.streamanalytix.spark.ss.receiver.SparkSSReceiver",
+        "channelType": "single",
+        "isStopRequest": false,
+        "type": "channel",
+        "messageTypes": [
+          "DummyChannel_963703"
+        ],
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectDisplayName": "Default",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": [
+            {
+              "vendorType": "ApacheSpark",
+              "name": "kd-cluster",
+              "id": 14
+            }
+          ],
+          "name": "Default_1730098071421"
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "DummyEmitter_291199"
+          },
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "DummyEmitter_489489"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "appType": "structuredstreaming,ssbatch",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "dummy-channel",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {},
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          10,
+          10
+        ],
+        "label": "Placeholder",
+        "inputDStreamType": "na",
+        "message": "",
+        "groupings": [],
+        "messageTypeId": "tracemessage",
+        "name": "DummyChannel_963703",
+        "schemaIdentifier": "com.streamanalytix.engine.core.scheme.util.DefaultSchemaIdentifier",
+        "category": [
+          "File"
+        ],
+        "config": {
+          "mvelfnclist": [],
+          "datasetNewAssociation": false,
+          "datasetSelectVersion": "0",
+          "sourceHeader": false,
+          "channelPlugin": "com.streamanalytix.spark.ss.receiver.DummySource",
+          "IsPiiEnable": false,
+          "parserType": "DELIMITED",
+          "datasetSelected": "",
+          "parentTag": "/",
+          "multilineJson": false,
+          "delimiter": ",",
+          "configEdited": false,
+          "saxInspect": {
+            "typeOfSchemaDetection": "readFromSource",
+            "datasetIds": {
+              "inputdatasetId": [],
+              "outputdatasetId": [
+                "DummyChannel_963703"
+              ]
+            },
+            "detectSchema": false,
+            "header": false,
+            "referenceSchemaId": {
+              "inputSchemaId": [],
+              "outputSchemaId": [
+                "DummyChannel_963703"
+              ]
+            },
+            "piiDetect": true,
+            "rowCount": 100,
+            "samplingMethod": "topN",
+            "triggerTime": "3 seconds"
+          },
+          "ignoreWhileExecution": false,
+          "customJDBC": false,
+          "connectionConfig": {},
+          "expfldlst": "",
+          "operatorType": "receiver",
+          "subsystemName": "Placeholder_Placeholder_commit_1753167547529",
+          "ignoreActionError": false
+        }
+      }
+    ],
+    "name": "Placeholder_Placeholder_commit_1753167547529",
+    "autoInspectSchema": {
+      "DummyChannel_963703": [
+        {
+          "name": "dummyCol",
+          "alias": "dummyCol",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        }
+      ]
+    },
+    "customFileNames": "",
+    "status": "STOPPED",
+    "failedReason": "",
+    "isCustomerDatabrickComputeEnabled": false,
+    "description": "TestVersion_sssh",
+    "partialConfig": {},
+    "clusterId": "-1",
+    "originalCustomJarName": "",
+    "projectDetails": {
+      "associatedAccounts": [
+        {
+          "vendorType": "ApacheSpark",
+          "name": "kd-cluster",
+          "id": 14
+        }
+      ],
+      "createdBy": "kuldeep.chouhan",
+      "projectDisplayName": "Default",
+      "sharedProject": false,
+      "name": "Default_1730098071421",
+      "projectName": "Default_1730098071421",
+      "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+      "projectVersion": 1
+    },
+    "topologySupervisors": [],
+    "createVersionRequestByUser": true,
+    "lockedBy": "",
+    "engine": "spark",
+    "alert": {
+      "added": [],
+      "updated": [],
+      "deleted": []
+    },
+    "appType": "etl",
+    "isReplayAlter": false,
+    "gitcommitid": "f2c2d8d65af11c3e0dcd2af77bff762d6d744d78",
+    "date_created": 1753175948394,
+    "sessionId": "4FDCE584890035E2020F93C906C37482",
+    "gitcommiturl": "https://Aksmha@bitbucket.org/aksmha/gathr-pipeline-repo/commit/f2c2d8d65af11c3e0dcd2af77bff762d6d744d78",
+    "versionNumber": 7,
+    "structure": "pipeline",
+    "templateName": "",
+    "displayColumnsMap": {
+      "DummyChannel_963703": {
+        "DummyChannel_963703": {
+          "allCols": [],
+          "displayCols": [
+            "dummyCol"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "DummyEmitter_291199": {
+        "DummyChannel_963703": {
+          "allCols": [],
+          "displayCols": [
+            "dummyCol"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "DummyEmitter_489489": {
+        "DummyChannel_963703": {
+          "allCols": [],
+          "displayCols": [
+            "dummyCol"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      }
+    },
+    "isDraftSupported": false,
+    "tenantId": "9",
+    "config": {
+      "subnetSettingsName": "",
+      "checkPointDirectory": "/",
+      "enableCheckPoint": "false",
+      "isCustomerComputeEnabled": true,
+      "yarnAmCores": "1",
+      "batchDuration": "1000",
+      "dataValidationExecutionMode": "sequential",
+      "executorCores": "2",
+      "userProvidedSparkOptions": "",
+      "uploadKeyTabFile": "",
+      "poolNname": "FIFO",
+      "uiJson": {
+        "source": {
+          "images": [
+            "dummy-channel.png"
+          ],
+          "all": [
+            "Placeholder"
+          ],
+          "count": ""
+        },
+        "target": {
+          "images": [
+            "dummy-emitter.png",
+            "dummy-emitter.png"
+          ],
+          "all": [
+            "Placeholder",
+            "Placeholder"
+          ],
+          "count": "+1"
+        }
+      },
+      "taskMaxFailures": "4",
+      "pendingRestartCount": "0",
+      "driverPermGenSize": "256",
+      "extraSparkGpuProperty": "--conf spark.executor.resource.gpu.amount\u003d1 --conf spark.executor.resource.gpu.vendor\u003dnvidia.com --conf spark.task.resource.gpu.amount\u003d0.1 --conf spark.kubernetes.node.selector.\u0027nvidia.com/gpu.present\u0027\u003dtrue",
+      "kPipelineId": "b6a55189-e957-4e6d-b54d-af38552f2c51",
+      "isImpersonationEnabled": false,
+      "isUnlimitedLicense": true,
+      "computeAccProjectName": "Default_1730098071421",
+      "receiverMaxRate": "",
+      "id": "0",
+      "appCores": "2",
+      "enableBackPressure": "",
+      "deploymentMode": "local",
+      "driverMemory": "512",
+      "isConnectionMissing": false,
+      "isMonitoringGraphsEnable": true,
+      "offset": -330,
+      "entityType": "cluster",
+      "yarnAmMemory": "512",
+      "isAccumulatorDataPublishOnES": true,
+      "gpuAffinity": false,
+      "useDedicatedAlways": false,
+      "monitoringComponentList": [
+        "DummyChannel_963703",
+        "DummyEmitter_291199",
+        "DummyEmitter_489489"
+      ],
+      "accountId": "",
+      "extraDriverJavaOptions": "",
+      "downloadKeytabFileLocation": "",
+      "connectionName": "",
+      "yarnQueue": "default",
+      "computeClusterType": "gathrCluster",
+      "vendorType": "local",
+      "eventLogDirectory": "/",
+      "initialExecutors": 0,
+      "driverCores": "1",
+      "isCustomerDatabrickComputeEnabled": false,
+      "yarnUser": "kuldeep.chouhan",
+      "dynamicAllocationEnabled": "false",
+      "clouderaLineage": false,
+      "extraExecutorJavaOptions": "",
+      "clusterId": "0",
+      "isBatchPipeline": true,
+      "executorInstances": 1,
+      "waitRestartTime": "2",
+      "autoInspection": false,
+      "isDirty": false,
+      "logLevel": "INFO",
+      "useDedicatedCluster": false,
+      "engine": "spark",
+      "clusterName": "",
+      "sharedCluster": false,
+      "eventLogEnabled": "false",
+      "captureRawData": true,
+      "vpcEndpointDNS": "",
+      "maxExecutors": 1,
+      "keyTabSelectOption": "",
+      "executorMemory": "512",
+      "ignoreConnectionTesting": false,
+      "isRestartRequired": false,
+      "extraSparkSubmitOptions": "",
+      "receiverRateLimiter": "none",
+      "statusAlertConfig": {
+        "isErrorHandlingRequired": false,
+        "targetStatus": [],
+        "errorLogTarget": "kafka",
+        "componentType": "",
+        "connectionName": "",
+        "connectionId": "",
+        "topicName": "",
+        "partitions": "1",
+        "replicationFactor": "1",
+        "topicAdministration": ""
+      },
+      "typeOfApplication": "structuredstreaming",
+      "regionId": "",
+      "maxRestartCount": 1,
+      "keyTabFilePath": "",
+      "zkKeyTabFileLocation": "",
+      "enableResourceAnalyzer": false,
+      "userKrbPrincipal": "",
+      "pipelineNotification": {
+        "errors": {},
+        "warnings": {},
+        "recommendations": {}
+      }
+    },
+    "subsystemName": "Placeholder_Placeholder_commit_1753167547529",
+    "customJarName": ""
+  }
+}
