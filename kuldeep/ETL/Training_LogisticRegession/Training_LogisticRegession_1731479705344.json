@@ -1,0 +1,922 @@
+{
+  "internalJson": {
+    "httpSessionId": "FC9723E772CCC0E1DC5C070B61E7AF05",
+    "isCustomerComputeEnabled": false,
+    "inspectType": "local",
+    "customJarBeforeModification": "",
+    "isDraft": false,
+    "processors": [
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "39",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "analytic",
+        "isStopRequest": false,
+        "messageTypes": [
+          "File_187168"
+        ],
+        "connectionType": "s3",
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectDisplayName": "Default",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": []
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "ElasticSearch_620600"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "subtype": "ml",
+        "appType": "structuredstreaming",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "logistic-regression-processor-ml",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "canChangeSchema": "true",
+        "coordinates": [
+          154.99999809265137,
+          -9.333332061767578
+        ],
+        "label": "LogisticRegression",
+        "inputDStreamType": "plain",
+        "message": "",
+        "tags": [
+          "Classification",
+          "Binary Classification",
+          "Multiclass Classification",
+          "Sigmoid",
+          "Odds Ratio",
+          "Machine Learning",
+          "Regression Analysis",
+          "Predictive Modeling",
+          "Logit",
+          "Probability Estimation",
+          "Cost",
+          "Gradient Descent",
+          "Regularization",
+          "Hyperparameter Tuning"
+        ],
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "File_187168",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "LogisticRegression_745115",
+        "refreshMetadata": false,
+        "category": [
+          "ML"
+        ],
+        "config": {
+          "s3UserConnectionID": "de74badd-9219-4a12-98ed-858132e64cf1",
+          "featureVariables": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth"
+          ],
+          "maxIterations": "100",
+          "trainRatio": 0.75,
+          "metricSelected": "areaUnderROC",
+          "classificationType": "binary",
+          "bestModelName": "TunedLOR_1731479651192",
+          "scoreField": "",
+          "saveModelOnS3": "true",
+          "isEvaluationEnabled": true,
+          "useSavedModel": "true",
+          "saxInspect": {
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "File_187168"
+              ],
+              "outputSchemaId": [
+                "LogisticRegression_745115"
+              ]
+            },
+            "datasetIds": {
+              "inputdatasetId": [
+                "File_187168"
+              ],
+              "outputdatasetId": [
+                "LogisticRegression_745115"
+              ]
+            },
+            "detectSchema": false
+          },
+          "modelDisplayName": "LogisticRegressionModel",
+          "elasticNetParam": "",
+          "applyTransformations": "true",
+          "isTurnPikeChild": "false",
+          "regParam": "0.0",
+          "s3ConfigUserModel": {
+            "connectionName": "s3_connection",
+            "connectionId": "de74badd-9219-4a12-98ed-858132e64cf1"
+          },
+          "tags": "",
+          "thresholds": "0.0",
+          "userModelLocation": "/KD/unlimited/models/LOR",
+          "connectionId": "de74badd-9219-4a12-98ed-858132e64cf1",
+          "executorPlugin": "com.streamanalytix.spark.ss.helper.LogisticRegressionMLHelper",
+          "messageName": "",
+          "hyperParametersMap": {
+            "executeTuning": true,
+            "validation": "crossValidation",
+            "numFolds": "2",
+            "trainRatio": "",
+            "bestModelDisplayName": "TunedLOR",
+            "bestModelName": "TunedLOR_1731479651192",
+            "tunedModelDescription": "",
+            "tunedModelTags": "",
+            "tunedModelVersionComments": "",
+            "s3TunnedConnectionName": "s3_connection",
+            "hdfsTunnedConnectionName": "",
+            "s3TunnedConnectionID": "de74badd-9219-4a12-98ed-858132e64cf1",
+            "hdfsTunnedConnectionID": "",
+            "s3ConfigTunedModel": {
+              "connectionId": "de74badd-9219-4a12-98ed-858132e64cf1",
+              "connectionName": "s3_connection"
+            },
+            "hdfsConfigTunedModel": "",
+            "tunedModelBucketName": "anirkhe115",
+            "tunedModelLocation": "/KD/unlimited/models/TunedLOR",
+            "metricSelected": "",
+            "hyperModelParam": [
+              {
+                "StringIndexer": {}
+              },
+              {
+                "VectorAssembler": {}
+              },
+              {
+                "LogisticRegression": {}
+              },
+              {
+                "IndexToString": {}
+              }
+            ]
+          },
+          "description": "",
+          "hdfsUserConnectionID": "",
+          "modelVersionUsed": "",
+          "hdfsUserConnectionName": "",
+          "dataPreProcessingList": [
+            {
+              "StringIndexer": {
+                "transformation": "Pre_Processing",
+                "algorithmParams": {
+                  "inputColumns": [
+                    "Species"
+                  ],
+                  "outputColumns": [
+                    "str_out"
+                  ],
+                  "handleInvalid": "error"
+                }
+              }
+            },
+            {
+              "VectorAssembler": {
+                "transformation": "Pre_Processing",
+                "algorithmParams": {
+                  "inputColumns": [
+                    "PetalLength",
+                    "SepalLength",
+                    "PetalWidth",
+                    "SepalWidth"
+                  ],
+                  "outputColumns": [
+                    "featureInput"
+                  ]
+                }
+              }
+            },
+            {
+              "LogisticRegression": {
+                "transformation": "Model_Configuration",
+                "algorithmParams": {
+                  "labelColumn": "str_out",
+                  "probabilityColumn": "prob",
+                  "outputColumns": [
+                    "prediction"
+                  ],
+                  "featureColumn": [
+                    "featureInput"
+                  ],
+                  "thresholds": "",
+                  "elasticNetParam": "0.0",
+                  "regParam": "0.0",
+                  "maxIterations": "100",
+                  "fitIntercept": "true"
+                }
+              }
+            },
+            {
+              "IndexToString": {
+                "transformation": "Post_Processing",
+                "algorithmParams": {
+                  "inputColumns": [
+                    "prediction"
+                  ],
+                  "outputColumns": [
+                    "post_processig_output"
+                  ],
+                  "labels": "useStringIndexerLabels",
+                  "labelValues": "",
+                  "stringIndexerOutput": "StringIndexer_1"
+                }
+              }
+            }
+          ],
+          "scope": "Project",
+          "inputLabel": "Species",
+          "customJDBC": false,
+          "comments": "",
+          "userModelBucketName": "anirkhe115",
+          "mvelfnclist": [],
+          "turnpikeName": "",
+          "dropNAVariables": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species"
+          ],
+          "s3UserConnectionName": "s3_connection",
+          "hdfsConfigUserModel": "",
+          "modelName": "LogisticRegressionModel_1731479519430",
+          "fitIntercept": "false",
+          "parentTag": "/",
+          "listOfPreProcessing": [
+            "str_out",
+            "featureInput"
+          ],
+          "connectionConfig": {},
+          "expfldlst": "",
+          "operatorType": "processor",
+          "operation": "TRAINING",
+          "subsystemName": "Training_LogisticRegession_1731479705344",
+          "existModelName": ""
+        }
+      },
+      {
+        "configured": true,
+        "coordinates": [
+          0,
+          0
+        ],
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "hiddenComp": true,
+        "label": "ElasticSearch",
+        "inputDStreamType": "both",
+        "type": "emitter",
+        "messageTypes": [
+          "LogisticRegression_745115"
+        ],
+        "emitStreamIds": [
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "subtype": "indexer",
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "LogisticRegression_745115",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "appType": "structuredstreaming",
+        "messageTypeId": "tracemessage",
+        "name": "ElasticSearch_620600",
+        "id": "elasticsearch-emitter",
+        "outputDStreamType": "both",
+        "config": {
+          "indexSource": "true",
+          "excludeEmptyFields": "false",
+          "indexNumberOfShards": "5",
+          "emitterOutputFlds": {
+            "LogisticRegression_745115": [
+              "saxModelPredictionColumn",
+              "saxModelLabelColumn",
+              "saxModelProbabilityColumn",
+              "saxModelIndexColumn"
+            ]
+          },
+          "isClassificationAlgo": "true",
+          "processingTimeUnit": "seconds",
+          "customClassPath": "",
+          "routingRequired": "false",
+          "keyFields": "",
+          "saxInspect": {
+            "datasetIds": {
+              "inputdatasetId": [
+                "LogisticRegression_745115"
+              ],
+              "outputdatasetId": [
+                "ElasticSearch_123456789"
+              ]
+            },
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "LogisticRegression_745115"
+              ],
+              "outputSchemaId": [
+                "LogisticRegression_745115"
+              ]
+            }
+          },
+          "indexExpression": "NA_EXPR",
+          "keyType": "uuid",
+          "componentType": "elasticsearch",
+          "indexKeyName": "sax_index_id",
+          "isMLEmitter": "true",
+          "acrossFieldSearchEnabled": "false",
+          "mvelfnclist": [],
+          "maxConnectionRetry": "3",
+          "routingPolicy": "",
+          "trigger": false,
+          "indexReplicationFactor": "1",
+          "processingTime": "",
+          "indexStore": "elasticsearch",
+          "isTTLEnable": false,
+          "modelName": "LogisticRegressionModel_1731479519430",
+          "ttlValue": "",
+          "checkpointLocation": "/tmp/LogisticRegressionModel_1731479519430_1731479706071",
+          "connectionRetryDelay": "30000",
+          "isNestedJson": "true",
+          "connectionId": "8db1fd60-ba22-4a1a-9eea-d148a2a56ed3",
+          "outputmode": "append",
+          "connectionConfig": {},
+          "operationType": "com.streamanalytix.spark.processor.BatchAwareSparkProcessor",
+          "expfldlst": "",
+          "connectionName": "Default",
+          "operatorType": "processor",
+          "batchSize": "1",
+          "saxMessageType": "LogisticRegression_745115",
+          "executorPlugin": "com.streamanalytix.spark.ss.emitter.ESEmitter",
+          "subsystemName": "Training_LogisticRegession_1731479705344",
+          "isBatchEnable": "false"
+        },
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        }
+      }
+    ],
+    "esperHAEnabled": false,
+    "isLocked": false,
+    "id": "Training_LogisticRegession_1731479705344",
+    "connections": [
+      "de74badd-9219-4a12-98ed-858132e64cf1"
+    ],
+    "emailIds": [],
+    "iscreatVersionChecked": false,
+    "appDisplayName": "Training_LogisticRegession",
+    "lockedDate": "",
+    "tags": [],
+    "parentVersionNumber": 3,
+    "configureEmail": false,
+    "enableErrorHandler": true,
+    "channels": [
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "41",
+        "className": "com.streamanalytix.spark.ss.receiver.SparkSSReceiver",
+        "channelType": "single",
+        "isStopRequest": false,
+        "type": "channel",
+        "messageTypes": [
+          "File_187168"
+        ],
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectDisplayName": "Default",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": []
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "LogisticRegression_745115"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "appType": "structuredstreaming,ssbatch",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "datagenerator-channel",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "canChangeSchema": true,
+        "coordinates": [
+          10,
+          -10
+        ],
+        "label": "File",
+        "inputDStreamType": "na",
+        "message": "",
+        "tags": [
+          "File Integration",
+          "File Upload",
+          "File Processing",
+          "File Management",
+          "Data Upload"
+        ],
+        "groupings": [],
+        "messageTypeId": "tracemessage",
+        "name": "File_187168",
+        "refreshMetadata": false,
+        "schemaIdentifier": "com.streamanalytix.engine.core.scheme.util.DefaultSchemaIdentifier",
+        "category": [
+          "File"
+        ],
+        "config": {
+          "recordsPerBatch": "100",
+          "extraConf": {
+            "cdcErrorAlert": false
+          },
+          "sourceHeader": true,
+          "messageTypes": [
+            "File_187168"
+          ],
+          "channelPlugin": "com.streamanalytix.spark.ss.receiver.DataGeneratorBatchSource",
+          "delimiter": ",",
+          "saxInspect": {
+            "autoInspectHdfsFilePath": "Iris_old.csv",
+            "typeOfSchemaDetection": "fileUpload",
+            "datasetIds": {
+              "inputdatasetId": [],
+              "outputdatasetId": [
+                "File_187168"
+              ]
+            },
+            "detectSchema": false,
+            "header": true,
+            "referenceSchemaId": {
+              "inputSchemaId": [],
+              "outputSchemaId": [
+                "File_187168"
+              ]
+            },
+            "rowCount": 100,
+            "samplingMethod": "topN",
+            "triggerTime": "3 seconds"
+          },
+          "customJDBC": false,
+          "ignoreActionError": false,
+          "configureData": "uploadData",
+          "mvelfnclist": [],
+          "filePath": "Iris_old.csv",
+          "datasetSelectVersion": "0",
+          "inspectAsBatch": true,
+          "fieldMapping": {},
+          "filename": "",
+          "repeatData": "false",
+          "parserType": "DELIMITED",
+          "datasetSelected": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "connectionConfig": {},
+          "expfldlst": "",
+          "operatorType": "receiver",
+          "subsystemName": "Training_LogisticRegession_1731479705344"
+        }
+      }
+    ],
+    "name": "Training_LogisticRegession_1731479705344",
+    "autoInspectSchema": {
+      "File_187168": [
+        {
+          "name": "PetalLength",
+          "alias": "PetalLength",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "SepalLength",
+          "alias": "SepalLength",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "PetalWidth",
+          "alias": "PetalWidth",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "SepalWidth",
+          "alias": "SepalWidth",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "Species",
+          "alias": "Species",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        }
+      ],
+      "LogisticRegression_745115": [
+        {
+          "name": "PetalLength",
+          "alias": "PetalLength",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "SepalLength",
+          "alias": "SepalLength",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "PetalWidth",
+          "alias": "PetalWidth",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "SepalWidth",
+          "alias": "SepalWidth",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "Species",
+          "alias": "Species",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        }
+      ]
+    },
+    "customFileNames": "Iris_old.csv",
+    "status": "STOPPED",
+    "isCustomerDatabrickComputeEnabled": false,
+    "description": "Test123",
+    "partialConfig": {},
+    "clusterId": "0",
+    "originalCustomJarName": "",
+    "projectDetails": {
+      "associatedAccounts": [],
+      "createdBy": "kuldeep.chouhan",
+      "projectDisplayName": "Default",
+      "sharedProject": false,
+      "projectName": "Default_1730098071421",
+      "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+      "projectVersion": 1
+    },
+    "topologySupervisors": [],
+    "createVersionRequestByUser": true,
+    "lockedBy": "",
+    "engine": "spark",
+    "alert": {
+      "added": [],
+      "updated": [],
+      "deleted": []
+    },
+    "appType": "etl",
+    "isReplayAlter": false,
+    "gitcommitid": "3884bcb988add44688bc4c8543fb502f791237d2",
+    "date_created": 1731479721114,
+    "sessionId": "FC9723E772CCC0E1DC5C070B61E7AF05",
+    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/3884bcb988add44688bc4c8543fb502f791237d2",
+    "versionNumber": 4,
+    "structure": "pipeline",
+    "templateName": "",
+    "displayColumnsMap": {
+      "File_187168": {
+        "File_187168": {
+          "allCols": [],
+          "displayCols": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "LogisticRegression_745115": {
+        "LogisticRegression_745115": {
+          "allCols": [],
+          "displayCols": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      }
+    },
+    "isDraftSupported": false,
+    "tenantId": "9",
+    "isErrorModeNotified": false,
+    "config": {
+      "subnetSettingsName": "",
+      "checkPointDirectory": "/",
+      "enableCheckPoint": "false",
+      "yarnAmCores": "1",
+      "batchDuration": "1000",
+      "executorCores": "2",
+      "userProvidedSparkOptions": "",
+      "action_failure_reason": "",
+      "poolNname": "FIFO",
+      "uiJson": {
+        "source": {
+          "all": [
+            "File"
+          ],
+          "images": [
+            "datagenerator-channel.png"
+          ],
+          "count": ""
+        },
+        "target": {
+          "all": [],
+          "images": [
+            "na-target.png"
+          ],
+          "count": ""
+        }
+      },
+      "taskMaxFailures": "4",
+      "pendingRestartCount": "0",
+      "driverPermGenSize": "512",
+      "kPipelineId": "31e93810-aab3-4fec-83da-350a16137aa6",
+      "isImpersonationEnabled": false,
+      "receiverMaxRate": "",
+      "appCores": "2",
+      "enableBackPressure": "",
+      "deploymentMode": "yarn-cluster",
+      "driverMemory": "512",
+      "isConnectionMissing": false,
+      "isMonitoringGraphsEnable": true,
+      "offset": -330,
+      "yarnAmMemory": "512",
+      "isAccumulatorDataPublishOnES": true,
+      "useDedicatedAlways": false,
+      "monitoringComponentList": [
+        "File_187168",
+        "LogisticRegression_745115"
+      ],
+      "accountId": "14",
+      "extraDriverJavaOptions": "",
+      "usingExternalSchema": false,
+      "downloadKeytabFileLocation": "",
+      "connectionName": "",
+      "yarnQueue": "default",
+      "computeClusterType": "gathrCluster",
+      "vendorType": "ApacheSpark",
+      "eventLogDirectory": "/",
+      "initialExecutors": "0",
+      "driverCores": "1",
+      "isCustomerDatabrickComputeEnabled": false,
+      "yarnUser": "kuldeep.chouhan",
+      "dynamicAllocationEnabled": "false",
+      "clouderaLineage": false,
+      "extraExecutorJavaOptions": "",
+      "clusterId": "0",
+      "isBatchPipeline": true,
+      "executorInstances": "1",
+      "waitRestartTime": "2",
+      "autoInspection": false,
+      "isDirty": false,
+      "logLevel": "INFO",
+      "useDedicatedCluster": false,
+      "engine": "spark",
+      "sharedCluster": false,
+      "eventLogEnabled": "false",
+      "captureRawData": true,
+      "vpcEndpointDNS": "",
+      "maxExecutors": "-1",
+      "keyTabSelectOption": "specifyKeyTabFilePath",
+      "executorMemory": "512",
+      "ignoreConnectionTesting": false,
+      "isRestartRequired": false,
+      "extraSparkSubmitOptions": "",
+      "receiverRateLimiter": "none",
+      "statusAlertConfig": {
+        "isErrorHandlingRequired": false,
+        "partitions": "1",
+        "componentType": "",
+        "replicationFactor": "1",
+        "errorLogTarget": "kafka",
+        "connectionId": "",
+        "topicName": "",
+        "connectionName": "",
+        "targetStatus": [],
+        "topicAdministration": ""
+      },
+      "typeOfApplication": "structuredstreaming",
+      "regionId": "",
+      "maxRestartCount": 1,
+      "keyTabFilePath": "",
+      "zkKeyTabFileLocation": "",
+      "enableResourceAnalyzer": false,
+      "pipelineNotification": {
+        "warnings": {},
+        "recommendations": {},
+        "errors": {}
+      }
+    },
+    "subsystemName": "Training_LogisticRegession_1731479705344",
+    "customJarName": ""
+  }
+}
