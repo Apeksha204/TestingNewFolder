@@ -713,7 +713,7 @@
     "appDisplayName": "GCS_Registered_model",
     "lockedDate": "",
     "tags": [],
-    "parentVersionNumber": 9,
+    "parentVersionNumber": 10,
     "configureEmail": false,
     "enableErrorHandler": true,
     "channels": [
@@ -1300,7 +1300,7 @@
       "projectVersion": 1
     },
     "topologySupervisors": [],
-    "createVersionRequestByUser": false,
+    "createVersionRequestByUser": true,
     "lockedBy": "",
     "engine": "spark",
     "alert": {
@@ -1310,11 +1310,11 @@
     },
     "appType": "etl",
     "isReplayAlter": false,
-    "gitcommitid": "c7b106eff537f361a63443176009a6078e7fc6cb",
+    "gitcommitid": "b45d1f0d151fc35366f3a74edfdd2af85667e98b",
     "date_created": 1731664632494,
     "sessionId": "78AB9B94BE9ACD0B612636C13C6C1C0F",
-    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/c7b106eff537f361a63443176009a6078e7fc6cb",
-    "versionNumber": 10,
+    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/b45d1f0d151fc35366f3a74edfdd2af85667e98b",
+    "versionNumber": 11,
     "structure": "pipeline",
     "templateName": "",
     "displayColumnsMap": {
