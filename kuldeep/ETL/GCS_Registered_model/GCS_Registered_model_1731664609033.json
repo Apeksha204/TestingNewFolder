@@ -713,7 +713,7 @@
     "appDisplayName": "GCS_Registered_model",
     "lockedDate": "",
     "tags": [],
-    "parentVersionNumber": 7,
+    "parentVersionNumber": 8,
     "configureEmail": false,
     "enableErrorHandler": true,
     "channels": [
@@ -1310,11 +1310,11 @@
     },
     "appType": "etl",
     "isReplayAlter": false,
-    "gitcommitid": "851c6b2a38c46656dfc36048dcc8bce5a50ced01",
+    "gitcommitid": "c284a165e45dd2e4ab2ff4b63cf33a9f29f320e7",
     "date_created": 1731664632494,
     "sessionId": "78AB9B94BE9ACD0B612636C13C6C1C0F",
-    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/851c6b2a38c46656dfc36048dcc8bce5a50ced01",
-    "versionNumber": 8,
+    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/c284a165e45dd2e4ab2ff4b63cf33a9f29f320e7",
+    "versionNumber": 9,
     "structure": "pipeline",
     "templateName": "",
     "displayColumnsMap": {
