@@ -1,0 +1,1537 @@
+{
+  "internalJson": {
+    "httpSessionId": "78AB9B94BE9ACD0B612636C13C6C1C0F",
+    "isCustomerComputeEnabled": false,
+    "inspectType": "local",
+    "customJarBeforeModification": "",
+    "isDraft": false,
+    "processors": [
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "37",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "analytic",
+        "isStopRequest": false,
+        "messageTypes": [
+          "File_712043"
+        ],
+        "connectionType": "s3",
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectDisplayName": "Default",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": []
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "S3emitter_137047"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "subtype": "ml",
+        "appType": "structuredstreaming",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "decisionTree-processor-ml",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "canChangeSchema": "true",
+        "coordinates": [
+          89.99999713897705,
+          -10
+        ],
+        "label": "DecisionTree",
+        "inputDStreamType": "plain",
+        "message": "",
+        "tags": [
+          "Classification",
+          "Regression",
+          "Entropy",
+          "Pruning",
+          "Decision Tree Splitting",
+          "Tree Structure",
+          "Machine Learning",
+          "Hyperparameter Tuning"
+        ],
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "File_712043",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "DecisionTree_861851",
+        "refreshMetadata": false,
+        "category": [
+          "ML"
+        ],
+        "config": {
+          "s3UserConnectionID": "",
+          "featureVariables": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species"
+          ],
+          "impurity": "gini",
+          "classificationType": "",
+          "saveModelOnS3": "true",
+          "maxBins": 5,
+          "saxInspect": {
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "File_712043"
+              ],
+              "outputSchemaId": [
+                "DecisionTree_861851"
+              ]
+            },
+            "datasetIds": {
+              "inputdatasetId": [
+                "File_712043"
+              ],
+              "outputdatasetId": [
+                "DecisionTree_861851"
+              ]
+            },
+            "detectSchema": false
+          },
+          "modelDisplayName": "",
+          "probabilityColumn": "",
+          "applyTransformations": "true",
+          "isTurnPikeChild": "false",
+          "s3ConfigUserModel": {},
+          "tags": "",
+          "thresholds": [],
+          "userModelLocation": "",
+          "connectionId": "",
+          "executorPlugin": "com.streamanalytix.spark.ss.helper.DecisionTreeMLHelper",
+          "messageName": "",
+          "seed": 1,
+          "hyperParametersMap": {},
+          "description": "",
+          "predictionColumn": "",
+          "hdfsUserConnectionID": "",
+          "modelVersionUsed": "1",
+          "hdfsUserConnectionName": "",
+          "featureColumn": "",
+          "dataPreProcessingList": [],
+          "scope": "Project",
+          "inputLabel": "",
+          "customJDBC": false,
+          "comments": "",
+          "userModelBucketName": "",
+          "turnpikeName": "",
+          "mvelfnclist": [],
+          "dropNAVariables": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species"
+          ],
+          "minInfoGain": 0,
+          "s3UserConnectionName": "",
+          "hdfsConfigUserModel": "",
+          "maxDepth": 5,
+          "modelName": "GCS_DTModel_1731662826517",
+          "algorithmType": "Classification",
+          "outputMessage": "File_712043",
+          "parentTag": "/",
+          "labelColumn": "",
+          "listOfPreProcessing": [],
+          "connectionConfig": {},
+          "expfldlst": "",
+          "operatorType": "processor",
+          "operation": "PREDICTION",
+          "rawPredictionColumn": "",
+          "subsystemName": "GCS_Registered_model_1731664609033"
+        }
+      },
+      {
+        "connectorId": "2",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "emitter",
+        "isStopRequest": false,
+        "connectionType": "s3",
+        "messageTypes": [
+          "DecisionTree_861851"
+        ],
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectDisplayName": "Default",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": []
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "subtype": "",
+        "appType": "structuredstreaming",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "s3-emitter",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "both",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          169.99999713897705,
+          -10
+        ],
+        "label": "S3",
+        "inputDStreamType": "both",
+        "currentAppType": "batch",
+        "message": "",
+        "tags": [
+          "S3 Integration",
+          "Cloud Storage",
+          "Data Storage",
+          "Object Storage",
+          "AWS S3 Integration",
+          "File Storage",
+          "Cloud Data Storage",
+          "AWS"
+        ],
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "DecisionTree_861851",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "S3emitter_137047",
+        "refreshMetadata": false,
+        "category": [
+          "File"
+        ],
+        "config": {
+          "bucketName": "anirkhe115",
+          "partitionColumnsList": [],
+          "outputMode": "append",
+          "processingTimeUnit": "",
+          "path": "/KD/unlimited/gcsdtmodel",
+          "endpoint": "",
+          "scdJoinColumns": "",
+          "delimiter": "",
+          "saxInspect": {
+            "datasetIds": {
+              "inputdatasetId": [
+                "DecisionTree_861851"
+              ],
+              "outputdatasetId": [
+                "S3emitter_137047"
+              ]
+            },
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "DecisionTree_861851"
+              ],
+              "outputSchemaId": [
+                "DecisionTree_861851"
+              ]
+            }
+          },
+          "customJDBC": false,
+          "s3Protocol": "s3a",
+          "ignoreActionError": false,
+          "useCustomFilename": false,
+          "isTimeBasedCheckPoint": false,
+          "turnpikeName": "",
+          "mvelfnclist": [],
+          "format": "json",
+          "customFileName": "",
+          "columnList": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species",
+            "str_out",
+            "feature_input",
+            "rawPrediction",
+            "prob",
+            "prediction",
+            "post_processing_output"
+          ],
+          "isTurnPikeChild": "false",
+          "trigger": false,
+          "scdType": "",
+          "priority": 1,
+          "processingTime": "",
+          "endPoint": "",
+          "partioningRequired": "",
+          "saveMode": "append",
+          "checkpointLocation": "",
+          "checkpointConnectionId": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "connectionId": "de74badd-9219-4a12-98ed-858132e64cf1",
+          "header": true,
+          "connectionConfig": {},
+          "expfldlst": "",
+          "connectionName": "s3_connection",
+          "operatorType": "processor",
+          "checkpointConnectionType": "hdfs",
+          "executorPlugin": "com.streamanalytix.spark.ss.emitter.S3Emitter",
+          "subsystemName": "GCS_Registered_model_1731664609033",
+          "scdEnabled": "false"
+        }
+      },
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "34",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "analytic",
+        "isStopRequest": false,
+        "messageTypes": [
+          "File_712043"
+        ],
+        "connectionType": "s3",
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectDisplayName": "Default",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": []
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "S3emitter_55590"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "subtype": "ml",
+        "appType": "structuredstreaming",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "randomForestTree-processor-ml",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "canChangeSchema": "true",
+        "coordinates": [
+          96.99998950958252,
+          66.99999809265137
+        ],
+        "label": "RandomForest",
+        "inputDStreamType": "plain",
+        "message": "",
+        "tags": [
+          "Ensemble Learning",
+          "Decision Trees",
+          "Classification",
+          "Regression",
+          "Anomaly Detection",
+          "Machine Learning",
+          "Extremely Randomized Trees",
+          "Random Forest Classifier",
+          "Random Forest Regressor",
+          "Cross-Validation",
+          "Hyperparameter Tuning"
+        ],
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "File_712043",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "RandomForest_894359",
+        "refreshMetadata": false,
+        "category": [
+          "ML"
+        ],
+        "config": {
+          "s3UserConnectionID": "",
+          "featureVariables": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species"
+          ],
+          "impurity": "gini",
+          "classificationType": "",
+          "saveModelOnS3": "true",
+          "maxBins": 5,
+          "saxInspect": {
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "File_712043"
+              ],
+              "outputSchemaId": [
+                "RandomForest_894359"
+              ]
+            },
+            "datasetIds": {
+              "inputdatasetId": [
+                "File_712043"
+              ],
+              "outputdatasetId": [
+                "RandomForest_894359"
+              ]
+            },
+            "detectSchema": false
+          },
+          "modelDisplayName": "",
+          "probabilityColumn": "",
+          "applyTransformations": "true",
+          "isTurnPikeChild": "false",
+          "s3ConfigUserModel": {},
+          "tags": "",
+          "thresholds": [],
+          "userModelLocation": "",
+          "connectionId": "",
+          "executorPlugin": "com.streamanalytix.spark.ss.helper.RandomForestMLHelper",
+          "messageName": "",
+          "featureSubsetStrategy": "",
+          "seed": 1,
+          "hyperParametersMap": {},
+          "subSamplingRate": 0,
+          "description": "",
+          "predictionColumn": "",
+          "hdfsUserConnectionID": "",
+          "modelVersionUsed": "1",
+          "hdfsUserConnectionName": "",
+          "featureColumn": "",
+          "dataPreProcessingList": [],
+          "scope": "Project",
+          "inputLabel": "",
+          "customJDBC": false,
+          "numTrees": 1,
+          "comments": "",
+          "userModelBucketName": "",
+          "turnpikeName": "",
+          "mvelfnclist": [],
+          "dropNAVariables": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species"
+          ],
+          "minInfoGain": 0,
+          "s3UserConnectionName": "",
+          "hdfsConfigUserModel": "",
+          "maxDepth": 5,
+          "modelName": "GCS_RF_Model_1731663040104",
+          "algorithmType": "Classification",
+          "outputMessage": "File_712043",
+          "parentTag": "/",
+          "labelColumn": "",
+          "listOfPreProcessing": [],
+          "connectionConfig": {},
+          "expfldlst": "",
+          "operatorType": "processor",
+          "operation": "PREDICTION",
+          "rawPredictionColumn": "",
+          "subsystemName": "GCS_Registered_model_1731664609033"
+        }
+      },
+      {
+        "connectorId": "2",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "emitter",
+        "isStopRequest": false,
+        "connectionType": "s3",
+        "messageTypes": [
+          "RandomForest_894359"
+        ],
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectDisplayName": "Default",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": []
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "subtype": "",
+        "appType": "structuredstreaming",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "s3-emitter",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "both",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          176.999981880188,
+          66.99999809265137
+        ],
+        "label": "S3",
+        "inputDStreamType": "both",
+        "currentAppType": "batch",
+        "message": "",
+        "tags": [
+          "S3 Integration",
+          "Cloud Storage",
+          "Data Storage",
+          "Object Storage",
+          "AWS S3 Integration",
+          "File Storage",
+          "Cloud Data Storage",
+          "AWS"
+        ],
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "RandomForest_894359",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "S3emitter_55590",
+        "refreshMetadata": false,
+        "category": [
+          "File"
+        ],
+        "config": {
+          "bucketName": "anirkhe115",
+          "partitionColumnsList": [],
+          "outputMode": "append",
+          "processingTimeUnit": "",
+          "path": "/KD/unlimited/RFoutput",
+          "endpoint": "",
+          "scdJoinColumns": "",
+          "delimiter": "",
+          "saxInspect": {
+            "datasetIds": {
+              "inputdatasetId": [
+                "RandomForest_894359"
+              ],
+              "outputdatasetId": [
+                "S3emitter_55590"
+              ]
+            },
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "RandomForest_894359"
+              ],
+              "outputSchemaId": [
+                "RandomForest_894359"
+              ]
+            }
+          },
+          "customJDBC": false,
+          "s3Protocol": "s3a",
+          "ignoreActionError": false,
+          "useCustomFilename": false,
+          "isTimeBasedCheckPoint": false,
+          "turnpikeName": "",
+          "mvelfnclist": [],
+          "format": "json",
+          "customFileName": "",
+          "columnList": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species",
+            "str_out",
+            "featureInput",
+            "rawPrediction",
+            "prob",
+            "prediction",
+            "post_processing_out"
+          ],
+          "isTurnPikeChild": "false",
+          "trigger": false,
+          "scdType": "",
+          "priority": 2,
+          "processingTime": "",
+          "endPoint": "",
+          "partioningRequired": "",
+          "saveMode": "append",
+          "checkpointLocation": "",
+          "checkpointConnectionId": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "connectionId": "de74badd-9219-4a12-98ed-858132e64cf1",
+          "header": true,
+          "connectionConfig": {},
+          "expfldlst": "",
+          "connectionName": "s3_connection",
+          "operatorType": "processor",
+          "checkpointConnectionType": "hdfs",
+          "executorPlugin": "com.streamanalytix.spark.ss.emitter.S3Emitter",
+          "subsystemName": "GCS_Registered_model_1731664609033",
+          "scdEnabled": "false"
+        }
+      }
+    ],
+    "esperHAEnabled": false,
+    "isLocked": false,
+    "id": "GCS_Registered_model_1731664609033",
+    "connections": [
+      "de74badd-9219-4a12-98ed-858132e64cf1",
+      "de74badd-9219-4a12-98ed-858132e64cf1"
+    ],
+    "emailIds": [],
+    "iscreatVersionChecked": false,
+    "appDisplayName": "GCS_Registered_model",
+    "lockedDate": "",
+    "tags": [],
+    "parentVersionNumber": 4,
+    "configureEmail": false,
+    "enableErrorHandler": true,
+    "channels": [
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "41",
+        "className": "com.streamanalytix.spark.ss.receiver.SparkSSReceiver",
+        "channelType": "single",
+        "isStopRequest": false,
+        "type": "channel",
+        "messageTypes": [
+          "File_712043"
+        ],
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectDisplayName": "Default",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": []
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "DecisionTree_861851"
+          },
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "RandomForest_894359"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "appType": "structuredstreaming,ssbatch",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "datagenerator-channel",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "canChangeSchema": true,
+        "coordinates": [
+          10,
+          28
+        ],
+        "label": "File",
+        "inputDStreamType": "na",
+        "message": "",
+        "tags": [
+          "File Integration",
+          "File Upload",
+          "File Processing",
+          "File Management",
+          "Data Upload"
+        ],
+        "groupings": [],
+        "messageTypeId": "tracemessage",
+        "name": "File_712043",
+        "refreshMetadata": false,
+        "schemaIdentifier": "com.streamanalytix.engine.core.scheme.util.DefaultSchemaIdentifier",
+        "category": [
+          "File"
+        ],
+        "config": {
+          "recordsPerBatch": "100",
+          "extraConf": {
+            "cdcErrorAlert": false
+          },
+          "sourceHeader": true,
+          "messageTypes": [
+            "File_712043"
+          ],
+          "channelPlugin": "com.streamanalytix.spark.ss.receiver.DataGeneratorBatchSource",
+          "delimiter": ",",
+          "saxInspect": {
+            "autoInspectHdfsFilePath": "Iris_old.csv",
+            "typeOfSchemaDetection": "fileUpload",
+            "datasetIds": {
+              "inputdatasetId": [],
+              "outputdatasetId": [
+                "File_712043"
+              ]
+            },
+            "detectSchema": false,
+            "header": true,
+            "referenceSchemaId": {
+              "inputSchemaId": [],
+              "outputSchemaId": [
+                "File_712043"
+              ]
+            },
+            "rowCount": 100,
+            "samplingMethod": "topN",
+            "triggerTime": "3 seconds"
+          },
+          "customJDBC": false,
+          "ignoreActionError": false,
+          "configureData": "uploadData",
+          "mvelfnclist": [],
+          "filePath": "Iris_old.csv",
+          "datasetSelectVersion": "0",
+          "inspectAsBatch": true,
+          "fieldMapping": {},
+          "filename": "",
+          "repeatData": "false",
+          "parserType": "DELIMITED",
+          "datasetSelected": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "connectionConfig": {},
+          "expfldlst": "",
+          "operatorType": "receiver",
+          "subsystemName": "GCS_Registered_model_1731664609033"
+        }
+      }
+    ],
+    "name": "GCS_Registered_model_1731664609033",
+    "autoInspectSchema": {
+      "File_712043": [
+        {
+          "name": "PetalLength",
+          "alias": "PetalLength",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "SepalLength",
+          "alias": "SepalLength",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "PetalWidth",
+          "alias": "PetalWidth",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "SepalWidth",
+          "alias": "SepalWidth",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "Species",
+          "alias": "Species",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        }
+      ],
+      "DecisionTree_861851": [
+        {
+          "name": "PetalLength",
+          "alias": "PetalLength",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "SepalLength",
+          "alias": "SepalLength",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "PetalWidth",
+          "alias": "PetalWidth",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "SepalWidth",
+          "alias": "SepalWidth",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "Species",
+          "alias": "Species",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "str_out",
+          "alias": "str_out",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "feature_input",
+          "alias": "feature_input",
+          "dataType": "vector",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "rawPrediction",
+          "alias": "rawPrediction",
+          "dataType": "vector",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "prob",
+          "alias": "prob",
+          "dataType": "vector",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "prediction",
+          "alias": "prediction",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "post_processing_output",
+          "alias": "post_processing_output",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        }
+      ],
+      "RandomForest_894359": [
+        {
+          "name": "PetalLength",
+          "alias": "PetalLength",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "SepalLength",
+          "alias": "SepalLength",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "PetalWidth",
+          "alias": "PetalWidth",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "SepalWidth",
+          "alias": "SepalWidth",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "Species",
+          "alias": "Species",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "str_out",
+          "alias": "str_out",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "featureInput",
+          "alias": "featureInput",
+          "dataType": "vector",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "rawPrediction",
+          "alias": "rawPrediction",
+          "dataType": "vector",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "prob",
+          "alias": "prob",
+          "dataType": "vector",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "prediction",
+          "alias": "prediction",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "name": "post_processing_out",
+          "alias": "post_processing_out",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        }
+      ]
+    },
+    "customFileNames": "Iris_old.csv",
+    "status": "STOPPED",
+    "isCustomerDatabrickComputeEnabled": false,
+    "description": "TestNew",
+    "partialConfig": {},
+    "clusterId": "0",
+    "originalCustomJarName": "",
+    "projectDetails": {
+      "associatedAccounts": [],
+      "createdBy": "kuldeep.chouhan",
+      "projectDisplayName": "Default",
+      "sharedProject": false,
+      "projectName": "Default_1730098071421",
+      "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+      "projectVersion": 1
+    },
+    "topologySupervisors": [],
+    "createVersionRequestByUser": true,
+    "lockedBy": "",
+    "engine": "spark",
+    "alert": {
+      "added": [],
+      "updated": [],
+      "deleted": []
+    },
+    "appType": "etl",
+    "isReplayAlter": false,
+    "gitcommitid": "677bc65234f25cdb7df7df55877c26f22f763700",
+    "date_created": 1731664632494,
+    "sessionId": "78AB9B94BE9ACD0B612636C13C6C1C0F",
+    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/677bc65234f25cdb7df7df55877c26f22f763700",
+    "versionNumber": 5,
+    "structure": "pipeline",
+    "templateName": "",
+    "displayColumnsMap": {
+      "File_712043": {
+        "File_712043": {
+          "allCols": [],
+          "displayCols": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "DecisionTree_861851": {
+        "DecisionTree_861851": {
+          "allCols": [],
+          "displayCols": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species",
+            "str_out",
+            "feature_input",
+            "rawPrediction",
+            "prob",
+            "prediction",
+            "post_processing_output"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "S3emitter_137047": {
+        "DecisionTree_861851": {
+          "allCols": [],
+          "displayCols": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species",
+            "str_out",
+            "feature_input",
+            "rawPrediction",
+            "prob",
+            "prediction",
+            "post_processing_output"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "RandomForest_894359": {
+        "RandomForest_894359": {
+          "allCols": [],
+          "displayCols": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species",
+            "str_out",
+            "featureInput",
+            "rawPrediction",
+            "prob",
+            "prediction",
+            "post_processing_out"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "S3emitter_55590": {
+        "RandomForest_894359": {
+          "allCols": [],
+          "displayCols": [
+            "PetalLength",
+            "SepalLength",
+            "PetalWidth",
+            "SepalWidth",
+            "Species",
+            "str_out",
+            "featureInput",
+            "rawPrediction",
+            "prob",
+            "prediction",
+            "post_processing_out"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      }
+    },
+    "isDraftSupported": false,
+    "tenantId": "9",
+    "isErrorModeNotified": false,
+    "config": {
+      "subnetSettingsName": "",
+      "checkPointDirectory": "/",
+      "enableCheckPoint": "false",
+      "yarnAmCores": "1",
+      "batchDuration": "1000",
+      "executorCores": "2",
+      "userProvidedSparkOptions": "",
+      "action_failure_reason": "",
+      "poolNname": "FIFO",
+      "uiJson": {
+        "source": {
+          "all": [
+            "File"
+          ],
+          "images": [
+            "datagenerator-channel.png"
+          ],
+          "count": ""
+        },
+        "target": {
+          "all": [
+            "S3",
+            "S3"
+          ],
+          "images": [
+            "s3-emitter.png",
+            "s3-emitter.png"
+          ],
+          "count": "+1"
+        }
+      },
+      "taskMaxFailures": "4",
+      "pendingRestartCount": "0",
+      "driverPermGenSize": "512",
+      "kPipelineId": "7d153f5d-1b3e-4f39-a220-9cd4a0b700a4",
+      "isImpersonationEnabled": false,
+      "receiverMaxRate": "",
+      "appCores": "2",
+      "enableBackPressure": "",
+      "deploymentMode": "yarn-cluster",
+      "driverMemory": "512",
+      "isConnectionMissing": false,
+      "isMonitoringGraphsEnable": true,
+      "offset": -330,
+      "yarnAmMemory": "512",
+      "isAccumulatorDataPublishOnES": true,
+      "useDedicatedAlways": false,
+      "monitoringComponentList": [
+        "File_712043",
+        "DecisionTree_861851",
+        "S3emitter_137047",
+        "RandomForest_894359",
+        "S3emitter_55590"
+      ],
+      "accountId": "14",
+      "extraDriverJavaOptions": "",
+      "usingExternalSchema": false,
+      "downloadKeytabFileLocation": "",
+      "connectionName": "",
+      "yarnQueue": "default",
+      "computeClusterType": "gathrCluster",
+      "vendorType": "ApacheSpark",
+      "eventLogDirectory": "/",
+      "initialExecutors": "0",
+      "driverCores": "1",
+      "isCustomerDatabrickComputeEnabled": false,
+      "yarnUser": "kuldeep.chouhan",
+      "dynamicAllocationEnabled": "false",
+      "clouderaLineage": false,
+      "extraExecutorJavaOptions": "",
+      "clusterId": "0",
+      "isBatchPipeline": true,
+      "executorInstances": "1",
+      "waitRestartTime": "2",
+      "autoInspection": false,
+      "isDirty": false,
+      "logLevel": "INFO",
+      "useDedicatedCluster": false,
+      "engine": "spark",
+      "sharedCluster": false,
+      "eventLogEnabled": "false",
+      "captureRawData": true,
+      "vpcEndpointDNS": "",
+      "maxExecutors": "-1",
+      "keyTabSelectOption": "specifyKeyTabFilePath",
+      "executorMemory": "512",
+      "ignoreConnectionTesting": false,
+      "isRestartRequired": false,
+      "extraSparkSubmitOptions": "",
+      "receiverRateLimiter": "none",
+      "statusAlertConfig": {
+        "isErrorHandlingRequired": false,
+        "partitions": "1",
+        "componentType": "",
+        "replicationFactor": "1",
+        "errorLogTarget": "kafka",
+        "connectionId": "",
+        "topicName": "",
+        "connectionName": "",
+        "targetStatus": [],
+        "topicAdministration": ""
+      },
+      "typeOfApplication": "structuredstreaming",
+      "regionId": "",
+      "maxRestartCount": 1,
+      "keyTabFilePath": "",
+      "zkKeyTabFileLocation": "",
+      "enableResourceAnalyzer": false,
+      "pipelineNotification": {
+        "warnings": {},
+        "recommendations": {},
+        "errors": {}
+      }
+    },
+    "subsystemName": "GCS_Registered_model_1731664609033",
+    "customJarName": ""
+  }
+}
