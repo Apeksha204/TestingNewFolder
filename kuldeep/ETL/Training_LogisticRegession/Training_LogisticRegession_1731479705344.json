@@ -1,10 +1,12 @@
 {
   "internalJson": {
-    "httpSessionId": "FC9723E772CCC0E1DC5C070B61E7AF05",
-    "isCustomerComputeEnabled": false,
+    "httpSessionId": "B803B6BB441D198C8E5C1500B2B8B037",
+    "isCustomerComputeEnabled": true,
     "inspectType": "local",
+    "templateUsed": [],
     "customJarBeforeModification": "",
     "isDraft": false,
+    "addedJars": [],
     "processors": [
       {
         "defaultDateFormat": "yyyy-MM-dd",
@@ -35,7 +37,7 @@
             ],
             "applyFilter": false,
             "filterCriteria": [],
-            "componentId": "ElasticSearch_620600"
+            "componentId": "ElasticSearch_539893"
           },
           {
             "emitStreamId": "saxErrorStream",
@@ -76,7 +78,7 @@
         "visible": true,
         "canChangeSchema": "true",
         "coordinates": [
-          154.99999809265137,
+          155,
           -9.333332061767578
         ],
         "label": "LogisticRegression",
@@ -123,6 +125,7 @@
           "maxIterations": "100",
           "trainRatio": 0.75,
           "metricSelected": "areaUnderROC",
+          "datasetNewAssociation": false,
           "classificationType": "binary",
           "bestModelName": "TunedLOR_1731479651192",
           "scoreField": "",
@@ -341,7 +344,7 @@
         ],
         "appType": "structuredstreaming",
         "messageTypeId": "tracemessage",
-        "name": "ElasticSearch_620600",
+        "name": "ElasticSearch_539893",
         "id": "elasticsearch-emitter",
         "outputDStreamType": "both",
         "config": {
@@ -395,7 +398,7 @@
           "isTTLEnable": false,
           "modelName": "LogisticRegressionModel_1731479519430",
           "ttlValue": "",
-          "checkpointLocation": "/tmp/LogisticRegressionModel_1731479519430_1731479706071",
+          "checkpointLocation": "/tmp/LogisticRegressionModel_1731479519430_1755680762716",
           "connectionRetryDelay": "30000",
           "isNestedJson": "true",
           "connectionId": "8db1fd60-ba22-4a1a-9eea-d148a2a56ed3",
@@ -438,7 +441,7 @@
     "appDisplayName": "Training_LogisticRegession",
     "lockedDate": "",
     "tags": [],
-    "parentVersionNumber": 5,
+    "parentVersionNumber": 6,
     "configureEmail": false,
     "enableErrorHandler": true,
     "channels": [
@@ -533,6 +536,7 @@
         ],
         "config": {
           "recordsPerBatch": "100",
+          "datasetNewAssociation": false,
           "extraConf": {
             "cdcErrorAlert": false
           },
@@ -746,19 +750,26 @@
     "isCustomerDatabrickComputeEnabled": false,
     "description": "Test123",
     "partialConfig": {},
-    "clusterId": "0",
+    "clusterId": "-1",
     "originalCustomJarName": "",
     "projectDetails": {
-      "associatedAccounts": [],
+      "associatedAccounts": [
+        {
+          "vendorType": "ApacheSpark",
+          "name": "kd-cluster",
+          "id": 14
+        }
+      ],
       "createdBy": "kuldeep.chouhan",
       "projectDisplayName": "Default",
       "sharedProject": false,
+      "name": "Default_1730098071421",
       "projectName": "Default_1730098071421",
       "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
       "projectVersion": 1
     },
     "topologySupervisors": [],
-    "createVersionRequestByUser": false,
+    "createVersionRequestByUser": true,
     "lockedBy": "",
     "engine": "spark",
     "alert": {
@@ -768,11 +779,11 @@
     },
     "appType": "etl",
     "isReplayAlter": false,
-    "gitcommitid": "146556fe357be92084f32acb286b102389be8121",
-    "date_created": 1731479721114,
-    "sessionId": "FC9723E772CCC0E1DC5C070B61E7AF05",
-    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/146556fe357be92084f32acb286b102389be8121",
-    "versionNumber": 6,
+    "gitcommitid": "c0b1e05db1a3bf2c1c66993e529a60e11dca2fe6",
+    "date_created": 1755680762782,
+    "sessionId": "B803B6BB441D198C8E5C1500B2B8B037",
+    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/c0b1e05db1a3bf2c1c66993e529a60e11dca2fe6",
+    "versionNumber": 7,
     "structure": "pipeline",
     "templateName": "",
     "displayColumnsMap": {
@@ -812,60 +823,69 @@
       "subnetSettingsName": "",
       "checkPointDirectory": "/",
       "enableCheckPoint": "false",
+      "isCustomerComputeEnabled": true,
       "yarnAmCores": "1",
       "batchDuration": "1000",
+      "dataValidationExecutionMode": "sequential",
       "executorCores": "2",
       "userProvidedSparkOptions": "",
       "action_failure_reason": "",
+      "uploadKeyTabFile": "",
       "poolNname": "FIFO",
       "uiJson": {
         "source": {
-          "all": [
-            "File"
-          ],
           "images": [
             "datagenerator-channel.png"
+          ],
+          "all": [
+            "File"
           ],
           "count": ""
         },
         "target": {
-          "all": [],
           "images": [
             "na-target.png"
           ],
+          "all": [],
           "count": ""
         }
       },
       "taskMaxFailures": "4",
       "pendingRestartCount": "0",
-      "driverPermGenSize": "512",
+      "driverPermGenSize": "256",
+      "extraSparkGpuProperty": "--conf spark.executor.resource.gpu.amount\u003d1 --conf spark.executor.resource.gpu.vendor\u003dnvidia.com --conf spark.task.resource.gpu.amount\u003d0.1 --conf spark.kubernetes.node.selector.\u0027nvidia.com/gpu.present\u0027\u003dtrue",
       "kPipelineId": "31e93810-aab3-4fec-83da-350a16137aa6",
       "isImpersonationEnabled": false,
+      "isUnlimitedLicense": true,
+      "computeAccProjectName": "Default_1730098071421",
       "receiverMaxRate": "",
+      "id": "0",
       "appCores": "2",
       "enableBackPressure": "",
-      "deploymentMode": "yarn-cluster",
+      "deploymentMode": "local",
       "driverMemory": "512",
       "isConnectionMissing": false,
       "isMonitoringGraphsEnable": true,
       "offset": -330,
+      "entityType": "cluster",
       "yarnAmMemory": "512",
       "isAccumulatorDataPublishOnES": true,
+      "gpuAffinity": false,
       "useDedicatedAlways": false,
       "monitoringComponentList": [
         "File_187168",
         "LogisticRegression_745115"
       ],
-      "accountId": "14",
+      "accountId": "",
       "extraDriverJavaOptions": "",
       "usingExternalSchema": false,
       "downloadKeytabFileLocation": "",
       "connectionName": "",
       "yarnQueue": "default",
       "computeClusterType": "gathrCluster",
-      "vendorType": "ApacheSpark",
+      "vendorType": "local",
       "eventLogDirectory": "/",
-      "initialExecutors": "0",
+      "initialExecutors": 0,
       "driverCores": "1",
       "isCustomerDatabrickComputeEnabled": false,
       "yarnUser": "kuldeep.chouhan",
@@ -874,19 +894,20 @@
       "extraExecutorJavaOptions": "",
       "clusterId": "0",
       "isBatchPipeline": true,
-      "executorInstances": "1",
+      "executorInstances": 1,
       "waitRestartTime": "2",
       "autoInspection": false,
-      "isDirty": false,
+      "isDirty": true,
       "logLevel": "INFO",
       "useDedicatedCluster": false,
       "engine": "spark",
+      "clusterName": "",
       "sharedCluster": false,
       "eventLogEnabled": "false",
       "captureRawData": true,
       "vpcEndpointDNS": "",
-      "maxExecutors": "-1",
-      "keyTabSelectOption": "specifyKeyTabFilePath",
+      "maxExecutors": 1,
+      "keyTabSelectOption": "",
       "executorMemory": "512",
       "ignoreConnectionTesting": false,
       "isRestartRequired": false,
@@ -894,14 +915,14 @@
       "receiverRateLimiter": "none",
       "statusAlertConfig": {
         "isErrorHandlingRequired": false,
-        "partitions": "1",
-        "componentType": "",
-        "replicationFactor": "1",
+        "targetStatus": [],
         "errorLogTarget": "kafka",
+        "componentType": "",
+        "connectionName": "",
         "connectionId": "",
         "topicName": "",
-        "connectionName": "",
-        "targetStatus": [],
+        "partitions": "1",
+        "replicationFactor": "1",
         "topicAdministration": ""
       },
       "typeOfApplication": "structuredstreaming",
@@ -910,10 +931,15 @@
       "keyTabFilePath": "",
       "zkKeyTabFileLocation": "",
       "enableResourceAnalyzer": false,
+      "userKrbPrincipal": "",
       "pipelineNotification": {
-        "warnings": {},
-        "recommendations": {},
-        "errors": {}
+        "errors": {},
+        "warnings": {
+          "LogisticRegression_745115": [
+            "\u003cspan class\u003d\"notification-comp-name\"\u003eLogisticRegression\u003c/span\u003e: component is not Inspected"
+          ]
+        },
+        "recommendations": {}
       }
     },
     "subsystemName": "Training_LogisticRegession_1731479705344",
