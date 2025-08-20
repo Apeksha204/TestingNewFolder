@@ -438,7 +438,7 @@
     "appDisplayName": "Training_LogisticRegession",
     "lockedDate": "",
     "tags": [],
-    "parentVersionNumber": 4,
+    "parentVersionNumber": 5,
     "configureEmail": false,
     "enableErrorHandler": true,
     "channels": [
@@ -768,11 +768,11 @@
     },
     "appType": "etl",
     "isReplayAlter": false,
-    "gitcommitid": "afbe897e422425432a94870ebdc941f2f6000b57",
+    "gitcommitid": "146556fe357be92084f32acb286b102389be8121",
     "date_created": 1731479721114,
     "sessionId": "FC9723E772CCC0E1DC5C070B61E7AF05",
-    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/afbe897e422425432a94870ebdc941f2f6000b57",
-    "versionNumber": 5,
+    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/146556fe357be92084f32acb286b102389be8121",
+    "versionNumber": 6,
     "structure": "pipeline",
     "templateName": "",
     "displayColumnsMap": {
