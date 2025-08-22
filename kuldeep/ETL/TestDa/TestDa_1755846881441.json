@@ -1,0 +1,764 @@
+{
+  "internalJson": {
+    "httpSessionId": "E43EB7811AB95F049C6ADDBB0D531D1D",
+    "isCustomerComputeEnabled": true,
+    "templateUsed": [],
+    "inspectType": "local",
+    "customJarBeforeModification": "",
+    "isDraft": false,
+    "addedJars": [],
+    "processors": [
+      {
+        "connectorId": "2",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "emitter",
+        "isStopRequest": false,
+        "connectionType": "s3",
+        "messageTypes": [
+          "File_894814_39606"
+        ],
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectDisplayName": "Default",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": [
+            {
+              "vendorType": "ApacheSpark",
+              "name": "kd-cluster",
+              "id": 14
+            }
+          ],
+          "name": "Default_1730098071421"
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "subtype": "",
+        "appType": "structuredstreaming",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "s3-emitter",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "both",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          90,
+          10
+        ],
+        "label": "S3",
+        "inputDStreamType": "both",
+        "currentAppType": "batch",
+        "message": "",
+        "tags": [
+          "S3 Integration",
+          "Cloud Storage",
+          "Data Storage",
+          "Object Storage",
+          "AWS S3 Integration",
+          "File Storage",
+          "Cloud Data Storage",
+          "AWS"
+        ],
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "File_894814_39606",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "S3emitter_707986",
+        "refreshMetadata": false,
+        "category": [
+          "File"
+        ],
+        "config": {
+          "bucketName": "anirkhe115",
+          "datasetNewAssociation": false,
+          "partitionColumnsList": [],
+          "outputMode": "append",
+          "compressionType": "none",
+          "processingTimeUnit": "",
+          "path": "ApekshaSaas",
+          "IsPiiEnable": true,
+          "endpoint": "",
+          "scdJoinColumns": "",
+          "multilineJson": false,
+          "delimiter": "|",
+          "saxInspect": {
+            "datasetIds": {
+              "inputdatasetId": [
+                "File_894814_39606"
+              ],
+              "outputdatasetId": [
+                "S3emitter_707986"
+              ]
+            },
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "File_894814_39606"
+              ],
+              "outputSchemaId": [
+                "File_894814_39606"
+              ]
+            }
+          },
+          "customJDBC": false,
+          "s3Protocol": "s3a",
+          "ignoreActionError": false,
+          "useCustomFilename": false,
+          "isTimeBasedCheckPoint": false,
+          "turnpikeName": "",
+          "mvelfnclist": [],
+          "format": "csv",
+          "customFileName": "",
+          "columnList": [
+            "Transaction_date",
+            "Product",
+            "Price",
+            "City",
+            "State",
+            "Country",
+            "Last_Login",
+            "Latitude",
+            "Longitude",
+            "US Zip"
+          ],
+          "isTurnPikeChild": "false",
+          "trigger": false,
+          "scdType": "",
+          "priority": 1,
+          "processingTime": "",
+          "endPoint": "",
+          "partioningRequired": "",
+          "saveMode": "append",
+          "checkpointLocation": "",
+          "checkpointConnectionId": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "connectionId": "de74badd-9219-4a12-98ed-858132e64cf1",
+          "header": true,
+          "connectionConfig": {},
+          "expfldlst": "",
+          "connectionName": "s3_connection",
+          "operatorType": "processor",
+          "checkpointConnectionType": "hdfs",
+          "executorPlugin": "com.streamanalytix.spark.ss.emitter.S3Emitter",
+          "subsystemName": "TestDa_1755846881441",
+          "scdEnabled": "false"
+        }
+      }
+    ],
+    "esperHAEnabled": false,
+    "isLocked": false,
+    "id": "TestDa_1755846881441",
+    "connections": [
+      "de74badd-9219-4a12-98ed-858132e64cf1"
+    ],
+    "emailIds": [],
+    "iscreatVersionChecked": false,
+    "appDisplayName": "TestDa",
+    "lockedDate": "",
+    "tags": [],
+    "parentVersionNumber": 0,
+    "configureEmail": false,
+    "enableErrorHandler": true,
+    "channels": [
+      {
+        "sourceId": "datagenerator",
+        "datasetState": "Published",
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "41",
+        "className": "com.streamanalytix.spark.ss.receiver.SparkSSReceiver",
+        "channelType": "single",
+        "isStopRequest": false,
+        "type": "channel",
+        "messageTypes": [
+          "File_894814_39606"
+        ],
+        "projectDetails": {
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectDisplayName": "Default",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": [
+            {
+              "vendorType": "ApacheSpark",
+              "name": "kd-cluster",
+              "id": 14
+            }
+          ],
+          "name": "Default_1730098071421"
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "S3emitter_707986"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "valid": true,
+        "appType": "structuredstreaming,ssbatch",
+        "isDataset": true,
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "datagenerator-channel",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "resuseDataset": true,
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "canChangeSchema": true,
+        "appDisplayName": "Test123",
+        "coordinates": [
+          10,
+          10
+        ],
+        "datasetName": "Test123_1755846440231",
+        "label": "Test123",
+        "inputDStreamType": "na",
+        "message": "",
+        "version": 1,
+        "tags": [
+          "File Integration",
+          "File Upload",
+          "File Processing",
+          "File Management",
+          "Data Upload"
+        ],
+        "groupings": [],
+        "messageTypeId": "tracemessage",
+        "name": "File_894814_39606",
+        "refreshMetadata": false,
+        "schemaIdentifier": "com.streamanalytix.engine.core.scheme.util.DefaultSchemaIdentifier",
+        "category": [
+          "File"
+        ],
+        "config": {
+          "isBinaryFileUpload": false,
+          "filePathDisplayName": "SalesJan.csv",
+          "recordsPerBatch": "100",
+          "datasetNewAssociation": false,
+          "sourceHeader": true,
+          "messageTypes": [
+            "File_894814_39606"
+          ],
+          "channelPlugin": "com.streamanalytix.spark.ss.receiver.DataGeneratorBatchSource",
+          "IsPiiEnable": true,
+          "delimiter": ",",
+          "multilineJson": false,
+          "saxInspect": {
+            "autoInspectHdfsFilePath": "SalesJan.csv",
+            "typeOfSchemaDetection": "fileUpload",
+            "datasetIds": {
+              "inputdatasetId": [],
+              "outputdatasetId": [
+                "File_894814_39606"
+              ]
+            },
+            "detectSchema": false,
+            "header": true,
+            "referenceSchemaId": {
+              "inputSchemaId": [],
+              "outputSchemaId": [
+                "File_894814_39606"
+              ]
+            },
+            "piiDetect": true,
+            "rowCount": 100,
+            "samplingMethod": "topN",
+            "triggerTime": "3 seconds"
+          },
+          "customJDBC": false,
+          "reuseDataset": true,
+          "ignoreActionError": false,
+          "datasetChange": "NONE",
+          "scopeDetails": {
+            "scope": "global",
+            "owner": "kuldeep.chouhan",
+            "projectName": ""
+          },
+          "datasetVersion": 1,
+          "datasetTransformer": "com.streamanalytix.bs.dataset.service.impl.DfsChannelDSTransformer",
+          "isLatestVersion": false,
+          "configureData": "uploadData",
+          "mvelfnclist": [],
+          "filePath": "SalesJan.csv",
+          "datasetName": "Test123_1755846440231",
+          "sessionId": "E43EB7811AB95F049C6ADDBB0D531D1D",
+          "datasetSelectVersion": "1",
+          "inspectAsBatch": true,
+          "fieldMapping": {},
+          "filename": "",
+          "repeatData": "false",
+          "parserType": "DELIMITED",
+          "datasetSelected": "Test123_1755846440231",
+          "datasetSourceType": "fileSystem",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "connectionConfig": {},
+          "header": false,
+          "expfldlst": "",
+          "operatorType": "receiver",
+          "saveAsDataset": false,
+          "subsystemName": "TestDa_1755846881441"
+        }
+      }
+    ],
+    "name": "TestDa_1755846881441",
+    "autoInspectSchema": {
+      "File_894814_39606": [
+        {
+          "name": "Transaction_date",
+          "alias": "Transaction_date",
+          "dataType": "java.sql.Timestamp",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Product",
+          "alias": "Product",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Price",
+          "alias": "Price",
+          "dataType": "java.lang.Integer",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "City",
+          "alias": "City",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "State",
+          "alias": "State",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Country",
+          "alias": "Country",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Last_Login",
+          "alias": "Last_Login",
+          "dataType": "java.util.Date",
+          "dateFormat": "yyyy-MM-dd",
+          "inputDateFormat": "yyyy-MM-dd",
+          "outputDateFormat": "yyyy-MM-dd",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Latitude",
+          "alias": "Latitude",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "Longitude",
+          "alias": "Longitude",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "US Zip",
+          "alias": "US Zip",
+          "dataType": "java.lang.Double",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        }
+      ]
+    },
+    "customFileNames": "SalesJan.csv",
+    "status": "STOPPED",
+    "description": "Test",
+    "partialConfig": {},
+    "clusterId": "-1",
+    "originalCustomJarName": "",
+    "projectDetails": {
+      "associatedAccounts": [
+        {
+          "vendorType": "ApacheSpark",
+          "name": "kd-cluster",
+          "id": 14
+        }
+      ],
+      "createdBy": "kuldeep.chouhan",
+      "projectDisplayName": "Default",
+      "sharedProject": false,
+      "name": "Default_1730098071421",
+      "projectName": "Default_1730098071421",
+      "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+      "projectVersion": 1
+    },
+    "topologySupervisors": [],
+    "createVersionRequestByUser": true,
+    "lockedBy": "",
+    "engine": "spark",
+    "alert": {
+      "added": [],
+      "updated": [],
+      "deleted": []
+    },
+    "appType": "etl",
+    "isReplayAlter": false,
+    "date_created": 1755846913102,
+    "sessionId": "E43EB7811AB95F049C6ADDBB0D531D1D",
+    "versionNumber": 1,
+    "structure": "pipeline",
+    "templateName": "",
+    "displayColumnsMap": {
+      "File_894814_39606": {
+        "File_894814_39606": {
+          "allCols": [],
+          "displayCols": [
+            "Transaction_date",
+            "Product",
+            "Price",
+            "City",
+            "State",
+            "Country",
+            "Last_Login",
+            "Latitude",
+            "Longitude",
+            "US Zip"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "S3emitter_707986": {
+        "File_894814_39606": {
+          "allCols": [],
+          "displayCols": [
+            "Transaction_date",
+            "Product",
+            "Price",
+            "City",
+            "State",
+            "Country",
+            "Last_Login",
+            "Latitude",
+            "Longitude",
+            "US Zip"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      }
+    },
+    "isDraftSupported": false,
+    "tenantId": "9",
+    "config": {
+      "subnetSettingsName": "",
+      "checkPointDirectory": "/",
+      "enableCheckPoint": "false",
+      "isCustomerComputeEnabled": true,
+      "yarnAmCores": "1",
+      "batchDuration": "1000",
+      "dataValidationExecutionMode": "sequential",
+      "executorCores": "2",
+      "userProvidedSparkOptions": "",
+      "uploadKeyTabFile": "",
+      "poolNname": "FIFO",
+      "uiJson": {
+        "source": {
+          "images": [
+            "dataasset.png"
+          ],
+          "all": [
+            "Data Asset (fileSystem - Test123)"
+          ],
+          "count": ""
+        },
+        "target": {
+          "images": [
+            "s3-emitter.png"
+          ],
+          "all": [
+            "S3"
+          ],
+          "count": ""
+        }
+      },
+      "taskMaxFailures": "4",
+      "pendingRestartCount": "0",
+      "driverPermGenSize": "256",
+      "extraSparkGpuProperty": "--conf spark.executor.resource.gpu.amount\u003d1 --conf spark.executor.resource.gpu.vendor\u003dnvidia.com --conf spark.task.resource.gpu.amount\u003d0.1 --conf spark.kubernetes.node.selector.\u0027nvidia.com/gpu.present\u0027\u003dtrue",
+      "kPipelineId": "7f95fc17-d7d8-427e-bdc6-b434c668da26",
+      "isImpersonationEnabled": false,
+      "isUnlimitedLicense": true,
+      "computeAccProjectName": "Default_1730098071421",
+      "receiverMaxRate": "",
+      "id": "0",
+      "appCores": "2",
+      "enableBackPressure": "",
+      "deploymentMode": "local",
+      "driverMemory": "512",
+      "isConnectionMissing": false,
+      "isMonitoringGraphsEnable": true,
+      "offset": -330,
+      "entityType": "cluster",
+      "yarnAmMemory": "512",
+      "isAccumulatorDataPublishOnES": true,
+      "gpuAffinity": false,
+      "useDedicatedAlways": false,
+      "monitoringComponentList": [
+        "File_894814_39606",
+        "S3emitter_707986"
+      ],
+      "accountId": "",
+      "extraDriverJavaOptions": "",
+      "downloadKeytabFileLocation": "",
+      "connectionName": "",
+      "yarnQueue": "default",
+      "computeClusterType": "gathrCluster",
+      "vendorType": "local",
+      "eventLogDirectory": "/",
+      "initialExecutors": 0,
+      "driverCores": "1",
+      "yarnUser": "kuldeep.chouhan",
+      "dynamicAllocationEnabled": "false",
+      "clouderaLineage": false,
+      "extraExecutorJavaOptions": "",
+      "clusterId": "0",
+      "isBatchPipeline": true,
+      "executorInstances": 1,
+      "IsPiiEnable": true,
+      "waitRestartTime": "2",
+      "autoInspection": false,
+      "isDirty": true,
+      "logLevel": "INFO",
+      "useDedicatedCluster": false,
+      "engine": "spark",
+      "clusterName": "",
+      "sharedCluster": false,
+      "eventLogEnabled": "false",
+      "captureRawData": true,
+      "vpcEndpointDNS": "",
+      "maxExecutors": 1,
+      "keyTabSelectOption": "",
+      "executorMemory": "512",
+      "ignoreConnectionTesting": false,
+      "isRestartRequired": false,
+      "extraSparkSubmitOptions": "",
+      "receiverRateLimiter": "none",
+      "statusAlertConfig": {
+        "isErrorHandlingRequired": false,
+        "targetStatus": [],
+        "errorLogTarget": "kafka",
+        "componentType": "",
+        "connectionName": "",
+        "connectionId": "",
+        "topicName": "",
+        "partitions": "1",
+        "replicationFactor": "1",
+        "topicAdministration": ""
+      },
+      "typeOfApplication": "structuredstreaming",
+      "regionId": "",
+      "maxRestartCount": 1,
+      "keyTabFilePath": "",
+      "zkKeyTabFileLocation": "",
+      "enableResourceAnalyzer": false,
+      "userKrbPrincipal": "",
+      "pipelineNotification": {
+        "errors": {},
+        "warnings": {
+          "S3emitter_707986": [
+            "\u003cspan class\u003d\"notification-comp-name\"\u003eS3\u003c/span\u003e: component is not Inspected"
+          ]
+        },
+        "recommendations": {}
+      }
+    },
+    "subsystemName": "TestDa_1755846881441",
+    "customJarName": ""
+  }
+}
