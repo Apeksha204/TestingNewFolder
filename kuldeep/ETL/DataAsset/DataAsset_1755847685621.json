@@ -1,6 +1,6 @@
 {
   "internalJson": {
-    "httpSessionId": "06501C625AD61E7913DD2FD89B358B29",
+    "httpSessionId": "E43EB7811AB95F049C6ADDBB0D531D1D",
     "isCustomerComputeEnabled": true,
     "templateUsed": [],
     "inspectType": "local",
@@ -101,7 +101,7 @@
           "saxInspect": {
             "datasetIds": {
               "inputdatasetId": [
-                "JDBC_462004_455317"
+                "ExpressionFilter_327490____JDBC_462004_455317"
               ],
               "outputdatasetId": [
                 "PUTHDFS_749959"
@@ -237,7 +237,17 @@
         "isIncrementalReadSupported": true,
         "outputDStreamType": "both",
         "errorConfig": {
-          "connectionName": ""
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "queueName": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
         },
         "configured": true,
         "visible": true,
@@ -273,7 +283,7 @@
           "saxInspect": {
             "datasetIds": {
               "inputdatasetId": [
-                "JDBC_462004_455317"
+                "ExpressionFilter_327490____JDBC_462004_455317"
               ],
               "outputdatasetId": [
                 "PUTHDFS_893911"
@@ -367,17 +377,18 @@
     "isLocked": false,
     "id": "DataAsset_1755847685621",
     "connections": [
-      "dc14849b-a997-4201-99a7-f4dad69a8bb0",
-      "dc14849b-a997-4201-99a7-f4dad69a8bb0",
-      "postgres-default-ee7-b2ac-5bbbce4457b9"
+      "c85a89aa-d118-47e9-85c1-bb7e516dceb5",
+      "c85a89aa-d118-47e9-85c1-bb7e516dceb5",
+      "7f1fb594-e2be-40bf-be37-446c9ff3a293"
     ],
     "emailIds": [],
     "iscreatVersionChecked": false,
     "appDisplayName": "DataAsset",
     "lockedDate": "",
     "tags": [],
-    "parentVersionNumber": 0,
+    "parentVersionNumber": 1,
     "configureEmail": false,
+    "customJarStatus": "",
     "enableErrorHandler": true,
     "channels": [
       {
@@ -476,7 +487,7 @@
         "label": "SanityPG",
         "inputDStreamType": "na",
         "message": "",
-        "version": 1,
+        "version": 0,
         "tags": [
           "Relational Database",
           "JDBC Integration",
@@ -715,9 +726,10 @@
     },
     "customFileNames": "",
     "status": "STOPPED",
-    "description": "Test123",
+    "failedReason": "",
+    "description": "Testcommit",
     "partialConfig": {},
-    "clusterId": "0",
+    "clusterId": "-1",
     "originalCustomJarName": "",
     "projectDetails": {
       "associatedAccounts": [
@@ -727,15 +739,16 @@
           "id": 14
         }
       ],
+      "createdBy": "kuldeep.chouhan",
       "projectDisplayName": "Default",
       "sharedProject": false,
-      "createdBy": "kuldeep.chouhan",
+      "name": "Default_1730098071421",
       "projectName": "Default_1730098071421",
       "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
       "projectVersion": 1
     },
     "topologySupervisors": [],
-    "createVersionRequestByUser": true,
+    "createVersionRequestByUser": false,
     "lockedBy": "",
     "engine": "spark",
     "alert": {
@@ -745,11 +758,11 @@
     },
     "appType": "etl",
     "isReplayAlter": false,
-    "gitcommitid": "4ff231dedfb6a30d82fac7dec482188abc97e832",
-    "date_created": 1755843440239,
-    "sessionId": "06501C625AD61E7913DD2FD89B358B29",
-    "gitcommiturl": "https://github.com/QAchetantest/gathrqa/commit/4ff231dedfb6a30d82fac7dec482188abc97e832",
-    "versionNumber": 1,
+    "gitcommitid": "cc0293b084ff6bcc432b467e250027b2d3979575",
+    "date_created": 1755847729118,
+    "sessionId": "E43EB7811AB95F049C6ADDBB0D531D1D",
+    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/cc0293b084ff6bcc432b467e250027b2d3979575",
+    "versionNumber": 2,
     "structure": "pipeline",
     "templateName": "",
     "displayColumnsMap": {
@@ -844,13 +857,12 @@
       "kPipelineId": "1ab2a42f-d623-48c9-a601-aa0213882263",
       "isImpersonationEnabled": false,
       "isUnlimitedLicense": true,
-      "computeAccProjectName": "Default_1753855900526",
+      "computeAccProjectName": "Default_1730098071421",
       "receiverMaxRate": "",
-      "id": "0",
       "appCores": "2",
       "enableBackPressure": "",
       "isPipelineSchedulingEnabled": false,
-      "deploymentMode": "cluster",
+      "deploymentMode": "local",
       "driverMemory": "512",
       "isConnectionMissing": false,
       "isMonitoringGraphsEnable": true,
@@ -863,16 +875,17 @@
       "monitoringComponentList": [
         "JDBC_462004_455317",
         "PUTHDFS_749959",
-        "PUTHDFS_893911",
-        "ExpressionFilter_327490____JDBC_462004_455317"
+        "PUTHDFS_893911"
       ],
       "endAt": "",
+      "accountId": "-1",
       "extraDriverJavaOptions": "",
       "usingExternalSchema": false,
       "downloadKeytabFileLocation": "",
       "connectionName": "",
-      "yarnQueue": "manualqa",
-      "computeClusterType": "registerCluster",
+      "yarnQueue": "default",
+      "computeClusterType": "gathrCluster",
+      "vendorType": "local",
       "eventLogDirectory": "/",
       "initialExecutors": 0,
       "driverCores": "1",
@@ -880,12 +893,13 @@
       "dynamicAllocationEnabled": "false",
       "clouderaLineage": false,
       "extraExecutorJavaOptions": "",
+      "clusterId": "0",
       "isBatchPipeline": true,
       "executorInstances": 1,
       "IsPiiEnable": true,
       "waitRestartTime": "2",
       "autoInspection": false,
-      "isDirty": false,
+      "isDirty": true,
       "logLevel": "INFO",
       "useDedicatedCluster": false,
       "engine": "spark",
@@ -925,7 +939,11 @@
       "userKrbPrincipal": "",
       "pipelineNotification": {
         "errors": {},
-        "warnings": {},
+        "warnings": {
+          "PUTHDFS_893911": [
+            "\u003cspan class\u003d\"notification-comp-name\"\u003eNative HDFS\u003c/span\u003e: component is not Inspected"
+          ]
+        },
         "recommendations": {}
       }
     },
