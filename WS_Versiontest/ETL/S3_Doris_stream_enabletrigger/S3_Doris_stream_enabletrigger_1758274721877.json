@@ -1,6 +1,6 @@
 {
   "internalJson": {
-    "httpSessionId": "1ADEB2B67A7EFE5ACFCD68F374238BDD",
+    "httpSessionId": "4EBE7980E48CAFE7CEA2398F02864B22",
     "isCustomerComputeEnabled": true,
     "templateUsed": [],
     "inspectType": "local",
@@ -220,7 +220,7 @@
     "appDisplayName": "S3_Doris_stream_enabletrigger",
     "lockedDate": "",
     "tags": [],
-    "parentVersionNumber": 0,
+    "parentVersionNumber": 1,
     "configureEmail": false,
     "customJarStatus": "",
     "enableErrorHandler": true,
@@ -473,12 +473,30 @@
     "customFileNames": "",
     "status": "STOPPED",
     "failedReason": "",
-    "description": "Test123",
+    "description": "NewVersion",
     "partialConfig": {},
     "clusterId": "-1",
     "originalCustomJarName": "",
     "projectDetails": {
-      "projectName": "Default_1753855900526"
+      "associatedAccounts": [
+        {
+          "vendorType": "ApacheSpark",
+          "name": "K8_kubernetes",
+          "id": 496
+        },
+        {
+          "vendorType": "ApacheSpark",
+          "name": "Apache_yarn",
+          "id": 489
+        }
+      ],
+      "createdBy": "chetantest4@gathr.one",
+      "projectDisplayName": "Default",
+      "sharedProject": false,
+      "name": "Default_1753855900526",
+      "projectName": "Default_1753855900526",
+      "projectId": "c119dece-bb50-4632-be16-b622bfd02655",
+      "projectVersion": 1
     },
     "customArtifact": {
       "useAllArtifacts": false,
@@ -509,9 +527,11 @@
     },
     "appType": "etl",
     "isReplayAlter": false,
-    "date_created": 1758278280121,
-    "sessionId": "1ADEB2B67A7EFE5ACFCD68F374238BDD",
-    "versionNumber": 1,
+    "gitcommitid": "4bc3ab439cf39266ed4373431d907c71e0ab6098",
+    "date_created": 1758692646772,
+    "sessionId": "4EBE7980E48CAFE7CEA2398F02864B22",
+    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/4bc3ab439cf39266ed4373431d907c71e0ab6098",
+    "versionNumber": 2,
     "structure": "pipeline",
     "templateName": "",
     "displayColumnsMap": {
@@ -624,7 +644,7 @@
       "executorInstances": 1,
       "waitRestartTime": "2",
       "autoInspection": false,
-      "isDirty": false,
+      "isDirty": true,
       "logLevel": "INFO",
       "useDedicatedCluster": false,
       "engine": "spark",
@@ -661,7 +681,11 @@
       "userKrbPrincipal": "",
       "pipelineNotification": {
         "errors": {},
-        "warnings": {},
+        "warnings": {
+          "DorisEmitter_535859": [
+            "\u003cspan class\u003d\"notification-comp-name\"\u003eDoris\u003c/span\u003e: component is not Inspected"
+          ]
+        },
         "recommendations": {}
       }
     },
