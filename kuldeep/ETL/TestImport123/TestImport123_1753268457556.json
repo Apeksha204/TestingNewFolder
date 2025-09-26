@@ -1,0 +1,676 @@
+{
+  "internalJson": {
+    "httpSessionId": "ECCFBFE31AF85DBF285737AF373328F3",
+    "isCustomerComputeEnabled": true,
+    "templateUsed": [],
+    "inspectType": "local",
+    "customJarBeforeModification": "",
+    "isDraft": false,
+    "addedJars": [],
+    "processors": [
+      {
+        "connectorId": "12",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "emitter",
+        "isStopRequest": false,
+        "connectionType": "gcs",
+        "messageTypes": [
+          "GCSBatchChannel_524265"
+        ],
+        "projectDetails": {
+          "associatedAccounts": [
+            {
+              "vendorType": "ApacheSpark",
+              "name": "kd-cluster",
+              "id": 14
+            }
+          ],
+          "projectDisplayName": "Default",
+          "sharedProject": false,
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "projectVersion": 1
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "subtype": "",
+        "appType": "structuredstreaming",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "GCS-emitter",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "both",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "queueName": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          176.06668090820312,
+          -10
+        ],
+        "label": "GCS",
+        "inputDStreamType": "both",
+        "currentAppType": "batch",
+        "message": "",
+        "tags": [
+          "Google Cloud Storage",
+          "Cloud Storage Integration",
+          "File Storage",
+          "Google Cloud Integration",
+          "Cloud Data Storage",
+          "Data Storage Integration"
+        ],
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "GCSBatchChannel_524265",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "GCSEmitter_491297",
+        "refreshMetadata": false,
+        "category": [
+          "File"
+        ],
+        "config": {
+          "bucketName": "qatest",
+          "datasetNewAssociation": false,
+          "partitionColumnsList": [],
+          "outputMode": "append",
+          "compressionType": "none",
+          "processingTimeUnit": "",
+          "path": "/parts/test8",
+          "IsPiiEnable": false,
+          "multilineJson": false,
+          "delimiter": "",
+          "saxInspect": {
+            "datasetIds": {
+              "inputdatasetId": [
+                "GCSBatchChannel_524265"
+              ],
+              "outputdatasetId": [
+                "GCSEmitter_491297"
+              ]
+            },
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "GCSBatchChannel_524265"
+              ],
+              "outputSchemaId": [
+                "GCSBatchChannel_524265"
+              ]
+            }
+          },
+          "customJDBC": false,
+          "reuseDataset": false,
+          "ignoreActionError": false,
+          "datasetChange": "NONE",
+          "isTimeBasedCheckPoint": false,
+          "datasetTransformer": "com.streamanalytix.bs.dataset.service.impl.GCSEmitterDSTransformer",
+          "appDisplayName": [],
+          "turnpikeName": "",
+          "mvelfnclist": [],
+          "format": "json",
+          "datasetName": "_1740156005573",
+          "columnList": [
+            "_c0",
+            "_c1",
+            "_c2",
+            "_c3",
+            "_c4"
+          ],
+          "isTurnPikeChild": "false",
+          "trigger": false,
+          "priority": 1,
+          "processingTime": "",
+          "partioningRequired": "false",
+          "saveMode": "append",
+          "checkpointLocation": "",
+          "datasetSourceType": "GCS",
+          "checkpointConnectionId": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "connectionId": "a62cb4e4-a723-4204-8aab-80e42a1645ec",
+          "connectionConfig": {},
+          "expfldlst": "",
+          "connectionName": "gcs",
+          "operatorType": "processor",
+          "saveAsDataset": false,
+          "checkpointConnectionType": "",
+          "executorPlugin": "com.streamanalytix.spark.ss.emitter.GCSEmitter",
+          "subsystemName": "TestImport123_1753268457556"
+        }
+      }
+    ],
+    "esperHAEnabled": false,
+    "isLocked": false,
+    "id": "TestImport123_1753268457556",
+    "connections": [
+      "526b40f0-061e-4515-bd03-83d77bae02d9",
+      "526b40f0-061e-4515-bd03-83d77bae02d9"
+    ],
+    "emailIds": [],
+    "iscreatVersionChecked": false,
+    "appDisplayName": "TestImport123",
+    "lockedDate": "",
+    "tags": [],
+    "parentVersionNumber": 1,
+    "configureEmail": false,
+    "enableErrorHandler": true,
+    "channels": [
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "12",
+        "className": "com.streamanalytix.spark.ss.receiver.SparkSSReceiver",
+        "channelType": "single",
+        "isStopRequest": false,
+        "type": "channel",
+        "connectionType": "gcs",
+        "messageTypes": [
+          "GCSBatchChannel_524265"
+        ],
+        "projectDetails": {
+          "associatedAccounts": [
+            {
+              "vendorType": "ApacheSpark",
+              "name": "kd-cluster",
+              "id": 14
+            }
+          ],
+          "projectDisplayName": "Default",
+          "sharedProject": false,
+          "createdBy": "kuldeep.chouhan",
+          "projectName": "Default_1730098071421",
+          "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+          "projectVersion": 1
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "GCSEmitter_491297"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "appType": "structuredstreaming,ssbatch",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "gcs-batch-channel",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "queueName": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          10,
+          4
+        ],
+        "label": "GCS Batch",
+        "inputDStreamType": "na",
+        "message": "",
+        "tags": [
+          "Google Cloud Storage",
+          "Cloud Storage Integration",
+          "File Storage",
+          "Google Cloud Integration",
+          "Cloud Data Storage",
+          "Data Storage Integration"
+        ],
+        "groupings": [],
+        "messageTypeId": "tracemessage",
+        "name": "GCSBatchChannel_524265",
+        "refreshMetadata": false,
+        "schemaIdentifier": "com.streamanalytix.engine.core.scheme.util.DefaultSchemaIdentifier",
+        "category": [
+          "File"
+        ],
+        "config": {
+          "bucketName": "knigam2292",
+          "isReadingFilePaths": false,
+          "datasetNewAssociation": false,
+          "readBy": "columnPartition",
+          "isRecursionEnabled": false,
+          "isBatch": "false",
+          "extraConf": {
+            "cdcErrorAlert": false
+          },
+          "sourceHeader": false,
+          "channelPlugin": "com.streamanalytix.spark.ss.receiver.GCSBatchSource",
+          "pathGlobFilter": "",
+          "path": "/komal/testincremental",
+          "IsPiiEnable": false,
+          "enableIncrementalRead": true,
+          "multilineJson": false,
+          "delimiter": ",",
+          "configEdited": false,
+          "saxInspect": {
+            "typeOfSchemaDetection": "readFromSource",
+            "datasetIds": {
+              "inputdatasetId": [],
+              "outputdatasetId": [
+                "GCSBatchChannel_524265"
+              ]
+            },
+            "detectSchema": false,
+            "header": false,
+            "referenceSchemaId": {
+              "inputSchemaId": [],
+              "outputSchemaId": [
+                "GCSBatchChannel_524265"
+              ]
+            },
+            "piiDetect": true,
+            "rowCount": 10,
+            "samplingMethod": "topN",
+            "triggerTime": "3 seconds"
+          },
+          "customJDBC": false,
+          "recursiveFileLookup": "",
+          "ignoreActionError": false,
+          "datasetTransformer": "com.streamanalytix.bs.dataset.service.impl.GCSChannelDSTransformer",
+          "appDisplayName": "",
+          "mvelfnclist": [],
+          "maxValue": "2000",
+          "datasetName": "",
+          "column": "java.lang.Integer#@#id",
+          "incrementalOffset": {
+            "inclusiveStartOffset": false,
+            "enableIncrementalRead": true,
+            "maxValue": "2000",
+            "hdfstValue": "1970-01-01T05:30:00.090+05:30",
+            "readBy": "columnPartition",
+            "column": "java.lang.Integer#@#id",
+            "manualColumn": false,
+            "readControlType": "maxValue",
+            "incrementSize": "",
+            "currentValue": "1"
+          },
+          "datasetSelectVersion": "0",
+          "readControlType": "maxValue",
+          "parserType": "DELIMITED",
+          "datasetSelected": "",
+          "datasetSourceType": "gcs",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "isBatchEnabled": true,
+          "connectionId": "a62cb4e4-a723-4204-8aab-80e42a1645ec",
+          "connectionConfig": {},
+          "expfldlst": "",
+          "connectionName": "gcs",
+          "operatorType": "receiver",
+          "saveAsDataset": false,
+          "incrementSize": "",
+          "subsystemName": "TestImport123_1753268457556",
+          "currentValue": "1"
+        }
+      }
+    ],
+    "name": "TestImport123_1753268457556",
+    "autoInspectSchema": {
+      "GCSBatchChannel_524265": [
+        {
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "name": "_c0",
+          "alias": "_c0",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "name": "_c1",
+          "alias": "_c1",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "name": "_c2",
+          "alias": "_c2",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "name": "_c3",
+          "alias": "_c3",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "name": "_c4",
+          "alias": "_c4",
+          "dataType": "java.lang.Boolean",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        },
+        {
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "name": "id",
+          "alias": "id",
+          "dataType": "java.lang.Integer",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "precision": 10,
+          "scale": 0,
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "description": "",
+          "selected": true
+        }
+      ]
+    },
+    "customFileNames": "",
+    "status": "STOPPED",
+    "isCustomerDatabrickComputeEnabled": false,
+    "description": "Test_New",
+    "partialConfig": {},
+    "clusterId": "-1",
+    "originalCustomJarName": "",
+    "projectDetails": {
+      "associatedAccounts": [
+        {
+          "vendorType": "ApacheSpark",
+          "name": "kd-cluster",
+          "id": 14
+        }
+      ],
+      "projectDisplayName": "Default",
+      "sharedProject": false,
+      "createdBy": "kuldeep.chouhan",
+      "projectName": "Default_1730098071421",
+      "projectId": "506033e4-5ddf-4ac8-949b-9da87944c60f",
+      "projectVersion": 1
+    },
+    "topologySupervisors": [],
+    "createVersionRequestByUser": true,
+    "lockedBy": "",
+    "engine": "spark",
+    "alert": {
+      "added": [],
+      "updated": [],
+      "deleted": []
+    },
+    "appType": "etl",
+    "isReplayAlter": false,
+    "gitcommitid": "06ebb1877492ef0359bcbd53e1f3c5d7fc6a41a0",
+    "date_created": 1740156019488,
+    "sessionId": "ECCFBFE31AF85DBF285737AF373328F3",
+    "gitcommiturl": "https://Aksmha@bitbucket.org/aksmha/gathr-pipeline-repo/commit/06ebb1877492ef0359bcbd53e1f3c5d7fc6a41a0",
+    "versionNumber": 2,
+    "structure": "pipeline",
+    "templateName": "",
+    "displayColumnsMap": {
+      "GCSBatchChannel_524265": {
+        "GCSBatchChannel_524265": {
+          "allCols": [],
+          "displayCols": [
+            "_c0",
+            "_c1",
+            "_c2",
+            "_c3",
+            "_c4",
+            "id"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "GCSEmitter_491297": {
+        "GCSBatchChannel_524265": {
+          "allCols": [],
+          "displayCols": [
+            "_c0",
+            "_c1",
+            "_c2",
+            "_c3",
+            "_c4",
+            "id"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      }
+    },
+    "isDraftSupported": false,
+    "tenantId": "9",
+    "isErrorModeNotified": false,
+    "config": {
+      "subnetSettingsName": "",
+      "checkPointDirectory": "/",
+      "enableCheckPoint": "false",
+      "isCustomerComputeEnabled": true,
+      "yarnAmCores": "1",
+      "batchDuration": "1000",
+      "dataValidationExecutionMode": "sequential",
+      "executorCores": "2",
+      "userProvidedSparkOptions": "",
+      "action_failure_reason": "",
+      "uploadKeyTabFile": "",
+      "poolNname": "FIFO",
+      "uiJson": {
+        "source": {
+          "images": [
+            "gcs-batch-channel.png"
+          ],
+          "all": [
+            "GCS Batch"
+          ],
+          "count": ""
+        },
+        "target": {
+          "images": [
+            "GCS-emitter.png"
+          ],
+          "all": [
+            "GCS"
+          ],
+          "count": ""
+        }
+      },
+      "taskMaxFailures": "4",
+      "pendingRestartCount": "0",
+      "driverPermGenSize": "256",
+      "kPipelineId": "da179409-03fc-4129-9486-569157af1769",
+      "isImpersonationEnabled": false,
+      "isUnlimitedLicense": true,
+      "computeAccProjectName": "Default_1737979469116",
+      "receiverMaxRate": "",
+      "id": "0",
+      "appCores": "2",
+      "enableBackPressure": "",
+      "isPipelineSchedulingEnabled": false,
+      "deploymentMode": "cluster",
+      "driverMemory": "512",
+      "isConnectionMissing": false,
+      "isMonitoringGraphsEnable": true,
+      "offset": -330,
+      "entityType": "cluster",
+      "yarnAmMemory": "512",
+      "isAccumulatorDataPublishOnES": true,
+      "useDedicatedAlways": false,
+      "monitoringComponentList": [
+        "GCSBatchChannel_524265",
+        "GCSEmitter_491297"
+      ],
+      "endAt": "",
+      "extraDriverJavaOptions": "",
+      "usingExternalSchema": false,
+      "downloadKeytabFileLocation": "",
+      "connectionName": "",
+      "yarnQueue": "default",
+      "computeClusterType": "registerCluster",
+      "eventLogDirectory": "/",
+      "initialExecutors": "0",
+      "driverCores": "1",
+      "isCustomerDatabrickComputeEnabled": false,
+      "yarnUser": "mohammad.waseem@impetus.com",
+      "dynamicAllocationEnabled": "false",
+      "clouderaLineage": false,
+      "extraExecutorJavaOptions": "",
+      "isBatchPipeline": true,
+      "executorInstances": "1",
+      "waitRestartTime": "2",
+      "autoInspection": false,
+      "isDirty": false,
+      "logLevel": "INFO",
+      "useDedicatedCluster": false,
+      "engine": "spark",
+      "clusterName": "",
+      "sharedCluster": false,
+      "eventLogEnabled": "false",
+      "captureRawData": true,
+      "vpcEndpointDNS": "",
+      "maxExecutors": "1",
+      "keyTabSelectOption": "specifyKeyTabFilePath",
+      "executorMemory": "512",
+      "ignoreConnectionTesting": false,
+      "isRestartRequired": false,
+      "extraSparkSubmitOptions": "",
+      "scheduleNote": "",
+      "receiverRateLimiter": "none",
+      "statusAlertConfig": {
+        "isErrorHandlingRequired": false,
+        "targetStatus": [],
+        "errorLogTarget": "kafka",
+        "componentType": "",
+        "connectionName": "",
+        "connectionId": "",
+        "topicName": "",
+        "partitions": "1",
+        "replicationFactor": "1",
+        "topicAdministration": ""
+      },
+      "userTimeZone": "",
+      "cronExpression": "",
+      "typeOfApplication": "structuredstreaming",
+      "regionId": "",
+      "maxRestartCount": 1,
+      "keyTabFilePath": "",
+      "zkKeyTabFileLocation": "",
+      "enableResourceAnalyzer": false,
+      "userKrbPrincipal": "",
+      "pipelineNotification": {
+        "errors": {},
+        "warnings": {},
+        "recommendations": {}
+      }
+    },
+    "subsystemName": "TestImport123_1753268457556",
+    "customJarName": ""
+  }
+}
