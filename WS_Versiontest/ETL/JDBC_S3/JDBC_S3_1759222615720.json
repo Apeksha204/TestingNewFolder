@@ -138,6 +138,7 @@
         "config": {
           "turnpikeName": "",
           "mvelfnclist": [],
+          "datasetNewAssociation": false,
           "isTurnPikeChild": "false",
           "configFields": "",
           "IsPiiEnable": false,
@@ -324,6 +325,7 @@
         "config": {
           "turnpikeName": "",
           "mvelfnclist": [],
+          "datasetNewAssociation": false,
           "isTurnPikeChild": "false",
           "IsPiiEnable": false,
           "outputMessage": "JDBC_761116",
@@ -481,6 +483,7 @@
         ],
         "config": {
           "bucketName": "anirkhe115",
+          "datasetNewAssociation": false,
           "partitionColumnsList": [],
           "outputMode": "append",
           "compressionType": "none",
@@ -514,7 +517,6 @@
           "ignoreActionError": false,
           "useCustomFilename": false,
           "isTimeBasedCheckPoint": false,
-          "turnpikeName": "",
           "mvelfnclist": [],
           "format": "csv",
           "customFileName": "",
@@ -546,20 +548,965 @@
           "subsystemName": "JDBC_S3_1759222615720",
           "scdEnabled": "false"
         }
+      },
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "65",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "processor",
+        "isStopRequest": false,
+        "messageTypes": [
+          "JDBC_761116",
+          "JDBC_489791"
+        ],
+        "projectDetails": {
+          "createdBy": "chetantest4@gathr.one",
+          "projectName": "Default_1753855900526",
+          "projectDisplayName": "Default",
+          "projectId": "c119dece-bb50-4632-be16-b622bfd02655",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": [
+            {
+              "vendorType": "ApacheSpark",
+              "name": "K8_kubernetes",
+              "id": 496
+            },
+            {
+              "vendorType": "ApacheSpark",
+              "name": "Apache_yarn",
+              "id": 489
+            }
+          ],
+          "name": "Default_1753855900526"
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "S3emitter_310462"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "customArtifact": {
+          "useAllArtifacts": false,
+          "workspace": {
+            "jars": [],
+            "files": [],
+            "archives": []
+          },
+          "project": {
+            "jars": [],
+            "files": [],
+            "archives": []
+          },
+          "global": {
+            "jars": [],
+            "files": [],
+            "archives": []
+          }
+        },
+        "joinTemplate": {
+          "filterOperators": {
+            "date": [
+              {
+                "label": "Equal",
+                "value": "equal"
+              },
+              {
+                "label": "Not Equal",
+                "value": "not_equal"
+              },
+              {
+                "label": "Less",
+                "value": "less"
+              },
+              {
+                "label": "Greater",
+                "value": "greater"
+              },
+              {
+                "label": "Less or Equal",
+                "value": "less_or_equal"
+              },
+              {
+                "label": "Greater or Equal",
+                "value": "greater_or_equal"
+              },
+              {
+                "label": "Between",
+                "value": "between"
+              },
+              {
+                "label": "Is Null",
+                "value": "is_null"
+              },
+              {
+                "label": "Is Not Null",
+                "value": "is_not_null"
+              },
+              {
+                "label": "In",
+                "value": "in"
+              },
+              {
+                "label": "Not In",
+                "value": "not_in"
+              },
+              {
+                "label": "Custom",
+                "value": "custom"
+              }
+            ],
+            "boolean": [
+              {
+                "label": "Equal",
+                "value": "equal"
+              },
+              {
+                "label": "Not Equal",
+                "value": "not_equal"
+              },
+              {
+                "label": "Is Null",
+                "value": "is_null"
+              },
+              {
+                "label": "Is Not Null",
+                "value": "is_not_null"
+              }
+            ],
+            "string": [
+              {
+                "label": "Contains",
+                "value": "contains"
+              },
+              {
+                "label": "Not Contains",
+                "value": "not_contains"
+              },
+              {
+                "label": "Begins With",
+                "value": "begins_with"
+              },
+              {
+                "label": "Ends With",
+                "value": "ends_with"
+              },
+              {
+                "label": "Equal",
+                "value": "equal"
+              },
+              {
+                "label": "Not Equal",
+                "value": "not_equal"
+              },
+              {
+                "label": "Not Begins With",
+                "value": "not_begins_with"
+              },
+              {
+                "label": "Not Ends With",
+                "value": "not_ends_with"
+              },
+              {
+                "label": "Is Null",
+                "value": "is_null"
+              },
+              {
+                "label": "Is Not Null",
+                "value": "is_not_null"
+              },
+              {
+                "label": "In",
+                "value": "in"
+              },
+              {
+                "label": "Not In",
+                "value": "not_in"
+              },
+              {
+                "label": "Matches",
+                "value": "matches"
+              },
+              {
+                "label": "Custom",
+                "value": "custom"
+              }
+            ],
+            "double": [
+              {
+                "label": "Equal",
+                "value": "equal"
+              },
+              {
+                "label": "Not Equal",
+                "value": "not_equal"
+              },
+              {
+                "label": "Less",
+                "value": "less"
+              },
+              {
+                "label": "Greater",
+                "value": "greater"
+              },
+              {
+                "label": "Less or Equal",
+                "value": "less_or_equal"
+              },
+              {
+                "label": "Greater or Equal",
+                "value": "greater_or_equal"
+              },
+              {
+                "label": "Between",
+                "value": "between"
+              },
+              {
+                "label": "Is Null",
+                "value": "is_null"
+              },
+              {
+                "label": "Is Not Null",
+                "value": "is_not_null"
+              },
+              {
+                "label": "In",
+                "value": "in"
+              },
+              {
+                "label": "Not In",
+                "value": "not_in"
+              },
+              {
+                "label": "Custom",
+                "value": "custom"
+              }
+            ],
+            "short": [
+              {
+                "label": "Equal",
+                "value": "equal"
+              },
+              {
+                "label": "Not Equal",
+                "value": "not_equal"
+              },
+              {
+                "label": "Less",
+                "value": "less"
+              },
+              {
+                "label": "Greater",
+                "value": "greater"
+              },
+              {
+                "label": "Less or Equal",
+                "value": "less_or_equal"
+              },
+              {
+                "label": "Greater or Equal",
+                "value": "greater_or_equal"
+              },
+              {
+                "label": "Between",
+                "value": "between"
+              },
+              {
+                "label": "Is Null",
+                "value": "is_null"
+              },
+              {
+                "label": "Is Not Null",
+                "value": "is_not_null"
+              },
+              {
+                "label": "In",
+                "value": "in"
+              },
+              {
+                "label": "Not In",
+                "value": "not_in"
+              },
+              {
+                "label": "Custom",
+                "value": "custom"
+              }
+            ],
+            "integer": [
+              {
+                "label": "Equal",
+                "value": "equal"
+              },
+              {
+                "label": "Not Equal",
+                "value": "not_equal"
+              },
+              {
+                "label": "Less",
+                "value": "less"
+              },
+              {
+                "label": "Greater",
+                "value": "greater"
+              },
+              {
+                "label": "Less or Equal",
+                "value": "less_or_equal"
+              },
+              {
+                "label": "Greater or Equal",
+                "value": "greater_or_equal"
+              },
+              {
+                "label": "Between",
+                "value": "between"
+              },
+              {
+                "label": "Is Null",
+                "value": "is_null"
+              },
+              {
+                "label": "Is Not Null",
+                "value": "is_not_null"
+              },
+              {
+                "label": "In",
+                "value": "in"
+              },
+              {
+                "label": "Not In",
+                "value": "not_in"
+              },
+              {
+                "label": "Custom",
+                "value": "custom"
+              }
+            ],
+            "decimal": [
+              {
+                "label": "Equal",
+                "value": "equal"
+              },
+              {
+                "label": "Not Equal",
+                "value": "not_equal"
+              },
+              {
+                "label": "Less",
+                "value": "less"
+              },
+              {
+                "label": "Greater",
+                "value": "greater"
+              },
+              {
+                "label": "Less or Equal",
+                "value": "less_or_equal"
+              },
+              {
+                "label": "Greater or Equal",
+                "value": "greater_or_equal"
+              },
+              {
+                "label": "Between",
+                "value": "between"
+              },
+              {
+                "label": "Is Null",
+                "value": "is_null"
+              },
+              {
+                "label": "Is Not Null",
+                "value": "is_not_null"
+              },
+              {
+                "label": "In",
+                "value": "in"
+              },
+              {
+                "label": "Not In",
+                "value": "not_in"
+              },
+              {
+                "label": "Custom",
+                "value": "custom"
+              }
+            ],
+            "float": [
+              {
+                "label": "Equal",
+                "value": "equal"
+              },
+              {
+                "label": "Not Equal",
+                "value": "not_equal"
+              },
+              {
+                "label": "Less",
+                "value": "less"
+              },
+              {
+                "label": "Greater",
+                "value": "greater"
+              },
+              {
+                "label": "Less or Equal",
+                "value": "less_or_equal"
+              },
+              {
+                "label": "Greater or Equal",
+                "value": "greater_or_equal"
+              },
+              {
+                "label": "Between",
+                "value": "between"
+              },
+              {
+                "label": "Is Null",
+                "value": "is_null"
+              },
+              {
+                "label": "Is Not Null",
+                "value": "is_not_null"
+              },
+              {
+                "label": "In",
+                "value": "in"
+              },
+              {
+                "label": "Not In",
+                "value": "not_in"
+              },
+              {
+                "label": "Custom",
+                "value": "custom"
+              }
+            ],
+            "long": [
+              {
+                "label": "Equal",
+                "value": "equal"
+              },
+              {
+                "label": "Not Equal",
+                "value": "not_equal"
+              },
+              {
+                "label": "Less",
+                "value": "less"
+              },
+              {
+                "label": "Greater",
+                "value": "greater"
+              },
+              {
+                "label": "Less or Equal",
+                "value": "less_or_equal"
+              },
+              {
+                "label": "Greater or Equal",
+                "value": "greater_or_equal"
+              },
+              {
+                "label": "Between",
+                "value": "between"
+              },
+              {
+                "label": "Is Null",
+                "value": "is_null"
+              },
+              {
+                "label": "Is Not Null",
+                "value": "is_not_null"
+              },
+              {
+                "label": "In",
+                "value": "in"
+              },
+              {
+                "label": "Not In",
+                "value": "not_in"
+              },
+              {
+                "label": "Custom",
+                "value": "custom"
+              }
+            ],
+            "timestamp": [
+              {
+                "label": "Equal",
+                "value": "equal"
+              },
+              {
+                "label": "Not Equal",
+                "value": "not_equal"
+              },
+              {
+                "label": "Less",
+                "value": "less"
+              },
+              {
+                "label": "Greater",
+                "value": "greater"
+              },
+              {
+                "label": "Less or Equal",
+                "value": "less_or_equal"
+              },
+              {
+                "label": "Greater or Equal",
+                "value": "greater_or_equal"
+              },
+              {
+                "label": "Between",
+                "value": "between"
+              },
+              {
+                "label": "Is Null",
+                "value": "is_null"
+              },
+              {
+                "label": "Is Not Null",
+                "value": "is_not_null"
+              },
+              {
+                "label": "In",
+                "value": "in"
+              },
+              {
+                "label": "Not In",
+                "value": "not_in"
+              },
+              {
+                "label": "Custom",
+                "value": "custom"
+              }
+            ]
+          },
+          "operatorField": {
+            "default": {
+              "fieldCount": 1,
+              "multiSelect": false
+            },
+            "in": {
+              "fieldCount": 1,
+              "multiSelect": false
+            },
+            "is_null": {
+              "fieldCount": 0,
+              "multiSelect": false
+            },
+            "not_in": {
+              "fieldCount": 1,
+              "multiSelect": false
+            },
+            "custom": {
+              "fieldCount": 1,
+              "multiSelect": false
+            },
+            "is_not_null": {
+              "fieldCount": 0,
+              "multiSelect": false
+            },
+            "between": {
+              "fieldCount": 2,
+              "multiSelect": false
+            }
+          },
+          "joinType": [
+            {
+              "label": "Equi",
+              "value": "EQUI JOIN"
+            },
+            {
+              "label": "Inner",
+              "value": "INNER JOIN"
+            },
+            {
+              "label": "Full Outer",
+              "value": "FULL OUTER JOIN"
+            },
+            {
+              "label": "Left Anti",
+              "value": "LEFT ANTI JOIN"
+            },
+            {
+              "label": "Left Outer",
+              "value": "LEFT OUTER JOIN"
+            },
+            {
+              "label": "Right Outer",
+              "value": "RIGHT OUTER JOIN"
+            },
+            {
+              "label": "Left Semi",
+              "value": "LEFT SEMI JOIN"
+            }
+          ],
+          "joinConditionOperators": [
+            {
+              "label": "Equals",
+              "value": "\u003d"
+            }
+          ]
+        },
+        "appType": "structuredstreaming,ssbatch",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "sql-join-ss",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {},
+        "configured": true,
+        "visible": true,
+        "canChangeSchema": true,
+        "coordinates": [
+          91.89582824707031,
+          90.90277099609375
+        ],
+        "label": "Join",
+        "inputDStreamType": "plain",
+        "message": "",
+        "tags": [
+          "Equi Join",
+          "Inner Join",
+          "Full Outer Join",
+          "Left Anti Join",
+          "Left Outer Join",
+          "Right Outer Join",
+          "Left Semi Join"
+        ],
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "JDBC_489791",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          },
+          {
+            "type": "shuffle",
+            "componentId": "JDBC_761116",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "Join_803104",
+        "refreshMetadata": false,
+        "category": [
+          "ML"
+        ],
+        "config": {
+          "tableNames": {
+            "JDBC_489791": "JDBC_489791",
+            "JDBC_761116": "JDBC_761116"
+          },
+          "encodeMap": {
+            "query": "String"
+          },
+          "turnpikeName": "",
+          "mvelfnclist": [],
+          "query": "mbN7u9rj8899C/xfaqav39u4TYKOLYjKJOfrndtBn+x9C/xfaqav32pXwbzcRcICMwXFtRUUYTLBSg9qk5SxCPOhluHGgsnOAqlnEHrj3GuaazXXmyP0fwv2TeLthcRSIs/hc2Zn8rsKhEmuOhpV39SIEeKh9yd6fQv8X2qmr98hx2ZHXHWnfYTZLlhgYYugaVDxlWU5C3PpZt56JilFY2rrbMYVOtjm5HyADKuPmKRa5QOfgMITCg\u003d\u003d",
+          "customJoinCriteria": "",
+          "isTurnPikeChild": "false",
+          "customJoinCriteriaCondition": "",
+          "IsPiiEnable": false,
+          "outputMessage": "JDBC_761116",
+          "parentTag": "/",
+          "multilineJson": false,
+          "configEdited": false,
+          "saxInspect": {
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "JDBC_761116",
+                "JDBC_489791"
+              ],
+              "outputSchemaId": [
+                "Join_803104"
+              ]
+            },
+            "piiDetect": true,
+            "datasetIds": {
+              "inputdatasetId": [
+                "JDBC_489791",
+                "JDBC_761116"
+              ],
+              "outputdatasetId": [
+                "Join_803104"
+              ]
+            },
+            "detectSchema": false
+          },
+          "customJDBC": false,
+          "connectionConfig": {},
+          "expfldlst": "",
+          "operatorType": "processor",
+          "joinJSON": {
+            "columns": [
+              "id",
+              "first_name",
+              "last_name",
+              "email"
+            ],
+            "filterCondition": [],
+            "joins": [
+              {
+                "joinCondition": [
+                  {
+                    "index": 0,
+                    "condition": "JDBC_489791.id\u003dJDBC_761116.id"
+                  }
+                ],
+                "tables": {
+                  "left": {
+                    "tableName": "JDBC_489791",
+                    "tableAlias": "JDBC_489791"
+                  },
+                  "right": {
+                    "tableName": "JDBC_761116",
+                    "tableAlias": "JDBC_761116"
+                  }
+                },
+                "type": "EQUI JOIN"
+              }
+            ],
+            "selectClause": [
+              "JDBC_761116.first_name",
+              "JDBC_761116.last_name",
+              "JDBC_761116.email",
+              "JDBC_761116.id"
+            ],
+            "broadCastTable": "-",
+            "customJoinCriteria": "",
+            "customJoinCriteriaCondition": ""
+          },
+          "executorPlugin": "com.streamanalytix.spark.ss.helper.JoinProcessor",
+          "subsystemName": "JDBC_S3_1759222615720"
+        }
+      },
+      {
+        "connectorId": "2",
+        "className": "com.streamanalytix.spark.ss.processor.StructuredStreamingProcessor",
+        "channelType": "single",
+        "type": "emitter",
+        "isStopRequest": false,
+        "connectionType": "s3",
+        "messageTypes": [
+          "Join_803104"
+        ],
+        "projectDetails": {
+          "createdBy": "chetantest4@gathr.one",
+          "projectName": "Default_1753855900526",
+          "projectDisplayName": "Default",
+          "projectId": "c119dece-bb50-4632-be16-b622bfd02655",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": [
+            {
+              "vendorType": "ApacheSpark",
+              "name": "K8_kubernetes",
+              "id": 496
+            },
+            {
+              "vendorType": "ApacheSpark",
+              "name": "Apache_yarn",
+              "id": 489
+            }
+          ],
+          "name": "Default_1753855900526"
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "customArtifact": {
+          "useAllArtifacts": false,
+          "workspace": {
+            "jars": [],
+            "files": [],
+            "archives": []
+          },
+          "project": {
+            "jars": [],
+            "files": [],
+            "archives": []
+          },
+          "global": {
+            "jars": [],
+            "files": [],
+            "archives": []
+          }
+        },
+        "subtype": "",
+        "appType": "structuredstreaming",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "s3-emitter",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "both",
+        "errorConfig": {
+          "partitions": "",
+          "isErrorHandlingRequired": true,
+          "componentType": "none",
+          "replicationFactor": "",
+          "limitDataCounts": 1,
+          "errorLogTarget": "none",
+          "queueName": "",
+          "connectionId": "",
+          "topicName": "",
+          "captureRawData": true,
+          "connectionName": "",
+          "enableAccumulator": false
+        },
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          171.8958282470703,
+          90.90277099609375
+        ],
+        "label": "S3",
+        "inputDStreamType": "both",
+        "currentAppType": "batch",
+        "message": "",
+        "tags": [
+          "S3 Integration",
+          "Cloud Storage",
+          "Data Storage",
+          "Object Storage",
+          "AWS S3 Integration",
+          "File Storage",
+          "Cloud Data Storage",
+          "AWS"
+        ],
+        "groupings": [
+          {
+            "type": "shuffle",
+            "componentId": "Join_803104",
+            "groupFields": [],
+            "streamId": "defaultStream"
+          }
+        ],
+        "messageTypeId": "tracemessage",
+        "name": "S3emitter_310462",
+        "refreshMetadata": false,
+        "category": [
+          "File"
+        ],
+        "config": {
+          "bucketName": "anirkhe115",
+          "partitionColumnsList": [],
+          "outputMode": "append",
+          "compressionType": "none",
+          "processingTimeUnit": "",
+          "path": "September30/Test2",
+          "IsPiiEnable": false,
+          "endpoint": "",
+          "scdJoinColumns": "",
+          "multilineJson": false,
+          "delimiter": ",",
+          "saxInspect": {
+            "datasetIds": {
+              "inputdatasetId": [
+                "Join_803104"
+              ],
+              "outputdatasetId": [
+                "S3emitter_310462"
+              ]
+            },
+            "referenceSchemaId": {
+              "inputSchemaId": [
+                "Join_803104"
+              ],
+              "outputSchemaId": [
+                "Join_803104"
+              ]
+            }
+          },
+          "customJDBC": false,
+          "s3Protocol": "s3a",
+          "ignoreActionError": false,
+          "useCustomFilename": false,
+          "isTimeBasedCheckPoint": false,
+          "turnpikeName": "",
+          "mvelfnclist": [],
+          "format": "csv",
+          "customFileName": "",
+          "columnList": [
+            "id",
+            "first_name",
+            "last_name"
+          ],
+          "isTurnPikeChild": "false",
+          "trigger": false,
+          "scdType": "",
+          "priority": 2,
+          "processingTime": "",
+          "endPoint": "",
+          "partioningRequired": "",
+          "saveMode": "append",
+          "checkpointLocation": "",
+          "checkpointConnectionId": "",
+          "parentTag": "/",
+          "ignoreWhileExecution": false,
+          "connectionId": "c61c796d-21cb-44dc-9c27-b2e4942700c3",
+          "header": true,
+          "connectionConfig": {},
+          "expfldlst": "",
+          "connectionName": "s3_Qa",
+          "operatorType": "processor",
+          "checkpointConnectionType": "",
+          "executorPlugin": "com.streamanalytix.spark.ss.emitter.S3Emitter",
+          "subsystemName": "JDBC_S3_1759222615720",
+          "scdEnabled": "false"
+        }
       }
     ],
     "esperHAEnabled": false,
+    "isLocked": false,
     "id": "JDBC_S3_1759222615720",
     "connections": [
       "c61c796d-21cb-44dc-9c27-b2e4942700c3",
+      "c61c796d-21cb-44dc-9c27-b2e4942700c3",
+      "6f844623-c87d-4797-b529-6f347432940e",
       "6f844623-c87d-4797-b529-6f347432940e"
     ],
     "emailIds": [],
     "iscreatVersionChecked": false,
     "appDisplayName": "JDBC_S3",
+    "lockedDate": "",
     "tags": [],
-    "parentVersionNumber": 0,
+    "parentVersionNumber": 1,
     "configureEmail": false,
+    "customJarStatus": "",
     "enableErrorHandler": true,
     "channels": [
       {
@@ -604,6 +1551,16 @@
             "applyFilter": false,
             "filterCriteria": [],
             "componentId": "FilterProcessor_877603"
+          },
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "Join_803104"
           },
           {
             "emitStreamId": "saxErrorStream",
@@ -690,6 +1647,7 @@
             "query": "String",
             "sqlInspectQuery": "String"
           },
+          "datasetNewAssociation": false,
           "maxRecordCount": "",
           "oldToNewColumnNameMapping": {},
           "manualColumn": false,
@@ -715,6 +1673,208 @@
               "inputSchemaId": [],
               "outputSchemaId": [
                 "JDBC_761116"
+              ]
+            },
+            "piiDetect": true,
+            "rowCount": 100,
+            "samplingMethod": "topN",
+            "triggerTime": "3 seconds"
+          },
+          "partitions": "1",
+          "datasetTransformer": "com.streamanalytix.bs.dataset.service.impl.QueryChannelDSTransformer",
+          "appDisplayName": "",
+          "query": "AoGLz5aRJYSuii/arUGGbJZgCN1ClwaUqdPAfF7/uGQ\u003d",
+          "dataType": "",
+          "incrementalOffset": {
+            "colToCheck": "",
+            "overrideQuery": false,
+            "updatedCustomQuery": "",
+            "dataType": "",
+            "manualColumn": false,
+            "currentValue": "",
+            "readControlType": "none",
+            "maxColumnValue": "",
+            "maxRecordCount": "",
+            "enableIncrementalRead": false,
+            "isSystemModstampChecked": false
+          },
+          "datasetSelectVersion": "0",
+          "readControlType": "none",
+          "dateTypeColumnMessageMapping": "",
+          "columnHaveUniqueValues": "true",
+          "datasetSelected": "",
+          "datasetSourceType": "JDBC",
+          "connectionId": "6f844623-c87d-4797-b529-6f347432940e",
+          "isBatchEnabled": "true",
+          "partitioningColumn": "",
+          "connectionName": "Mysqltest",
+          "saveAsDataset": false,
+          "dataSource": "jdbc",
+          "enablePartitioning": "false",
+          "upperBound": "2",
+          "maxColumnValue": "",
+          "isSystemModstampChecked": false,
+          "IsPiiEnable": false,
+          "enableIncrementalRead": false,
+          "scope": "Project",
+          "customJDBC": false,
+          "mappedSchema": [],
+          "ignoreActionError": false,
+          "autoDetectBounds": "true",
+          "fetchSize": "1000",
+          "mvelfnclist": [],
+          "datasetName": "",
+          "parserType": "DELIMITED",
+          "parentTag": "/",
+          "tenantId": "",
+          "ignoreWhileExecution": false,
+          "connectionConfig": {},
+          "lowerBound": "1",
+          "expfldlst": "",
+          "operatorType": "receiver",
+          "subsystemName": "JDBC_S3_1759222615720"
+        }
+      },
+      {
+        "defaultDateFormat": "yyyy-MM-dd",
+        "connectorId": "6",
+        "className": "com.streamanalytix.spark.ss.receiver.SparkSSReceiver",
+        "channelType": "single",
+        "isStopRequest": false,
+        "type": "channel",
+        "messageTypes": [
+          "JDBC_489791"
+        ],
+        "connectionType": "jdbc",
+        "projectDetails": {
+          "createdBy": "chetantest4@gathr.one",
+          "projectName": "Default_1753855900526",
+          "projectDisplayName": "Default",
+          "projectId": "c119dece-bb50-4632-be16-b622bfd02655",
+          "sharedProject": false,
+          "projectVersion": 1,
+          "associatedAccounts": [
+            {
+              "vendorType": "ApacheSpark",
+              "name": "K8_kubernetes",
+              "id": 496
+            },
+            {
+              "vendorType": "ApacheSpark",
+              "name": "Apache_yarn",
+              "id": 489
+            }
+          ],
+          "name": "Default_1753855900526"
+        },
+        "emitStreamIds": [
+          {
+            "emitStreamId": "defaultStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "Join_803104"
+          },
+          {
+            "emitStreamId": "saxErrorStream",
+            "outputFields": [
+              "tracemessage",
+              "streamIds"
+            ],
+            "applyFilter": false,
+            "filterCriteria": [],
+            "componentId": "deadLaterChannel"
+          }
+        ],
+        "customArtifact": {
+          "useAllArtifacts": false,
+          "workspace": {
+            "jars": [],
+            "files": [],
+            "archives": []
+          },
+          "project": {
+            "jars": [],
+            "files": [],
+            "archives": []
+          },
+          "global": {
+            "jars": [],
+            "files": [],
+            "archives": []
+          }
+        },
+        "appType": "structuredstreaming,ssbatch",
+        "defaultTimestampFormat": "yyyy-MM-dd HH:mm:ss",
+        "disabled": false,
+        "remainingTrialDays": 0,
+        "isBeta": false,
+        "id": "jdbc-channel",
+        "state": "free",
+        "isIncrementalReadSupported": true,
+        "outputDStreamType": "plain",
+        "errorConfig": {},
+        "configured": true,
+        "visible": true,
+        "coordinates": [
+          11.895830154418945,
+          90.90277099609375
+        ],
+        "label": "JDBC",
+        "inputDStreamType": "na",
+        "message": "",
+        "tags": [
+          "Relational Database",
+          "JDBC Integration",
+          "Database Management",
+          "MYSQL",
+          "Oracle",
+          "MSSQL",
+          "SQL Server",
+          "postgresql"
+        ],
+        "groupings": [],
+        "messageTypeId": "tracemessage",
+        "name": "JDBC_489791",
+        "refreshMetadata": true,
+        "schemaIdentifier": "com.streamanalytix.engine.core.scheme.util.DefaultSchemaIdentifier",
+        "category": [
+          "Database"
+        ],
+        "config": {
+          "rowsInSingleQuery": "10000",
+          "encodeMap": {
+            "query": "String",
+            "sqlInspectQuery": "String"
+          },
+          "maxRecordCount": "",
+          "oldToNewColumnNameMapping": {},
+          "manualColumn": false,
+          "schemaName": "",
+          "sourceHeader": false,
+          "channelPlugin": "com.streamanalytix.spark.ss.receiver.JDBCSource",
+          "tableName": "CustomerTest02",
+          "sqlInspectQuery": "VZOOIiNAk0Sn0bEFCDy8LgKBi8+WkSWEroov2q1BhmyWYAjdQpcGlNIKDUIpVNAtgZTJPDSVHYLDfqtE99PHWw\u003d\u003d",
+          "multilineJson": false,
+          "delimiter": ",",
+          "configEdited": false,
+          "saxInspect": {
+            "typeOfSchemaDetection": "readFromSource",
+            "datasetIds": {
+              "inputdatasetId": [],
+              "outputdatasetId": [
+                "JDBC_489791"
+              ]
+            },
+            "detectSchema": false,
+            "header": false,
+            "referenceSchemaId": {
+              "inputSchemaId": [],
+              "outputSchemaId": [
+                "JDBC_489791"
               ]
             },
             "piiDetect": true,
@@ -909,13 +2069,162 @@
           "precision": 10,
           "scale": 0
         }
+      ],
+      "JDBC_489791": [
+        {
+          "name": "id",
+          "alias": "id",
+          "dataType": "java.lang.Integer",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "first_name",
+          "alias": "first_name",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "last_name",
+          "alias": "last_name",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "email",
+          "alias": "email",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "false",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        }
+      ],
+      "Join_803104": [
+        {
+          "name": "first_name",
+          "alias": "first_name",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "last_name",
+          "alias": "last_name",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "email",
+          "alias": "email",
+          "dataType": "java.lang.String",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        },
+        {
+          "name": "id",
+          "alias": "id",
+          "dataType": "java.lang.Integer",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss",
+          "inputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "outputDateFormat": "yyyy-MM-dd HH:mm:ss",
+          "stringToDate": false,
+          "isInputField": "Y",
+          "isTimestampField": "N",
+          "selected": true,
+          "PII": "",
+          "PII_TYPE": "",
+          "isPiiMasked": "",
+          "description": "",
+          "precision": 10,
+          "scale": 0
+        }
       ]
     },
     "customFileNames": "",
     "status": "STOPPED",
-    "description": "Test_Commit",
+    "failedReason": "",
+    "description": "Test version 2",
     "partialConfig": {},
-    "clusterId": "0",
+    "clusterId": "-1",
     "originalCustomJarName": "",
     "projectDetails": {
       "associatedAccounts": [
@@ -958,6 +2267,7 @@
     },
     "topologySupervisors": [],
     "createVersionRequestByUser": true,
+    "lockedBy": "",
     "engine": "spark",
     "alert": {
       "added": [],
@@ -966,8 +2276,11 @@
     },
     "appType": "etl",
     "isReplayAlter": false,
+    "gitcommitid": "630317a78855864eedef3a512df1ff1852b88efb",
+    "date_created": 1759222979166,
     "sessionId": "255A9872C6076EC52F7BE802AA6C233C",
-    "versionNumber": 1,
+    "gitcommiturl": "https://github.com/Apeksha204/TestingNewFolder/commit/630317a78855864eedef3a512df1ff1852b88efb",
+    "versionNumber": 2,
     "structure": "pipeline",
     "templateName": "",
     "displayColumnsMap": {
@@ -1020,6 +2333,45 @@
           "types": {},
           "uniqueValues": {}
         }
+      },
+      "JDBC_489791": {
+        "JDBC_489791": {
+          "allCols": [],
+          "displayCols": [
+            "id",
+            "first_name",
+            "last_name",
+            "email"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "Join_803104": {
+        "Join_803104": {
+          "allCols": [],
+          "displayCols": [
+            "id",
+            "first_name",
+            "last_name",
+            "email"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
+      },
+      "S3emitter_310462": {
+        "Join_803104": {
+          "allCols": [],
+          "displayCols": [
+            "id",
+            "first_name",
+            "last_name",
+            "email"
+          ],
+          "types": {},
+          "uniqueValues": {}
+        }
       }
     },
     "isDraftSupported": false,
@@ -1039,21 +2391,25 @@
       "uiJson": {
         "source": {
           "images": [
+            "jdbc-channel.png",
             "jdbc-channel.png"
           ],
           "all": [
+            "JDBC",
             "JDBC"
           ],
-          "count": ""
+          "count": "+1"
         },
         "target": {
           "images": [
+            "s3-emitter.png",
             "s3-emitter.png"
           ],
           "all": [
+            "S3",
             "S3"
           ],
-          "count": ""
+          "count": "+1"
         }
       },
       "taskMaxFailures": "4",
@@ -1065,7 +2421,7 @@
       "isUnlimitedLicense": true,
       "computeAccProjectName": "Default_1753855900526",
       "receiverMaxRate": "",
-      "id": "",
+      "id": "0",
       "appCores": "2",
       "enableBackPressure": "",
       "deploymentMode": "local",
@@ -1082,7 +2438,10 @@
         "JDBC_761116",
         "FilterProcessor_877603",
         "Drop_477991",
-        "S3emitter_619713"
+        "S3emitter_619713",
+        "JDBC_489791",
+        "Join_803104",
+        "S3emitter_310462"
       ],
       "accountId": "-1",
       "extraDriverJavaOptions": "",
@@ -1103,7 +2462,7 @@
       "executorInstances": 1,
       "waitRestartTime": "2",
       "autoInspection": false,
-      "isDirty": false,
+      "isDirty": true,
       "logLevel": "INFO",
       "useDedicatedCluster": false,
       "engine": "spark",
